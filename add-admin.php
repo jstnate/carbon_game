@@ -11,7 +11,7 @@ require_once 'object/connection.php';
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
-    <title>Connectez-vous !</title>
+    <title>Ajouter un utilisateur</title>
 </head>
 <body>
     <div>
@@ -47,11 +47,19 @@ require_once 'object/connection.php';
 
             if ($user->verifyInput() === true) {
                 $connection = new Connection();
-                $insert = $connection->insertUser($user);
+                $verify = $connection->verifyUser($user);
 
-                if ($insert) { ?>
-                    <h2>Crétaion réussi</h2>
-               <?php }
+                if ($verify === false) {
+                    $insert = $connection->insertUser($user);
+
+                    if ($insert) { ?>
+                        <h2>Création réussie</h2>
+                    <?php } else { ?>
+                        <h2>Un problème est survenu</h2>
+                    <?php }
+               } else { ?>
+                    <h2>Adresse email déjà utilisée</h2>
+                <?php }
             }
         }
     ?>
