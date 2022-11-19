@@ -1,2 +1,2 @@
-# carbon_game
+# Carbon
 Repository of Carbon web site
