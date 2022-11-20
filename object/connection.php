@@ -11,7 +11,7 @@ class Connection
         $this->pdo = new PDO('mysql:dbname=carbon_db;host=127.0.0.1', 'root', 'root');
     }
 
-    public function verifyUser(User $user)
+    public function verifyUser(User $user): bool
     {
         $prepare = 'SELECT * FROM user WHERE email = :email';
         $preExe = $this->pdo->prepare($prepare);
@@ -44,5 +44,29 @@ class Connection
             'password' => md5($user->password . 'SALT'),
             'function' => $user->function,
         ]);
+    }
+
+    public function loginVerify(User $user): bool
+    {
+        $query = 'SELECT * FROM user WHERE email = :email';
+        $statement = $this->pdo->prepare($query);
+
+        $statement->execute([
+            'email' => $user->email
+        ]);
+
+        $data = $statement->fetch();
+
+        $passVerified = false;
+
+        if (isset($data[0]) && md5($user->password . 'SALT') === $data['password']) {
+            $passVerified = true;
+            $_SESSION['user_id'] = $data['id'];
+            $_SESSION['user_email'] = $data['email'];
+            $_SESSION['user_password'] = $data['password'];
+            $_SESSION['function'] = $data['function'];
+        }
+
+        return $passVerified;
     }
 }
