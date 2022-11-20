@@ -40,14 +40,12 @@
         );
 
         $connection = new Connection;
-        $verify = $connection->loginVerify($user);
+        $verify = $connection->LoginVerify($user);
 
         if ($verify === true) {
             if ($_SESSION['function'] === 'admin' || $_SESSION['function'] === 'yes') {
-//                header('Location: admin.php');
-                echo 'Connecté';
+                header('Location: dashboard-users.php');
             } else {
-//                header('Location: my-account.php');
                 echo "Vous n'êtes pas autorisé";
             }
         } else {

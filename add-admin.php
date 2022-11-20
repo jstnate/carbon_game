@@ -45,12 +45,12 @@ require_once 'object/connection.php';
                 $_POST['function']
             );
 
-            if ($user->verifyInput() === true) {
+            if ($user->VerifyInput() === true) {
                 $connection = new Connection();
-                $verify = $connection->verifyUser($user);
+                $verify = $connection->VerifyUser($user);
 
                 if ($verify === false) {
-                    $insert = $connection->insertUser($user);
+                    $insert = $connection->InsertUser($user);
 
                     if ($insert) { ?>
                         <h2>Création réussie</h2>

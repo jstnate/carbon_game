@@ -11,7 +11,7 @@ class Connection
         $this->pdo = new PDO('mysql:dbname=carbon_db;host=127.0.0.1', 'root', 'root');
     }
 
-    public function verifyUser(User $user): bool
+    public function VerifyUser(User $user): bool
     {
         $prepare = 'SELECT * FROM user WHERE email = :email';
         $preExe = $this->pdo->prepare($prepare);
@@ -31,7 +31,7 @@ class Connection
         return $emailVerify;
     }
 
-    public function insertUser(User $user): bool
+    public function InsertUser(User $user): bool
     {
         $query = 'INSERT INTO user (name, email, password, function)
                     VALUES (:name, :email, :password, :function)';
@@ -46,7 +46,7 @@ class Connection
         ]);
     }
 
-    public function loginVerify(User $user): bool
+    public function LoginVerify(User $user): bool
     {
         $query = 'SELECT * FROM user WHERE email = :email';
         $statement = $this->pdo->prepare($query);
@@ -68,5 +68,47 @@ class Connection
         }
 
         return $passVerified;
+    }
+
+    public function GetUsers()
+    {
+        $query = 'SELECT * FROM user ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+
+    }
+
+    public function CreateAdmin($id)
+    {
+        $query = "UPDATE user SET function = 'admin' WHERE id = ?";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute(array($id));
+        return true;
+    }
+
+    public function Authorize($id)
+    {
+        $query = "UPDATE user SET function = 'yes' WHERE id = ?";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute(array($id));
+        return true;
+    }
+
+    public function Unauthorize($id)
+    {
+        $query = "UPDATE user SET function = 'no' WHERE id = ?";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute(array($id));
+        return true;
+    }
+
+    public function DeleteUser($id)
+    {
+        $query = "DELETE FROM user WHERE id = ?";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute(array($id));
+        return true;
     }
 }
