@@ -111,4 +111,19 @@ class Connection
         $statement->execute(array($id));
         return true;
     }
+
+    public function InsertCard(Card $card): bool
+    {
+        $query = 'INSERT INTO cards (card_name, carbon, description)
+                    VALUES (:card_name, :carbon, :description)';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'card_name' => $card->card_name,
+            'carbon' => $card->carbon,
+            'description' => $card->description,
+        ]);
+    }
+
 }
