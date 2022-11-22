@@ -112,7 +112,7 @@ class Connection
         return true;
     }
 
-    public function InsertCard(Card $card): bool
+    public function insertCard(Card $card): bool
     {
         $query = 'INSERT INTO cards (card_name, carbon, description)
                     VALUES (:card_name, :carbon, :description)';
@@ -124,6 +124,15 @@ class Connection
             'carbon' => $card->carbon,
             'description' => $card->description,
         ]);
+    }
+    public function GetCards()
+    {
+        $query = 'SELECT * FROM cards ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+
     }
 
 }

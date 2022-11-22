@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!doctype html>
 <html lang="en">
 <head>
@@ -22,6 +25,10 @@
 <?php
 
 // Sécurité Provisoire //
+
+if($_SESSION['function'] != 'yes' || $_SESSION['function'] != 'admin' ){
+    header('Location: login.php');
+}
 
 
 
