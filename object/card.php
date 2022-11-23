@@ -6,6 +6,7 @@ class Card
         public string $card_name,
         public float $carbon,
         public string $description,
+        public string $image,
     )
     {
     }

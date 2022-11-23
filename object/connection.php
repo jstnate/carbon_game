@@ -114,8 +114,8 @@ class Connection
 
     public function insertCard(Card $card): bool
     {
-        $query = 'INSERT INTO cards (card_name, carbon, description)
-                    VALUES (:card_name, :carbon, :description)';
+        $query = 'INSERT INTO cards (card_name, carbon, description, image_url)
+                    VALUES (:card_name, :carbon, :description, :image_url)';
 
         $statement = $this->pdo->prepare($query);
 
@@ -123,6 +123,7 @@ class Connection
             'card_name' => $card->card_name,
             'carbon' => $card->carbon,
             'description' => $card->description,
+            'image_url' => $card->image,
         ]);
     }
     public function GetCards()
