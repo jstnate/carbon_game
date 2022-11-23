@@ -26,7 +26,11 @@
 
 // Sécurité Provisoire //
 
-if($_SESSION['function'] != 'yes' || $_SESSION['function'] != 'admin' ){
+if($_SESSION['function'] == 'admin' || $_SESSION['function'] == 'yes'){
+    $autorisation = 1;
+}
+
+if($autorisation != 1){
     header('Location: login.php');
 }
 
