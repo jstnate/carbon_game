@@ -154,4 +154,14 @@ class Connection
         ]);
     }
 
+    public function GetMessages()
+    {
+        $query = 'SELECT * FROM messages ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+
+    }
+
 }
