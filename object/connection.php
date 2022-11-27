@@ -136,4 +136,22 @@ class Connection
 
     }
 
+    public function insertMessage(Message $message): bool
+    {
+        $query = 'INSERT INTO messages (family_name, name, email, society, subject, description)
+                    VALUES (:family_name, :name, :email, :society, :subject, :description)';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'family_name' => $message->family_name,
+            'name' => $message->name,
+            'email' => $message->email,
+            'society' => $message->society,
+            'subject' => $message->subject,
+            'description' => $message->description,
+
+        ]);
+    }
+
 }
