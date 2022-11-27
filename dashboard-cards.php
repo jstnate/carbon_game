@@ -26,7 +26,7 @@
     <h2><?php echo $card['carbon'];?></h2>
     <h2><?php echo $card['description'];?></h2>
     <img src="temporary/<?php echo $card['image_url'] ?>" alt="padimaj">
-    <a href="modify-card.php">Modifier La Carte</a>
+    <a href="modify-card.php?id=<?php echo $card['id']?>">Modifier La Carte</a>
 <?php endforeach; ?>
 
 </body>

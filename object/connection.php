@@ -164,4 +164,26 @@ class Connection
 
     }
 
+    public function GetSingleCard($id): bool|array
+    {
+        $get = "SELECT * FROM cards WHERE id = $id";
+        $request2 = $this->pdo->query($get);
+        return $request2->fetchAll();
+    }
+
+    public function ModifyCard(Card $card)
+    {
+        $query = 'UPDATE cards SET card_name = :card_name, carbon = :carbon, description = :description, image_url = :image_url WHERE id = :id';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'card_name' => $card->card_name,
+            'carbon' => $card->carbon,
+            'description' => $card->description,
+            'image_url' => $card->image,
+            'id' => $_POST['card_id'],
+        ]);
+    }
+
 }
