@@ -1,5 +1,13 @@
 <?php
 session_start();
+
+if($_SESSION['function'] == 'admin' || $_SESSION['function'] == 'yes'){
+    $autorisation = 1;
+}
+
+if($autorisation != 1){
+    header('Location: login.php');
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -23,7 +31,7 @@ $cards = $connection->GetSingleCard($id);
 ?>
 
 <?php    foreach($cards as $card): ?>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
 
         <?php if(!isset($finalcardname)){
             $finalcardname = $card['card_name'];
@@ -43,6 +51,12 @@ $cards = $connection->GetSingleCard($id);
         <label>Description: </label>
         <input type="text" name="description" value="<?php echo $finaldescription ?>">
 
+        <?php if(!isset($finalimage)){
+            $finalimage = $card['image_url'];
+        }?>
+        <label>Image: </label>
+        <input type="file" name="image_url">
+
         <input type="hidden" name="card_id" value="<?php echo $id ?>">
 
         <button type="submit">Modifier</button>
@@ -60,13 +74,17 @@ $cards = $connection->GetSingleCard($id);
                 $_POST['card_name'],
                 $_POST['carbon'],
                 $_POST['description'],
-                $card['image_url'],
+                $_FILES['image_url']['name'],
             );
+            $img_name = $_FILES['image_url']['name'];
+            $tmp_img_name = $_FILES['image_url']['tmp_name'];
+            $temporary = 'temporary/';
+            move_uploaded_file($tmp_img_name,$temporary.$img_name);
             print_r($card);
             $connection = new Connection();
             $modify = $connection->ModifyCard($card);
             if($modify){
-                echo "c'est good man";
+                header('Location: dashboard-cards.php');
             }else{
                 echo "C'est pas good man";
             }

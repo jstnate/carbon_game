@@ -27,6 +27,8 @@
     <h2><?php echo $card['description'];?></h2>
     <img src="temporary/<?php echo $card['image_url'] ?>" alt="padimaj">
     <a href="modify-card.php?id=<?php echo $card['id']?>">Modifier La Carte</a>
+    <br>
+    <a href="delete-card.php?id=<?php echo $card['id']?>">Supprimer La Carte</a>
 <?php endforeach; ?>
 
 </body>

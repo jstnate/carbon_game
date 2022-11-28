@@ -186,4 +186,11 @@ class Connection
         ]);
     }
 
+    public function DeleteCard($id)
+    {
+        $supp = "DELETE FROM cards WHERE id = $id";
+        $request2 = $this->pdo->query($supp);
+        return $request2->fetchAll();
+    }
+
 }

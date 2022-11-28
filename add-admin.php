@@ -2,6 +2,14 @@
 session_start();
 require_once 'object/user.php';
 require_once 'object/connection.php';
+
+if($_SESSION['function'] == 'admin'){
+    $autorisation = 1;
+}
+
+if($autorisation != 1){
+    header('Location: login.php');
+}
 ?>
 
 <!doctype html>
