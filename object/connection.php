@@ -111,4 +111,14 @@ class Connection
         $statement->execute(array($id));
         return true;
     }
+
+    public function GetCards()
+    {
+        $query = 'SELECT * FROM cards ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+
+    }
 }
