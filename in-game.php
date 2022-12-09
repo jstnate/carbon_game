@@ -1,3 +1,8 @@
+<?php
+require_once 'object/card.php';
+require_once 'object/connection.php';
+?>
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,6 +19,20 @@
     </div>
 
     <div id="game-player">
+    </div>
+
+    <div id="cards-input" style="display: none">
+    <h1>Cochez les cartes que vous avez en main</h1>
+    <form method="POST">
+    <?php
+        $connection = new Connection();
+        $cards = $connection->GetCards();
+        foreach ($cards as $card): ?>
+                <input type="checkbox" id="choose_cards">
+                <label for="choose_cards"> <?php echo $card['card_name']?> <label>
+        <?php endforeach; ?>
+        <button type="submit">Enregistrer</button>
+        </form>
     </div>
 </body>
 </html>
