@@ -112,6 +112,21 @@ class Connection
         return true;
     }
 
+    public function insertCard(Card $card): bool
+    {
+        $query = 'INSERT INTO cards (card_name, carbon, description, image_url)
+                    VALUES (:card_name, :carbon, :description, :image_url)';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'card_name' => $card->card_name,
+            'carbon' => $card->carbon,
+            'description' => $card->description,
+            'image_url' => $card->image,
+        ]);
+    }
+
     public function GetCards()
     {
         $query = 'SELECT * FROM cards ORDER BY id';
@@ -121,4 +136,63 @@ class Connection
         return $data;
 
     }
+
+    public function insertMessage(Message $message): bool
+    {
+        $query = 'INSERT INTO messages (family_name, name, email, society, subject, description)
+                    VALUES (:family_name, :name, :email, :society, :subject, :description)';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'family_name' => $message->family_name,
+            'name' => $message->name,
+            'email' => $message->email,
+            'society' => $message->society,
+            'subject' => $message->subject,
+            'description' => $message->description,
+
+        ]);
+    }
+
+    public function GetMessages()
+    {
+        $query = 'SELECT * FROM messages ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
+
+    }
+
+    public function GetSingleCard($id): bool|array
+    {
+        $get = "SELECT * FROM cards WHERE id = $id";
+        $request2 = $this->pdo->query($get);
+        return $request2->fetchAll();
+    }
+
+    public function ModifyCard(Card $card)
+    {
+        $query = 'UPDATE cards SET card_name = :card_name, carbon = :carbon, description = :description, image_url = :image_url WHERE id = :id';
+
+        $statement = $this->pdo->prepare($query);
+
+        return $statement->execute([
+            'card_name' => $card->card_name,
+            'carbon' => $card->carbon,
+            'description' => $card->description,
+            'image_url' => $card->image,
+            'id' => $_POST['card_id'],
+        ]);
+    }
+
+    public function DeleteCard($id)
+    {
+        $supp = "DELETE FROM cards WHERE id = $id";
+        $request2 = $this->pdo->query($supp);
+        return $request2->fetchAll();
+    }
+
+
 }
