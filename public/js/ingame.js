@@ -1,6 +1,7 @@
 'use strict'
 let turn = localStorage.getItem('TurnCount')
 let event = localStorage.getItem('EventFrequency')
+let playerCount = localStorage.getItem('PlayerCount')
 let currentTurn = 1
 
 let eventName = ['Protocole de Kyoto', 'Tempête Xynthia', 'Ouragan Katrina', 'Méga-feux de brousse australien', 'Gel des récoltes','Sécheresse intense', 'Replantation', 'Dégel du pergilisol', 'Canicule de 2003', 'Tornade', 'Pandémie de COVID-19', 'Hausse du niveau de la mer', 'Économie circulaire', 'Déforestation', 'Agriculture biologique', 'Accord de Paris sur le climat', 'Marée noire','Marée verte'    ]
@@ -9,6 +10,21 @@ let eventEffect = ['Tout le monde choisit une carte à défausser  et doit s\'ac
 
 let startGame = document.getElementById('game-start')
 let showEvent = document.getElementById('event-appear')
+let showPlayers = document.getElementById('game-player')
+
+console.log(playerCount)
+window.onload = showPlayer()
+function showPlayer() {
+    for (let i = 0; i < playerCount; i++) {
+        let name = document.createElement('h1')
+        name.innerHTML = localStorage.getItem('Player-' + i)
+        console.log(name)
+        showPlayers.appendChild(name)
+
+    }
+}
+
+
 startGame.addEventListener('click', (e) => {
     e.preventDefault()
     startGame.innerHTML = 'Tour suivant'

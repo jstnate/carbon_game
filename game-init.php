@@ -33,15 +33,10 @@
             <option value="5">5 / 5</option>
         </select>
 
-<!--        <label for="cards">Choisis tes cartes</label>-->
-<!---->
-<!--        --><?php
-//            $connection = new Connection();
-//            $cards = $connection->GetCards();
-//
-//            foreach ($cards as $card): ?>
-<!--                -->
-<!--        --><?php //endforeach; ?>
+
+        <div id="playerAppears">
+
+        </div>
 
         <button type="submit">Set up le jeu</button>
     </form>
