@@ -40,12 +40,23 @@ startGame.addEventListener('click', (e) => {
     }
 })
 
+let eventTitle = document.createElement('h2')
+let eventText = document.createElement('p')
+
 function turnEvent() {
+    eventTitle.innerHTML = ''
+    eventText.innerHTML = ''
     let x = Math.floor(Math.random() * 10/2)
     if(x > event) {
+        eventText.innerHTML = 'Aucun évènement pendant ce tour !'
         console.log("pas d'évent")
     } else {
         let i = Math.floor(Math.random() * 18)
+
+        eventTitle.innerHTML = eventName[i]
+        eventText.innerHTML = eventEffect[i]
+        showEvent.appendChild(eventTitle)
+        showEvent.appendChild(eventText)
         console.log(eventName[i])
         console.log(eventEffect[i])
     }
