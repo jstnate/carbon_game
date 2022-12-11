@@ -4,6 +4,8 @@ let playerList = []
 let player = document.getElementById('player')
 let turn;
 let event;
+let avatarList = ["images/avatar1.PNG","images/avatar2.PNG","images/avatar3.PNG","images/avatar4.PNG", "images/avatar5.PNG", "images/avatar6.PNG", "images/avatar 7.PNG", "images/avatar 8.PNG", "images/avatar 9.PNG"]
+let avatarNumber = 9
 // let playerCount = 0
 
 let eventName = ['Protocole de Kyoto', 'Tempête Xynthia', 'Ouragan Katrina', 'Méga-feux de brousse australien', 'Gel des récoltes','Sécheresse intense', 'Replantation', 'Dégel du pergilisol', 'Canicule de 2003', 'Tornade', 'Pandémie de COVID-19', 'Hausse du niveau de la mer', 'Économie circulaire', 'Déforestation', 'Agriculture biologique', 'Accord de Paris sur le climat', 'Marée noire','Marée verte'    ]
@@ -19,13 +21,26 @@ playerForm.onsubmit = (e) => {
     e.preventDefault()
     playerList.push(player.value)
     let PlayerName = playerList[z]
+    let choice = Math.floor(Math.random() * avatarNumber)
+    avatarNumber -=1
+    console.log(choice)
+    let playerAvatar = avatarList[choice]
+    avatarList.splice(choice, 1)
+    console.log(avatarList)
+    let playerImg = document.createElement('img')
+    playerImg.src = playerAvatar
     let name = document.createElement("h1")
     name.innerHTML = PlayerName
     playerAppears.appendChild(name)
+    playerAppears.appendChild(playerImg)
     z++
     // playerCount++
     console.log(playerList)
+    if(avatarNumber == 0){
+        playerForm.style.display ="none"
+    }
 }
+
 
 
 setUpForm.onsubmit = (e) => {

@@ -52,7 +52,6 @@ function turnEvent() {
         console.log("pas d'évent")
     } else {
         let i = Math.floor(Math.random() * 18)
-
         eventTitle.innerHTML = eventName[i]
         eventText.innerHTML = eventEffect[i]
         showEvent.appendChild(eventTitle)
