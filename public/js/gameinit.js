@@ -27,11 +27,13 @@ setUpForm.onsubmit = (e) => {
 
 start.addEventListener('click', () => {
     localStorage.clear()
-   for (let i = 0; i < playerList.length; i++) {
-       localStorage.setItem('Player-' + i, playerList[i])
+   for (let i = 1; i <= playerList.length; i++) {
+       localStorage.setItem('Player-' + i, playerList[i-1])
    }
    localStorage.setItem('TurnCount', turn)
    localStorage.setItem('EventFrequency', event)
+    localStorage.setItem('PlayerCount', playerList.length)
+    localStorage.setItem('CurrentNumber', 1)
 })
 
 

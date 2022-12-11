@@ -17,9 +17,5 @@
 
     <div id="game-player">
     </div>
-
-    <div id="cards-input" style="display: none">
-
-    </div>
 </body>
 </html>
