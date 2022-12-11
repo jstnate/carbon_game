@@ -35,7 +35,7 @@ startGame.addEventListener('click', (e) => {
         document.getElementById('event-appear').innerHTML = ""
         let showResult = document.createElement('a')
         showResult.innerHTML = "Voir les résultat"
-        showResult.href = "result.php"
+        showResult.href = "end-game.php"
         document.getElementById('event-appear').appendChild(showResult)
     }
 })
@@ -52,7 +52,6 @@ function turnEvent() {
         console.log("pas d'évent")
     } else {
         let i = Math.floor(Math.random() * 18)
-
         eventTitle.innerHTML = eventName[i]
         eventText.innerHTML = eventEffect[i]
         showEvent.appendChild(eventTitle)
