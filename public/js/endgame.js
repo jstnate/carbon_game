@@ -2,7 +2,7 @@
 
 let form = document.getElementById('score-count')
 let values= []
-let score = 0
+let playerScore = 0
 
 let playerCount = localStorage.getItem('PlayerCount')
 let currentNumber = localStorage.getItem('CurrentNumber')
@@ -24,31 +24,38 @@ window.onload = () => {
 }
 
 form.onsubmit = () => {
-    document.querySelectorAll("input[type='checkbox']:checked").forEach(function (item)  {
+    document.querySelectorAll("input[type='checkbox']:checked").forEach(function (item) {
         let checked = parseInt(item.value);
         console.log(checked)
         values.push(checked);
     });
 
-    score = values.reduce((acc, val) => {
+    playerScore = values.reduce((acc, val) => {
         return acc + val;
     }, 0)
+
+    let playerName = localStorage.getItem('Player-' + currentNumber)
+
+    let player = new Player(playerName, playerScore)
+
+    localStorage.setItem('Player-' + currentNumber, JSON.stringify(player))
 
     if (currentNumber === playerCount) {
         text.innerHTML = ''
         currentPlayer.innerHTML = ''
         actionDisplay.innerHTML = ''
         let a = document.createElement('a')
-        a.href = '#'
+        a.href = 'results.php'
         a.innerHTML = 'Voir le classement'
         actionDisplay.appendChild(a)
     } else {
         currentNumber = parseInt(currentNumber) + 1
         localStorage.setItem('CurrentNumber', currentNumber)
     }
-    console.log(score)
-};
+}
 
+// let test = JSON.parse(localStorage.getItem('Player-' + currentNumber))
+// console.log(test['playerName'])
 
 
 

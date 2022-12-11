@@ -35,7 +35,7 @@ startGame.addEventListener('click', (e) => {
         document.getElementById('event-appear').innerHTML = ""
         let showResult = document.createElement('a')
         showResult.innerHTML = "Voir les résultat"
-        showResult.href = "result.php"
+        showResult.href = "end-game.php"
         document.getElementById('event-appear').appendChild(showResult)
     }
 })
