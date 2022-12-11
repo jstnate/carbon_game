@@ -16,6 +16,7 @@ require_once 'object/connection.php';
     <body>
         <h1 id="result-title">Cochez les cartes que vous avez en main</h1>
         <h2 id="current-player"></h2>
+        <img src="" alt="" id="current-avatar">
         <div id="action-display">
             <form id="score-count" method="POST">
                 <?php

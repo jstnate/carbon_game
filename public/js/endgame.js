@@ -7,26 +7,29 @@ let playerScore = 0
 let playerCount = localStorage.getItem('PlayerCount')
 let currentNumber = localStorage.getItem('CurrentNumber')
 let currentPlayer = document.getElementById('current-player')
+let currentAvatar = document.getElementById('current-avatar')
 let text = document.getElementById('result-title')
 
 let actionDisplay = document.getElementById('action-display')
 
 class Player
 {
-    constructor(name, score) {
+    constructor(name, score, avatar) {
         this.playerName = name;
         this.playerScore = score;
+        this.playerAvatar = avatar;
     }
 }
 
 window.onload = () => {
     currentPlayer.innerHTML = localStorage.getItem('Player-' + currentNumber)
+    currentAvatar.src = localStorage.getItem('Avatar-' + currentNumber)
 }
 
 form.onsubmit = () => {
     document.querySelectorAll("input[type='checkbox']:checked").forEach(function (item) {
         let checked = parseInt(item.value);
-        console.log(checked)
+        // console.log(checked)
         values.push(checked);
     });
 
@@ -35,14 +38,16 @@ form.onsubmit = () => {
     }, 0)
 
     let playerName = localStorage.getItem('Player-' + currentNumber)
+    let playerAvatar = localStorage.getItem('Avatar-' + currentNumber)
 
-    let player = new Player(playerName, playerScore)
+    let player = new Player(playerName, playerScore, playerAvatar)
 
     localStorage.setItem('Player-' + currentNumber, JSON.stringify(player))
 
     if (currentNumber === playerCount) {
         text.innerHTML = ''
         currentPlayer.innerHTML = ''
+        currentAvatar.style.display = 'none'
         actionDisplay.innerHTML = ''
         let a = document.createElement('a')
         a.href = 'results.php'

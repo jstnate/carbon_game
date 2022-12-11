@@ -15,7 +15,7 @@ window.onload = () => {
     )
 
     showWinners()
-    console.log(objects)
+    // console.log(objects)
 }
 
 function showWinners() {
@@ -25,18 +25,24 @@ function showWinners() {
         objectName.innerHTML = objects[i].playerName
         let objectScore = document.createElement('p')
         objectScore.innerHTML = objects[i].playerScore
+        let objectAvatar = document.createElement('img')
+        objectAvatar.src = objects[i].playerAvatar
         object.appendChild(objectName)
         object.appendChild(objectScore)
-        console.log(objects[i])
+        object.appendChild(objectAvatar)
+        // console.log(objects[i])
     }
 
-    for (let i = 3; i <= objects.length; i++) {
+    for (let i = 3; i < objects.length; i++) {
         let objectName = document.createElement('h3')
         objectName.innerHTML = objects[i].playerName
         let objectScore = document.createElement('p')
         objectScore.innerHTML = objects[i].playerScore
+        let objectAvatar = document.createElement('img')
+        objectAvatar.src = objects[i].playerAvatar
         others.appendChild(objectName)
         others.appendChild(objectScore)
+        others.appendChild(objectAvatar)
     }
 
 }
