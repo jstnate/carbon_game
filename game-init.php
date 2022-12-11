@@ -14,6 +14,10 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div id="maximum" style="display: none">
+        <h1>Nombre maximum de joueur atteint</h1>
+    </div>
     <form id="player-form" action="">
         <label for="player">Créer un joueur</label>
         <input type="text" name="player" id="player">
