@@ -10,25 +10,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="public/css/style.css">
     <title>Connectez-vous !</title>
 </head>
 <body>
-    <h1>Connectez-vous !</h1>
+    <div class="login">
+        <h1>Connectez-vous !</h1>
 
-    <form method="POST">
-        <label for="email">Email</label>
-        <input type="email" name="email" id="email" placeholder="mail@gmail.com">
-        <label for="password">Mot de passe</label>
-        <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
+        <form method="POST">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="mail@gmail.com">
+            <label for="password">Mot de passe</label>
+            <input type="password" name="password" id="password" placeholder="Entrez votre mot de passe">
 
-        <?php if(isset($_GET['error']) && $_GET['error'] == 1) { ?>
-            <div class="errorLog">
-                <h3>Incorrect mail or password !</h3>
-                <p>Please enter an email address and a corresponding password</p>
-            </div>
-        <?php } ?>
-        <button type="submit">Se connecter</button>
-    </form>
+            <?php if(isset($_GET['error']) && $_GET['error'] == 1) { ?>
+                <div class="errorLog">
+                    <h3>Incorrect mail or password !</h3>
+                    <p>Please enter an email address and a corresponding password</p>
+                </div>
+            <?php } ?>
+            <button type="submit">Se connecter</button>
+        </form>
+    </div>
 
     <?php
     if ($_POST) {
