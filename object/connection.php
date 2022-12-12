@@ -112,7 +112,6 @@ class Connection
         return true;
     }
 
-
     // Partenaires 
     public function insertPartner(Partner $partner): bool
     {
@@ -128,7 +127,7 @@ class Connection
     {
         $query = 'SELECT * FROM partner ORDER BY id';
     }
-    
+
     public function insertCard(Card $card): bool
     {
         $query = 'INSERT INTO cards (card_name, carbon, description, image_url)
@@ -143,6 +142,7 @@ class Connection
             'image_url' => $card->image,
         ]);
     }
+
     public function GetCards()
     {
         $query = 'SELECT * FROM cards ORDER BY id';
@@ -188,6 +188,7 @@ class Connection
         return $data;
 
     }
+
 
     public function GetSingleCard($id): bool|array
     {
