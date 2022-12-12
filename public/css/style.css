@@ -1,9 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=KoHo:wght@400;500;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: sans-serif;
+  font-family: "Koho", sans-serif;
+}
+
+.login-bg {
+  background-image: url("../../images/backgrounds/login-bg.jpg");
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position-x: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-bg .login {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 90%;
+  padding: 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.login-bg .login__title {
+  width: 100%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 40px;
+}
+.login-bg .login__title h1 {
+  font-weight: bold;
+  font-size: 24px;
+}
+.login-bg .login__title p {
+  font-size: 12px;
+}
+.login-bg .login__form {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.login-bg .login__form label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+.login-bg .login__form input {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid rgb(0, 0, 0);
+  font-size: 14px;
+}
+.login-bg .login__form input:focus {
+  outline: none;
+  border: 1px solid #6DB86C;
+}
+.login-bg .login__form .errorLog h3 {
+  color: rgb(255, 0, 0);
+  font-size: 16px;
+}
+.login-bg .login__form .errorLog p {
+  font-size: 14px;
+}
+.login-bg .login__form button {
+  padding: 0.8em 2em;
+  border-radius: 20px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #6DB86C;
+  border: 2px solid #6DB86C;
+  margin-top: 50px;
+}
+.login-bg .login__form button:hover {
+  background-color: #ffffff;
+  border: 2px solid #6DB86C;
+  color: #6DB86C;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 550px) {
+  .login-bg .login {
+    width: 500px;
+    height: 60vh;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
