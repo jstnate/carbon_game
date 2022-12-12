@@ -10,6 +10,7 @@ class Card
     )
     {
     }
+
     public function verifyInput(): bool
     {
         $isValid = true;
@@ -23,3 +24,4 @@ class Card
 }
 
 ?>
+
