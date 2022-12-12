@@ -57,6 +57,12 @@ $cards = $connection->GetSingleCard($id);
         <label>Image: </label>
         <input type="file" name="image_url">
 
+        <?php if(!isset($finaltype)){
+            $finaltype = $card['type'];
+        }?>
+        <label>Catégorie: </label>
+        <input type="text" name="type" value="<?php echo $finaltype ?>" >
+
         <input type="hidden" name="card_id" value="<?php echo $id ?>">
 
         <button type="submit">Modifier</button>
@@ -75,6 +81,7 @@ $cards = $connection->GetSingleCard($id);
                 $_POST['carbon'],
                 $_POST['description'],
                 $_FILES['image_url']['name'],
+                $_POST['type'],
             );
             $img_name = $_FILES['image_url']['name'];
             $tmp_img_name = $_FILES['image_url']['tmp_name'];

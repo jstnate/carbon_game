@@ -22,24 +22,32 @@ function showPlayer() {
         name.innerHTML = localStorage.getItem('Player-' + i)
         let avatar = document.createElement('img')
         avatar.src = localStorage.getItem('Avatar-' + i)
-        showPlayers.appendChild(name)
-        showPlayers.appendChild(avatar)
+        let playerdiv = document.createElement('div')
+        playerdiv.classList.add('player-div')
+        playerdiv.appendChild(avatar)
+        playerdiv.appendChild(name)
+        showPlayers.appendChild(playerdiv)
     }
 }
 
 
 startGame.addEventListener('click', (e) => {
     e.preventDefault()
+    document.getElementById('game-border').style.border="none"
     startGame.innerHTML = 'Tour suivant'
+    document.getElementById('gm-logo').style.display="none"
     if (currentTurn < turn) {
         turnEvent()
         currentTurn += 1
     } else {
-        document.getElementById('event-appear').innerHTML = ""
+        startGame.style.display="none"
+        showEvent.classList.add('event-hidden')
+        showEvent.classList.remove('event-shown')
+        document.getElementById('gm-logo').style.display="block"
         let showResult = document.createElement('a')
         showResult.innerHTML = "Voir les résultat"
         showResult.href = "end-game.php"
-        document.getElementById('event-appear').appendChild(showResult)
+        document.getElementById('game-border').appendChild(showResult)
     }
 })
 
@@ -47,6 +55,8 @@ let eventTitle = document.createElement('h2')
 let eventText = document.createElement('p')
 
 function turnEvent() {
+    showEvent.classList.remove('event-hidden')
+    showEvent.classList.add('event-shown')
     eventTitle.innerHTML = ''
     eventText.innerHTML = ''
     let x = Math.floor(Math.random() * 10/2)
