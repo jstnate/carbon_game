@@ -1,4 +1,6 @@
 @use "base/reset";
 @use "pages/login";
 @use "pages/contact";
-@use "components/navbar-contact";
+@use "pages/dashboard_admin";
+@use "layouts/navbar-contact";
+@use "layouts/admin-header";

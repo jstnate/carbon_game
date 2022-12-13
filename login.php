@@ -47,7 +47,7 @@
 
         if ($verify === true) {
             if ($_SESSION['function'] === 'admin' || $_SESSION['function'] === 'yes') {
-                header('Location: dashboard-users.php');
+                header('Location: dashboard-partners.php');
             } else {
                 echo "Vous n'êtes pas autorisé";
             }

@@ -1,0 +1,195 @@
+    .admin {
+        display: flex;
+        align-items: center;
+        background-color: #FBFCF4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 10vh;
+        padding: 0 2em;
+        box-shadow: 0 5px 10px rgba($color: #000000, $alpha: .1);
+
+        &__responsive-logo {
+            height: 6vh;
+            aspect-ratio: 4/3;
+        }
+    
+        &__nav {
+            position: absolute;
+            right: -300px;
+            top: 10vh;
+            height: 90vh;
+            width: 300px;
+            background-color: #FBFCF4;
+            transition: all 0.5s;
+
+            &__list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-direction: column;
+                gap: 25px;
+                margin-top: 10vh;
+                transition: all .5s;
+
+                &__element {
+    
+                    &__div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+    
+                        button {
+                            font-size: 20px;
+                            font-weight: bold;
+                            text-decoration: none;
+                            color: #000000;
+                            background: none;
+                            border: none;
+
+                            &:hover {
+                                cursor: pointer;
+                                color: #6DB96C;
+                                
+                                i {
+                                    color: #6DB96C;
+                                }
+                            }
+    
+                            i {
+                                font-size: 20px;
+                                color: #000000;
+                                margin-left: 20px;
+    
+                                &.shown {
+                                    transform: rotate(-180deg);
+                                }
+                            }
+                        }
+    
+                        .admin__nav__list__element__link {
+                            display: none;
+                            transform: translateX(30px);
+
+                            &:hover {
+                                cursor: pointer;
+                                color: #6DB96C;
+                            }
+    
+                            &.shown {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    &__logo {
+                        height: 6vh;
+                        aspect-ratio: 4/3;
+                    } 
+    
+                    &__link {
+                        font-size: 20px;
+                        font-weight: bold;
+                        text-decoration: none;
+                        color: #000000;
+
+                        &:hover {
+                            cursor: pointer;
+                            color: #6DB96C;
+                        }
+                    }
+                }
+    
+            }
+        }
+    
+        &__nav-shown {
+            right: 0;
+
+            .admin__nav__list {
+    
+                .admin__nav__logo {
+                    display: none;
+                }
+            }
+        }
+    
+        &__burger-hidden {
+            width: 40px;
+            height: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+    
+            hr {
+                width: 100%;
+                height: 4px;
+                border: none;
+                background-color: #000000;
+                border-radius: 20px;
+                transition: all .4s;
+            }
+    
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    
+        &__burger-hidden.admin__burger-shown {
+            
+            .admin__burger__first {
+                transform:  translateY(13px) rotate(-45deg);
+            }
+    
+            .admin__burger__middle {
+                display: none;
+            }
+    
+            .admin__burger__last {
+                transform: translateY(-13px) rotate(45deg);
+            }
+        }
+    }
+
+@media screen and (min-width: 1024px) {
+        .admin {
+            &__responsive-logo {
+                display: none;
+            }
+
+            &__burger-hidden {
+                display: none;
+            }
+
+            &__nav {
+                position: static;
+                height: auto;
+                width: 100%;
+                padding: 1em 3em;
+
+                &__list {
+                    flex-direction: row;
+                    margin: 0;
+
+                    &__element {
+    
+                        &__div {
+                            .admin__nav__list__element__link {
+                                position: absolute;
+                                right: 8%;
+                                top: 6vh;
+                                display: none;
+                                transform: translateX(30px);
+        
+                                &.shown {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }

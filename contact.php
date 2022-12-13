@@ -1,6 +1,3 @@
-<?php require "public/component/navbar_contact.php"; ?>
-
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -11,6 +8,7 @@
     <title>Page Contact</title>
 </head>
 <body>
+    <?php require "public/includes/navbar_contact.php"; ?>
     <main>
         <div class="container_all">
             <div class="container_title">
