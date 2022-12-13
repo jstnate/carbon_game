@@ -35,8 +35,8 @@ playerForm.onsubmit = (e) => {
     playerImg.src = playerAvatar
     let name = document.createElement("h1")
     name.innerHTML = PlayerName
-    playerdiv.appendChild(name)
     playerdiv.appendChild(playerImg)
+    playerdiv.appendChild(name)
     playerAppears.appendChild(playerdiv)
     z++
     // playerCount++

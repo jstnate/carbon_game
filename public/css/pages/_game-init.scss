@@ -6,8 +6,6 @@
     font-size: 29px;
   }
 
-
-
   .player-form {
     position: relative;
     display: flex;
@@ -97,6 +95,30 @@
       position: absolute;
       right: -30px;
       bottom: 0;
+    }
+  }
+
+  .player-appears{
+    display: flex;
+    flex-direction: column;
+    background: #FFFFFF;
+    border: 1px solid #6DB96C;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    .player-div{
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      text-align: center;
+    }
+    img{
+      height: 36px;
+      width: 36px;
+      align-items: center;
+    }
+    h2{
+      text-align: center;
+      font-size: 22px ;
     }
   }
 }

@@ -52,13 +52,15 @@
         </div>
 
 
-        <div id="playerAppears">
-
-        </div>
 
         <button class="responsive-button" type="submit">Set up le jeu</button>
         <button class="phone-button" type="submit"><img src="images/icons/checked-white1.png" alt=""></button>
     </form>
+
+    <div id="playerAppears" class="player-appears">
+        <h2>Récapitulatif de la configuration</h2>
+    </div>
+
 
     <a href="in-game.php" id="start">Lancer la partie</a>
 </body>
