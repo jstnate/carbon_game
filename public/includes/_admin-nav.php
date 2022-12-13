@@ -1,12 +1,12 @@
 <header class="admin">
-    <img src="images/avatars/avatar3.PNG" alt="" class="admin__responsive-logo">
+    <img src="../images/backgrounds/logo.png" alt="" class="admin__responsive-logo">
 
     <nav class="admin__nav" id="admin-menu">
         <ul class="admin__nav__list">
             <li class="admin__nav__list__element"><a href="" class="admin__nav__list__element__link">Utilisateurs</a></li>
             <li class="admin__nav__list__element"><a href="" class="admin__nav__list__element__link">Ressources</a></li>
 
-            <li class="admin__nav__list__element admin__nav__logo"><img src="images/avatars/avatar3.PNG" alt="Logo" class="admin__nav__list__element__logo"></li>
+            <li class="admin__nav__list__element admin__nav__logo"><img src="../images/backgrounds/logo.png" alt="Logo" class="admin__nav__list__element__logo"></li>
 
             <li class="admin__nav__list__element"><a href="" class="admin__nav__list__element__link">Partenaires</a></li>
             <li class="admin__nav__list__element">
