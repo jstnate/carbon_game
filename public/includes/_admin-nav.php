@@ -11,10 +11,9 @@
 
             <li class="admin__nav__list__element"><a href="" class="admin__nav__list__element__link">Partenaires</a></li>
             <li class="admin__nav__list__element">
-                <div class="admin__nav__list__element__div" id="logout-btn">
-                    <span><?= $_SESSION['user_name']?><i class="fa-solid fa-chevron-down" id="logout-icon"></i></span>
-                    <a href="" class="admin__nav__list__element__link" id="logout-message">Se déconnecter</a>
-                </div>
+                <form class="admin__nav__list__element__div" id="logout-btn" method="POST" action="logout.php">
+                    <button type="submit"><?= $_SESSION['user_name']?><i class="fa-solid fa-right-from-bracket" id="logout-icon"></i></button>
+                </form>
             </li>
         </ul>
     </nav>

@@ -61,8 +61,6 @@
             header('Location: login.php?error=1');
         };
 
-        echo $_SESSION['function'];
-
     }
     ?>
 </body>

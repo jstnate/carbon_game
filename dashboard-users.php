@@ -21,8 +21,13 @@
 <body class="dashboard">
     <?php
         if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
+            $verify = 1;
             $connection = new Connection();
             $users = $connection->GetUsers();
+        }
+        if($verify != 1){
+            header('Location:login.php');
+        }
 
             require_once 'public/includes/_admin-nav.php';
             ?>
@@ -78,11 +83,8 @@
 
                 <?php endforeach; ?>
             </div>
-        <?php } else {
-            echo "<h1 class='unauthorized-message'>Vous n'êtes pas autorisé à accéder à cette page</h1>";
-        }
-
-        if (isset($_POST['create-admin'])) {
+        
+        <?php if (isset($_POST['create-admin'])) {
             $connection = new Connection();
             $id = $_POST['id'];
             $connection->CreateAdmin($id);

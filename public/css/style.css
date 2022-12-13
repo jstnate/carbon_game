@@ -328,25 +328,27 @@
   flex-direction: column;
   align-items: center;
 }
-.dashboard .admin__nav__list__element__div span {
+.dashboard .admin__nav__list__element__div button {
   font-size: 20px;
   font-weight: bold;
   text-decoration: none;
   color: #000000;
+  background: none;
+  border: none;
 }
-.dashboard .admin__nav__list__element__div span:hover {
+.dashboard .admin__nav__list__element__div button:hover {
   cursor: pointer;
   color: #6DB96C;
 }
-.dashboard .admin__nav__list__element__div span:hover i {
+.dashboard .admin__nav__list__element__div button:hover i {
   color: #6DB96C;
 }
-.dashboard .admin__nav__list__element__div span i {
+.dashboard .admin__nav__list__element__div button i {
   font-size: 20px;
   color: #000000;
   margin-left: 20px;
 }
-.dashboard .admin__nav__list__element__div span i.shown {
+.dashboard .admin__nav__list__element__div button i.shown {
   transform: rotate(-180deg);
 }
 .dashboard .admin__nav__list__element__div .admin__nav__list__element__link {
