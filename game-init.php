@@ -25,7 +25,13 @@
 
     <form id="setup-form" action="">
         <label for="turn">Nombre de tour</label>
-        <input type="text" name="turn" id="turn">
+        <select name="turn" id="turn">
+            <option value="2">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+            <option value="10">10</option>
+        </select>
 
         <label for="event">Fréquence des événements</label>
         <select name="event" id="event">

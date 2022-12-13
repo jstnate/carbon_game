@@ -17,6 +17,7 @@
         <input type="number" name="carbon_number" placeholder="Indice Carbon">
         <input type="textarea" name="card_description" placeholder="Description">
         <input type="file" accept="image/png, image/jpeg" name="image_url">
+        <input type="text" name="type" placeholder="catégorie">
         <button type="Submit">Enregistrer la carte</button>
     </form>
 
@@ -27,7 +28,7 @@
 
 // Sécurité Provisoire //
 
-if($_SESSION['function'] == 'admin' || $_SESSION['function'] == 'yes'){
+if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
     $autorisation = 1;
 }
 
@@ -47,6 +48,7 @@ require_once 'object/card.php';
                     $_POST['carbon_number'],
                     $_POST['card_description'],
                     $_FILES['image_url']['name'],
+                    $_POST['type'],
             );
             $img_name = $_FILES['image_url']['name'];
             $tmp_img_name = $_FILES['image_url']['tmp_name'];
