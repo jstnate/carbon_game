@@ -1,0 +1,105 @@
+.game-init-container{
+  background: #FBFCF4;
+  h1{
+    padding-top: 31px;
+    text-align: center;
+    font-size: 29px;
+  }
+
+
+
+  .player-form {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 20px auto 0;
+
+    .name-input {
+      margin-bottom: 10px;
+      width: 70%;
+      input {
+        border: 2px solid #6DB86C;
+        border-radius: 15px;
+        height: 2.5em;
+        width: 236px;
+      }
+      label {
+        margin: 5px 10px;
+        color: #8D8A8A;
+        font-size: 12px;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 30px;
+      bottom: 8px;
+      background: #6DB86C;
+      border: 2px solid #FFFFFF;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .setup-form{
+    gap: 16px;
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    margin: 20px auto;
+    align-items: center;
+    position: relative;
+
+    .setup-input{
+      display: flex;
+      flex-direction: column;
+    }
+    select{
+
+      width: 110px;
+      background: #FFFFFF;
+      border: 2px solid #6DB96C;
+      box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      height: 2.5rem;
+      padding: 0.5em 1em;
+    }
+    label{
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      top: -5px;
+      font-size: 12px;
+      white-space: nowrap;
+      color: #8D8A8A;
+    }
+    .responsive-button{
+      display: none;
+    }
+    button{
+      background: #6DB86C;
+      border: 2px solid #FFFFFF;
+      border-radius: 50%;
+      width: 44px;
+      height: 44px;
+      padding: 1em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: -30px;
+      bottom: 0;
+    }
+  }
+}
+
+
+

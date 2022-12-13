@@ -13,7 +13,11 @@ let startGame = document.getElementById('game-start')
 let showEvent = document.getElementById('event-appear')
 let showPlayers = document.getElementById('game-player')
 
+let quit = document.getElementById('quit-game')
 
+quit.addEventListener("click", () =>{
+    localStorage.clear()
+})
 console.log(playerCount)
 window.onload = showPlayer()
 function showPlayer() {
@@ -33,7 +37,9 @@ function showPlayer() {
 
 startGame.addEventListener('click', (e) => {
     e.preventDefault()
-    document.getElementById('game-border').style.border="none"
+    if(window.innerWidth < 760){
+        document.getElementById('game-border').style.border="none"
+    }
     startGame.innerHTML = 'Tour suivant'
     document.getElementById('gm-logo').style.display="none"
     if (currentTurn < turn) {
@@ -48,6 +54,11 @@ startGame.addEventListener('click', (e) => {
         showResult.innerHTML = "Voir les résultat"
         showResult.href = "end-game.php"
         document.getElementById('game-border').appendChild(showResult)
+
+    }
+    if(window.innerWidth > 760){
+        startGame.classList.add('white-start')
+        showEvent.appendChild(startGame)
     }
 })
 

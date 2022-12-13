@@ -17,7 +17,7 @@
 
     <?php require_once 'public/includes/ingame-navbar.php'; ?>
     <div class="game-border" id="game-border">
-        <img class="logo" id="gm-logo" src="images/logo.png" alt="LOGO ROND">
+        <img class="logo" id="gm-logo" src="images/logos/logo.png" alt="LOGO ROND">
 
         <div class='event-hidden' id="event-appear">
 

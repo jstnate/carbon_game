@@ -17,6 +17,9 @@
   background: #FBFCF4;
   box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.25);
 }
+.gm-navbar .quit-computer {
+  display: none;
+}
 .gm-navbar .quit-button {
   border-radius: 50%;
   width: 49px;
@@ -26,7 +29,30 @@
   align-items: center;
   justify-content: center;
 }
+.gm-navbar .quit-button img {
+  display: flex;
+}
 
+@media screen and (min-width: 760px) {
+  .gm-navbar {
+    background: #6DB86C;
+  }
+  .gm-navbar .quit-button {
+    display: none;
+  }
+  .gm-navbar .quit-computer {
+    display: block;
+    padding: 0.5em 1.5em;
+    background: #FFFFFF;
+    border-radius: 15px;
+  }
+  .gm-navbar .quit-computer a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+  }
+}
 .ingame-bg {
   background: #FBFCF4;
   overflow: hidden;
@@ -88,6 +114,7 @@
 .ingame-bg .game-border #game-player img {
   width: 80px;
   aspect-ratio: 1/1;
+  background: none;
 }
 .ingame-bg .game-border #game-player .player-div {
   display: flex;
@@ -95,6 +122,33 @@
   align-items: center;
 }
 
+@media screen and (min-width: 760px) {
+  .ingame-bg {
+    background-image: url("../../images/backgrounds/lianes2-8.png");
+    background-size: 115%;
+    background-position-x: 65%;
+    background-position-y: 12%;
+  }
+  .ingame-bg .game-border {
+    border-width: 1px;
+  }
+  .ingame-bg .game-border .event-shown {
+    max-width: 60vw;
+    background: #6DB96C;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.38);
+  }
+  .ingame-bg .game-border #game-start {
+    border-radius: 10px;
+  }
+  .ingame-bg .game-border #game-start.white-start {
+    background: white;
+    color: #6DB96C;
+    border-radius: 25px;
+    padding: 0.5em 1.5em;
+  }
+}
 .caroussel {
   display: flex;
   align-items: center;
@@ -116,6 +170,7 @@
 }
 #winner-div #winners {
   position: relative;
+  width: 100vw;
 }
 #winner-div #winners .first {
   position: absolute;
@@ -125,14 +180,20 @@
   justify-content: space-between;
   width: 100px;
   height: 100px;
-  left: 154px;
-  top: 186px;
+  left: auto;
+  right: auto;
+  top: 0;
+  transform: translateX(150%);
 }
 #winner-div #winners .first h2 {
   text-align: center;
   font-size: 24px;
 }
 #winner-div #winners .first p {
+  margin-top: 10px;
+  font-weight: bold;
+  padding: 1em 2em;
+  color: #6DB96C;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +202,7 @@
   left: 127px;
   top: 309px;
   background: #FFFFFF;
-  border: 1px solid #6DB96C;
+  border: 1.5px solid #6DB96C;
   border-radius: 25px;
 }
 #winner-div #winners .second {
@@ -149,18 +210,28 @@
   width: 100px;
   height: 100px;
   left: 54px;
-  top: 378px;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 #winner-div #winners .second h2 {
   text-align: center;
   font-size: 24px;
 }
 #winner-div #winners .second p {
+  margin-top: 10px;
+  width: 135px;
+  height: 40px;
+  font-weight: bold;
+  padding: 1em 2em;
+  color: #6DB96C;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
-  border: 1px solid #6DB96C;
+  border: 1.5px solid #6DB96C;
   border-radius: 25px;
 }
 #winner-div #winners .third {
@@ -168,26 +239,37 @@
   width: 100px;
   height: 100px;
   left: 254px;
-  top: 378px;
+  top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 #winner-div #winners .third h2 {
   text-align: center;
   font-size: 24px;
 }
 #winner-div #winners .third p {
+  margin-top: 10px;
+  width: 135px;
+  height: 40px;
+  font-weight: bold;
+  padding: 1em 2em;
+  color: #6DB96C;
   display: flex;
   align-items: center;
   justify-content: center;
   background: #FFFFFF;
-  border: 1px solid #6DB96C;
+  border: 1.5px solid #6DB96C;
   border-radius: 25px;
 }
 #winner-div #winners #others {
+  overflow-y: scroll;
   position: absolute;
   width: 358px;
   height: 163px;
   left: 16px;
-  top: 568px;
+  top: 420px;
   padding: 1em 2em;
   background: #FBFCF4;
   border: 2px solid #6DB96C;
@@ -196,6 +278,104 @@
 #winner-div #winners #others .otherplayers {
   display: flex;
   justify-content: space-between;
+}
+#winner-div #winners #others .otherplayers p {
+  font-weight: bold;
+}
+
+.game-init-container {
+  background: #FBFCF4;
+}
+.game-init-container h1 {
+  padding-top: 31px;
+  text-align: center;
+  font-size: 29px;
+}
+.game-init-container .player-form {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  margin: 20px auto 0;
+}
+.game-init-container .player-form .name-input {
+  margin-bottom: 10px;
+  width: 70%;
+}
+.game-init-container .player-form .name-input input {
+  border: 2px solid #6DB86C;
+  border-radius: 15px;
+  height: 2.5em;
+  width: 236px;
+}
+.game-init-container .player-form .name-input label {
+  margin: 5px 10px;
+  color: #8D8A8A;
+  font-size: 12px;
+}
+.game-init-container .player-form button {
+  position: absolute;
+  right: 30px;
+  bottom: 8px;
+  background: #6DB86C;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.game-init-container .setup-form {
+  gap: 16px;
+  display: flex;
+  justify-content: space-between;
+  width: 70%;
+  margin: 20px auto;
+  align-items: center;
+  position: relative;
+}
+.game-init-container .setup-form .setup-input {
+  display: flex;
+  flex-direction: column;
+}
+.game-init-container .setup-form select {
+  width: 110px;
+  background: #FFFFFF;
+  border: 2px solid #6DB96C;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  height: 2.5rem;
+  padding: 0.5em 1em;
+}
+.game-init-container .setup-form label {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: -5px;
+  font-size: 12px;
+  white-space: nowrap;
+  color: #8D8A8A;
+}
+.game-init-container .setup-form .responsive-button {
+  display: none;
+}
+.game-init-container .setup-form button {
+  background: #6DB86C;
+  border: 2px solid #FFFFFF;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -30px;
+  bottom: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
