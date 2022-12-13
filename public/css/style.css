@@ -97,5 +97,345 @@
     height: 60vh;
   }
 }
+.dashboard {
+  background-color: #FBFCF4;
+}
+.dashboard .unauthorized-message {
+  font-size: 24px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  color: red;
+}
+.dashboard__header {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  margin: 50px auto 25px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2em;
+}
+.dashboard__header__title {
+  font-size: 28px;
+}
+.dashboard__header__button {
+  text-decoration: none;
+  color: white;
+  background-color: #6DB96C;
+  padding: 0.5em 1.5em;
+  font-weight: bold;
+  border-radius: 25px;
+}
+.dashboard__users {
+  background-color: rgba(109, 185, 108, 0.18);
+  border-radius: 20px;
+}
+.dashboard__users__columns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em 5em 2em 2em;
+  background-color: #FFFFFF;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+}
+.dashboard__users__columns .fields-not-in-responsive {
+  display: none;
+}
+.dashboard__users__user {
+  border-bottom: 2px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2em;
+}
+.dashboard__users__user:last-child {
+  border: none;
+}
+.dashboard__users__user__fields {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.dashboard__users__user__fields h3 {
+  text-transform: capitalize;
+}
+.dashboard__users__user__fields__name {
+  width: 150px;
+}
+.dashboard__users__user__fields__name h4 {
+  color: #6DB96C;
+  font-size: 14px;
+}
+.dashboard__users__user__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  gap: 10px;
+}
+.dashboard__users__user__actions input {
+  width: 100%;
+  padding: 5px 0;
+  border: none;
+  border-radius: 10px;
+  color: white;
+}
+.dashboard__users__user__actions input.dashboard__users__user_actions__add-admin {
+  background-color: #6DB96C;
+}
+.dashboard__users__user__actions input.dashboard__users__user_actions__remove-admin {
+  background-color: #f4ac30;
+}
+.dashboard__users__user__actions input.dashboard__users__user_actions__remove-authorized {
+  background-color: #7f7f7f;
+}
+.dashboard__users__user__actions input.dashboard__users__user_actions__add-authorized {
+  background-color: #548df7;
+}
+.dashboard__users__user__actions input.dashboard__users__user_actions__remove {
+  background-color: #ca4040;
+}
+
+@media screen and (min-width: 560px) {
+  .dashboard__header {
+    flex-direction: row;
+    width: 80%;
+    margin: 100px auto 25px;
+    padding: 0;
+  }
+  .dashboard__users {
+    width: 80%;
+    margin: auto;
+  }
+}
+@media screen and (min-width: 780px) {
+  .dashboard__users__columns {
+    padding: 2em;
+  }
+  .dashboard__users__user__actions {
+    flex-direction: row;
+    width: auto;
+  }
+  .dashboard__users__user__actions input {
+    width: auto;
+    padding: 0.5em 1em;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .dashboard__users__columns .fields-not-in-responsive {
+    display: block;
+    margin-right: 270px;
+  }
+  .dashboard__users__columns .fields-not-in-responsive.fields-optional {
+    display: none;
+  }
+  .dashboard__users__user__fields {
+    width: 45%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard__users__user__fields__name {
+    width: 200px;
+  }
+  .dashboard__users__user__fields h3 {
+    width: 100px;
+  }
+  .dashboard__users__user__fields h4 {
+    width: 100px;
+  }
+  .dashboard__users__user__fields .user-optional-field {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .dashboard__users__columns .fields-not-in-responsive {
+    display: block;
+    margin: 0;
+  }
+  .dashboard__users__columns .fields-not-in-responsive.fields-optional {
+    display: block;
+    margin-left: 110px;
+  }
+  .dashboard__users__columns .fields-not-in-responsive.fields-not-optional {
+    margin-right: 435px;
+  }
+  .dashboard__users__user__fields {
+    width: 50%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .dashboard__users__user__fields__name {
+    width: 200px;
+  }
+  .dashboard__users__user__fields h3 {
+    width: 100px;
+  }
+  .dashboard__users__user__fields h4 {
+    width: 100px;
+  }
+  .dashboard__users__user__fields .user-optional-field {
+    display: block;
+  }
+}
+.dashboard {
+  overflow-x: hidden;
+}
+.dashboard .admin {
+  display: flex;
+  align-items: center;
+  background-color: #FBFCF4;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 0 2em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+.dashboard .admin__responsive-logo {
+  height: 6vh;
+  aspect-ratio: 4/3;
+}
+.dashboard .admin__nav {
+  position: absolute;
+  right: -300px;
+  top: 10vh;
+  height: 90vh;
+  width: 300px;
+  background-color: #FBFCF4;
+  transition: all 0.5s;
+}
+.dashboard .admin__nav__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 10vh;
+  transition: all 0.5s;
+}
+.dashboard .admin__nav__list__element__div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.dashboard .admin__nav__list__element__div span {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+.dashboard .admin__nav__list__element__div span:hover {
+  cursor: pointer;
+  color: #6DB96C;
+}
+.dashboard .admin__nav__list__element__div span:hover i {
+  color: #6DB96C;
+}
+.dashboard .admin__nav__list__element__div span i {
+  font-size: 20px;
+  color: #000000;
+  margin-left: 20px;
+}
+.dashboard .admin__nav__list__element__div span i.shown {
+  transform: rotate(-180deg);
+}
+.dashboard .admin__nav__list__element__div .admin__nav__list__element__link {
+  display: none;
+  transform: translateX(30px);
+}
+.dashboard .admin__nav__list__element__div .admin__nav__list__element__link:hover {
+  cursor: pointer;
+  color: #6DB96C;
+}
+.dashboard .admin__nav__list__element__div .admin__nav__list__element__link.shown {
+  display: block;
+}
+.dashboard .admin__nav__list__element__logo {
+  height: 6vh;
+  aspect-ratio: 4/3;
+}
+.dashboard .admin__nav__list__element__link {
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #000000;
+}
+.dashboard .admin__nav__list__element__link:hover {
+  cursor: pointer;
+  color: #6DB96C;
+}
+.dashboard .admin__nav-shown {
+  right: 0;
+}
+.dashboard .admin__nav-shown .admin__nav__list .admin__nav__logo {
+  display: none;
+}
+.dashboard .admin__burger-hidden {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.dashboard .admin__burger-hidden hr {
+  width: 100%;
+  height: 4px;
+  border: none;
+  background-color: #000000;
+  border-radius: 20px;
+  transition: all 0.4s;
+}
+.dashboard .admin__burger-hidden:hover {
+  cursor: pointer;
+}
+.dashboard .admin__burger-hidden.admin__burger-shown .admin__burger__first {
+  transform: translateY(13px) rotate(-45deg);
+}
+.dashboard .admin__burger-hidden.admin__burger-shown .admin__burger__middle {
+  display: none;
+}
+.dashboard .admin__burger-hidden.admin__burger-shown .admin__burger__last {
+  transform: translateY(-13px) rotate(45deg);
+}
+
+@media screen and (min-width: 1024px) {
+  .dashboard .admin__responsive-logo {
+    display: none;
+  }
+  .dashboard .admin__burger-hidden {
+    display: none;
+  }
+  .dashboard .admin__nav {
+    position: static;
+    height: auto;
+    width: 100%;
+    padding: 1em 3em;
+  }
+  .dashboard .admin__nav__list {
+    flex-direction: row;
+    margin: 0;
+  }
+  .dashboard .admin__nav__list__element__div .admin__nav__list__element__link {
+    position: absolute;
+    right: 8%;
+    top: 6vh;
+    display: none;
+    transform: translateX(30px);
+  }
+  .dashboard .admin__nav__list__element__div .admin__nav__list__element__link.shown {
+    display: block;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */

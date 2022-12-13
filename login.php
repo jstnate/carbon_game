@@ -52,14 +52,16 @@
         $verify = $connection->LoginVerify($user);
 
         if ($verify === true) {
-            if ($_SESSION['function'] === 'admin' || $_SESSION['function'] === 'yes') {
-                header('Location: dashboard-users.php');
+            if ($_SESSION['function'] === 'administrateur' || $_SESSION['function'] === 'autorisé') {
+                header('Location: dashboard-admin.php');
             } else {
-                echo "Vous n'êtes pas autorisé";
+                header('Location: login.php?error=1');
             }
         } else {
             header('Location: login.php?error=1');
-        }
+        };
+
+        echo $_SESSION['function'];
 
     }
     ?>

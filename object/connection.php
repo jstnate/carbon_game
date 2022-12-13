@@ -63,6 +63,7 @@ class Connection
             $passVerified = true;
             $_SESSION['user_id'] = $data['id'];
             $_SESSION['user_email'] = $data['email'];
+            $_SESSION['user_name'] = $data['name'];
             $_SESSION['user_password'] = $data['password'];
             $_SESSION['function'] = $data['function'];
         }
@@ -82,7 +83,7 @@ class Connection
 
     public function CreateAdmin($id)
     {
-        $query = "UPDATE user SET function = 'admin' WHERE id = ?";
+        $query = "UPDATE user SET function = 'administrateur' WHERE id = ?";
         $statement = $this->pdo->prepare($query);
         $statement->execute(array($id));
         return true;
@@ -90,7 +91,7 @@ class Connection
 
     public function Authorize($id)
     {
-        $query = "UPDATE user SET function = 'yes' WHERE id = ?";
+        $query = "UPDATE user SET function = 'autorisé' WHERE id = ?";
         $statement = $this->pdo->prepare($query);
         $statement->execute(array($id));
         return true;
@@ -98,7 +99,7 @@ class Connection
 
     public function Unauthorize($id)
     {
-        $query = "UPDATE user SET function = 'no' WHERE id = ?";
+        $query = "UPDATE user SET function = 'interdit' WHERE id = ?";
         $statement = $this->pdo->prepare($query);
         $statement->execute(array($id));
         return true;
