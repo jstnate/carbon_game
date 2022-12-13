@@ -5,7 +5,7 @@ let selectedAvatar = []
 let player = document.getElementById('player')
 let turn;
 let event;
-let avatarList = ["images/avatars/avatar1.PNG","images/avatars/avatar2.PNG","images/avatars/avatar3.PNG","images/avatars/avatar4.PNG", "images/avatars/avatar5.PNG", "images/avatars/avatar6.PNG", "images/avatars/avatar7.PNG", "images/avatars/avatar8.PNG", "images/avatars/avatar9.PNG"]
+let avatarList = ["images/avatars/avatar1.png","images/avatars/avatar2.png","images/avatars/avatar3.png","images/avatars/avatar4.png", "images/avatars/avatar5.png", "images/avatars/avatar6.png", "images/avatars/avatar7.png", "images/avatars/avatar8.png", "images/avatars/avatar9.png"]
 let avatarNumber = 9
 
 let eventName = ['Protocole de Kyoto', 'Tempête Xynthia', 'Ouragan Katrina', 'Méga-feux de brousse australien', 'Gel des récoltes','Sécheresse intense', 'Replantation', 'Dégel du pergilisol', 'Canicule de 2003', 'Tornade', 'Pandémie de COVID-19', 'Hausse du niveau de la mer', 'Économie circulaire', 'Déforestation', 'Agriculture biologique', 'Accord de Paris sur le climat', 'Marée noire','Marée verte'    ]

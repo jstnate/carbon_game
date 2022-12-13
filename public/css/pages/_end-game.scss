@@ -1,0 +1,139 @@
+// .caroussel{
+//   display: flex;
+//   align-items: center;
+//   gap: 20px;
+//   flex-wrap: nowrap;
+//   overflow-x: scroll;
+// }
+
+.endgame {
+  background-color: #FBFCF4;
+
+  &__title {
+    font-size: 24px;
+    width: 90%;
+    text-align: center;
+    color: #6DB96C;
+    margin: 50px auto;
+  }
+
+  &__player {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__cards {
+
+    &__form {
+      margin: auto;
+
+      &__title {
+        font-size: 20px;
+        margin: 50px 20px 25px;
+        color: #6DB96C;
+      }
+
+      &__carrousel {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 50px;
+        padding: 30px 20% 10px;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        background-color: rgba(109, 185, 108, 0.18);
+
+        &__item {
+          
+          input {
+            display: none;
+
+              &:checked + label {
+                h3 {
+                  filter: grayscale(0);
+                }
+
+                img {
+                  filter: grayscale(0);
+                }
+              }
+            
+            }
+
+            label {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              gap: 20px;
+              h3 {
+                color: #6DB96C;
+                filter: grayscale(100%);
+              }
+
+              img {
+                position: relative;
+                width: 200px;
+                aspect-ratio: 9/16;
+                filter: grayscale(100%);
+              }
+            }
+
+          }
+        }
+
+        &__button {
+          width: 100%;
+          padding: 2em;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          button {
+            padding: .8em 3em;
+            margin: 2em auto;
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid #6DB96C;
+            background-color: #6DB96C;
+            color: #ffffff;
+            border-radius: 20px;
+
+            &:hover {
+              background-color: #ffffff;
+              color: #6DB96C;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+}
+
+@media screen and (min-width: 600px) {
+  .endgame {
+    &__cards {
+      &__form {
+        &__carrousel {
+          padding: 30px 10% 10px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .endgame {
+    &__cards {
+      &__form {
+        &__carrousel {
+          padding: 30px 5% 10px;
+        }
+      }
+    }
+  }
+}

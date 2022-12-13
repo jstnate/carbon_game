@@ -42,7 +42,7 @@ function showWinners() {
 
     for (let i = 3; i < objects.length; i++) {
         let objectName = document.createElement('h3')
-        objectName.innerHTML = '#' + i + ' ' + objects[i].playerName
+        objectName.innerHTML = '#' + (i+1) + ' ' + objects[i].playerName
         let objectScore = document.createElement('p')
         objectScore.innerHTML = objects[i].playerScore + ' points'
         let otherdiv = document.createElement('div')

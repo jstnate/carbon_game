@@ -41,14 +41,12 @@
             <option value="4">4 / 5</option>
             <option value="5">5 / 5</option>
         </select>
-
-
-        <div id="playerAppears">
-
-        </div>
-
         <button type="submit">Set up le jeu</button>
     </form>
+
+    <div id="playerAppears">
+
+    </div>
 
     <a href="in-game.php" id="start">Lancer la partie</a>
 </body>

@@ -1,6 +1,6 @@
 'use strict'
 let turn = localStorage.getItem('TurnCount')
-let event = localStorage.getItem('EventFrequency')
+let eventFrequency = localStorage.getItem('EventFrequency')
 let playerCount = localStorage.getItem('PlayerCount')
 let currentTurn = 1
 
@@ -51,6 +51,7 @@ startGame.addEventListener('click', (e) => {
     }
 })
 
+let turnCount = document.createElement('h2')
 let eventTitle = document.createElement('h2')
 let eventText = document.createElement('p')
 
@@ -59,8 +60,11 @@ function turnEvent() {
     showEvent.classList.add('event-shown')
     eventTitle.innerHTML = ''
     eventText.innerHTML = ''
+    turnCount.innerHTML = ''
     let x = Math.floor(Math.random() * 10/2)
-    if(x > event) {
+    turnCount.innerHTML = "Tour " + currentTurn
+    showEvent.appendChild(turnCount)
+    if(x > eventFrequency) {
         eventText.innerHTML = 'Aucun évènement pendant ce tour !'
         showEvent.appendChild(eventText)
         // console.log("pas d'évent")
@@ -73,4 +77,5 @@ function turnEvent() {
         // console.log(eventName[i])
         // console.log(eventEffect[i])
     }
+    
 }

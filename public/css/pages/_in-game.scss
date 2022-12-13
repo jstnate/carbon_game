@@ -1,6 +1,7 @@
 .ingame-bg{
   background: #FBFCF4;
   overflow: hidden;
+
   .game-border{
     background: #FBFCF4;
     display: flex;
@@ -16,6 +17,7 @@
     border-style: solid;
     border-color: #6DB96C;
     border-radius: 10px;
+    
     #game-start{
       border: none;
       padding: 1em 2.5em;

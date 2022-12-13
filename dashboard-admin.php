@@ -1,6 +1,6 @@
 <?php
 session_start();
-if(isset($_SESSION['function']) && $_SESSION['function'] == 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] == 'autorisé'){
+if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
     $autorisation = 1;
 }
 
