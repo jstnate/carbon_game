@@ -5,7 +5,7 @@ let selectedAvatar = []
 let player = document.getElementById('player')
 let turn;
 let event;
-let avatarList = ["images/avatar1.PNG","images/avatar2.PNG","images/avatar3.PNG","images/avatar4.PNG", "images/avatar5.PNG", "images/avatar6.PNG", "images/avatar 7.PNG", "images/avatar 8.PNG", "images/avatar 9.PNG"]
+let avatarList = ["images/avatars/avatar1.PNG","images/avatars/avatar2.PNG","images/avatars/avatar3.PNG","images/avatars/avatar4.PNG", "images/avatars/avatar5.PNG", "images/avatars/avatar6.PNG", "images/avatars/avatar7.PNG", "images/avatars/avatar8.PNG", "images/avatars/avatar9.PNG"]
 let avatarNumber = 9
 
 

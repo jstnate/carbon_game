@@ -3,7 +3,7 @@ session_start();
 require_once 'object/user.php';
 require_once 'object/connection.php';
 
-if($_SESSION['function'] == 'admin'){
+if(isset($_SESSION['function']) && $_SESSION['function'] == 'administrateur'){
     $autorisation = 1;
 }
 
@@ -35,9 +35,9 @@ if($autorisation != 1){
 
             <label for="function">Rôle</label>
             <select name="function" id="function">
-                <option value="no">Sélectionnez son rôle...</option>
-                <option value="yes">Autorisé</option>
-                <option value="admin">Administrateur</option>
+                <option value="interdit">Sélectionnez son rôle...</option>
+                <option value="autorisé">Autorisé</option>
+                <option value="administrateur">Administrateur</option>
             </select>
 
             <button type="submit">Ajouter un utilisateur</button>

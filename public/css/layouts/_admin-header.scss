@@ -1,3 +1,6 @@
+.dashboard {
+    overflow-x: hidden;
+    
     .admin {
         display: flex;
         align-items: center;
@@ -152,8 +155,10 @@
             }
         }
     }
+}
 
 @media screen and (min-width: 1024px) {
+    .dashboard {
         .admin {
             &__responsive-logo {
                 display: none;
@@ -192,4 +197,9 @@
                 }
             }
         }
+<<<<<<< HEAD
     }
+=======
+    }
+}
+>>>>>>> nathan-dev
