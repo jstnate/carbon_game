@@ -103,4 +103,99 @@
   overflow-x: scroll;
 }
 
+#winner-div {
+  overflow: hidden;
+  background: #FBFCF4;
+}
+#winner-div #congrats {
+  padding: 30px;
+}
+#winner-div #congrats h2 {
+  text-align: center;
+  font-size: 24px;
+}
+#winner-div #winners {
+  position: relative;
+}
+#winner-div #winners .first {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100px;
+  height: 100px;
+  left: 154px;
+  top: 186px;
+}
+#winner-div #winners .first h2 {
+  text-align: center;
+  font-size: 24px;
+}
+#winner-div #winners .first p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 135px;
+  height: 40px;
+  left: 127px;
+  top: 309px;
+  background: #FFFFFF;
+  border: 1px solid #6DB96C;
+  border-radius: 25px;
+}
+#winner-div #winners .second {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 54px;
+  top: 378px;
+}
+#winner-div #winners .second h2 {
+  text-align: center;
+  font-size: 24px;
+}
+#winner-div #winners .second p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid #6DB96C;
+  border-radius: 25px;
+}
+#winner-div #winners .third {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  left: 254px;
+  top: 378px;
+}
+#winner-div #winners .third h2 {
+  text-align: center;
+  font-size: 24px;
+}
+#winner-div #winners .third p {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #FFFFFF;
+  border: 1px solid #6DB96C;
+  border-radius: 25px;
+}
+#winner-div #winners #others {
+  position: absolute;
+  width: 358px;
+  height: 163px;
+  left: 16px;
+  top: 568px;
+  padding: 1em 2em;
+  background: #FBFCF4;
+  border: 2px solid #6DB96C;
+  border-radius: 10px;
+}
+#winner-div #winners #others .otherplayers {
+  display: flex;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=style.css.map */

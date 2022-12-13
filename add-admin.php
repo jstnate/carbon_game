@@ -3,7 +3,7 @@ session_start();
 require_once 'object/user.php';
 require_once 'object/connection.php';
 
-if($_SESSION['function'] == 'admin'){
+if($_SESSION['function'] == 'administrateur'){
     $autorisation = 1;
 }
 
