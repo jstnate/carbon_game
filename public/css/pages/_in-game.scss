@@ -60,6 +60,7 @@
       img{
         width: 80px;
         aspect-ratio: 1/1;
+        background: none;
       }
       .player-div{
         display: flex;
@@ -69,3 +70,38 @@
     }
   }
 }
+
+@media screen and (min-width: 760px) {
+  .ingame-bg {
+    background-image: url("../../images/backgrounds/lianes2-8.png");
+    background-size: 115%;
+    background-position-x: 65%;
+    background-position-y: 12%;
+
+    .game-border {
+      border-width: 1px;
+
+      .event-shown{
+        max-width: 60vw;
+        background: #6DB96C;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0px 3px 7px rgba(0, 0, 0, 0.38);
+      }
+
+      #game-start {
+        border-radius: 10px;
+
+        &.white-start{
+          background: white;
+          color: #6DB96C;
+          border-radius: 25px;
+          padding: 0.5em 1.5em;
+
+        }
+      }
+
+    }
+  }
+}
+

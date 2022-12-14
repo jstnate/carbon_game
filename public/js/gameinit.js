@@ -35,8 +35,8 @@ playerForm.onsubmit = (e) => {
     playerImg.src = playerAvatar
     let name = document.createElement("h1")
     name.innerHTML = PlayerName
-    playerdiv.appendChild(name)
     playerdiv.appendChild(playerImg)
+    playerdiv.appendChild(name)
     playerAppears.appendChild(playerdiv)
     z++
     // playerCount++
@@ -48,12 +48,20 @@ playerForm.onsubmit = (e) => {
 }
 
 
+let setupdiv = document.getElementById('setup-div')
 
 setUpForm.onsubmit = (e) => {
     e.preventDefault()
+    setupdiv.innerHTML = ''
     event = document.getElementById('event').value
     turn = document.getElementById('turn').value
     // console.log(turn, event)
+    let setup = document.createElement('p')
+    let setup2 = document.createElement('p')
+    setup.innerHTML = "Nombre de tours: " + turn
+    setupdiv.appendChild(setup)
+    setup2.innerHTML = "Fréquence d'évènement: " + (event * 2)+ '0%'
+    setupdiv.appendChild(setup2)
 }
 
 start.addEventListener('click', () => {
