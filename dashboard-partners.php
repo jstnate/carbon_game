@@ -35,7 +35,7 @@
     <?php
     foreach($partners as $partner) { ?>
         <h2> <?= $partner['partner_name']?></h2>
-        <img src="image/<?php echo $partner['logo'] ?>" alt="">
+        <img src="images/<?php echo $partner['logo'] ?>" alt="">
         <p> <?= date("d-m-y H:i:s", strtotime($partner['created_at']))?></p>
         <form method="POST" action="dashboard-partners.php">
             <input type="hidden" name="delete_partner" value="<?= $partner["id"]; ?>">
