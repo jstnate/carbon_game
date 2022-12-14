@@ -17,6 +17,10 @@
     border-style: solid;
     border-color: #6DB96C;
     border-radius: 10px;
+
+    .logo {
+      width: 50%;
+    }
     
     #game-start{
       border: none;
@@ -80,6 +84,10 @@
 
     .game-border {
       border-width: 1px;
+
+      .logo {
+        width: 20%;
+      }
 
       .event-shown{
         max-width: 60vw;
