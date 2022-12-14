@@ -46,10 +46,10 @@
 
                 <div class="add-img">
                     <img src="images/icons/add_image.png" alt="">
-                    <p>PNG OU JPG inférieur à 5MB</p>
+                    <p>PNG ou JPG inférieur à 5MB</p>
                     <div class="button_container">
                         <input id="file" type="file" accept="image/png, image/jpeg" name="image_url" class="inputfile" data-multiple-caption="{count} files selected" multiple >
-                        <label for="file" class="custom-file-upload"><span>Choose a file&hellip;</span></label>
+                        <label for="file" class="custom-file-upload"><span>Selectionner un fichier&hellip;</span></label>
                     </div>
                 </div>
                 
@@ -63,6 +63,7 @@
             </form>
         </div>
     <!-- <a href="dashboard-cards.php">Voir les cartes</a> -->
+    </div>
 
     <script src="public/js/custom-file-input.js"></script>
 </body>
