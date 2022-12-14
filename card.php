@@ -24,7 +24,18 @@
         <title>Carte inexistante</title>
     <?php } ?>
 </head>
-<body>
+<body class="solo-card">
+    <?php require_once 'public/includes/navbar_contact.php'; ?>
+    <div class="card-img">
     <img src="<?= $card[0]['image_url'] ?>" alt="">
+    </div>
+    <div class="card-informations">
+        <h2><?= $card[0]['card_name']?></h2>
+        <h3><?= $card[0]['carbon']?></h3>
+    </div>
+    <div class="card-description">
+        <h2>Description de l'empreinte carbone :</h2>
+        <p><?= $card[0]['description']?></p>
+    </div>
 </body>
 </html>
