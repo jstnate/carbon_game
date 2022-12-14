@@ -1,4 +1,7 @@
 <?php
+
+use Symfony\Component\VarDumper\VarDumper;
+
 session_start();
 if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
     $autorisation = 1;
@@ -42,7 +45,7 @@ if($autorisation != 1){
                     <div class="demandeur_society">
                         <div class="demandeur">
                             <h3 class="title">Demandeur</h3>
-                            <p class="info"><?php echo $message['name'] . ' ' . $message['family_name'];?></p>
+                            <p class="info"><?php echo $message['first_name'] . ' ' . $message['last_name'];?></p>
                         </div>
                         <div class="society">
                             <h3 class="title">Entreprise</h3>
@@ -64,7 +67,8 @@ if($autorisation != 1){
                         </div>
                     </div>
                     <div class="button_container">
-                        <div class="button"> <a href="mailto:">Répondre</a></div>
+                        <div class="button desktop_button"> <a href="<?= 'mailto:' . $message['email'] ?>">Répondre</a></div>
+                        <div class="button mobile_button"> <a href="<?= 'mailto:' . $message['email'] ?>"><i class="fa-solid fa-share-from-square"></i></a></div>
                     </div>
                 </div>
             </div>

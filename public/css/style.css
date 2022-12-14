@@ -9,7 +9,7 @@
 
 .login-bg {
   background-image: url("../../images/backgrounds/login-bg.jpg");
-  background-size: auto 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 25%;
   display: flex;
@@ -93,7 +93,6 @@
 @media screen and (min-width: 550px) {
   .login-bg .login {
     width: 500px;
-    height: 60vh;
   }
 }
 .gm-navbar {
@@ -536,19 +535,20 @@ footer .footer_container .text {
   font-weight: 700;
   font-size: 24px;
   text-align: center;
-  margin: 5%;
+  margin: 50px 5% 0;
 }
 @media screen and (min-width: 768px) {
   .dashboard_admin h1 {
     font-size: 35px;
     text-align: left;
+    margin: 5rem 5% 0;
   }
 }
 .dashboard_admin .all_messages {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  margin: 5%;
+  margin: 25px 5%;
 }
 .dashboard_admin .all_messages .main_container {
   width: 100%;
@@ -562,6 +562,7 @@ footer .footer_container .text {
   .dashboard_admin .all_messages .main_container {
     display: flex;
     flex-direction: row;
+    align-items: center;
   }
 }
 .dashboard_admin .all_messages .main_container .infos_container {
@@ -570,7 +571,7 @@ footer .footer_container .text {
   border-bottom: solid #6DB86C;
   justify-content: center;
   gap: 15px;
-  padding: 15px;
+  padding: 20px;
 }
 @media screen and (min-width: 768px) {
   .dashboard_admin .all_messages .main_container .infos_container {
@@ -578,6 +579,7 @@ footer .footer_container .text {
     flex-direction: column;
     border-right: solid #6DB86C;
     border-bottom: none;
+    width: 30%;
   }
 }
 .dashboard_admin .all_messages .main_container .infos_container .demandeur_society {
@@ -628,27 +630,19 @@ footer .footer_container .text {
 @media screen and (min-width: 768px) {
   .dashboard_admin .all_messages .main_container .message_container {
     margin-top: 0%;
+    width: 70%;
   }
 }
 .dashboard_admin .all_messages .main_container .message_container .message {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   gap: 15px;
+  text-align: left;
 }
 @media screen and (min-width: 768px) {
   .dashboard_admin .all_messages .main_container .message_container .message {
     align-items: normal;
     padding: 20px;
-  }
-}
-.dashboard_admin .all_messages .main_container .message_container .message .subject {
-  text-align: center;
-}
-@media screen and (min-width: 768px) {
-  .dashboard_admin .all_messages .main_container .message_container .message .subject {
-    text-align: left;
   }
 }
 .dashboard_admin .all_messages .main_container .message_container .message .subject h3 {
@@ -661,17 +655,40 @@ footer .footer_container .text {
 }
 .dashboard_admin .all_messages .main_container .message_container .button_container .button {
   background-color: #6DB96C;
-  padding: 0.5em 1.5em;
-  border-radius: 25px;
-  width: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.dashboard_admin .all_messages .main_container .message_container .button_container .button a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
+.dashboard_admin .all_messages .main_container .message_container .button_container .button.mobile_button {
+  padding: 0.5em 1.5em;
+  border-radius: 25px;
+  width: 30px;
+  aspect-ratio: 1/1;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .message_container .button_container .button.mobile_button {
+    display: none;
+  }
+}
+.dashboard_admin .all_messages .main_container .message_container .button_container .button.mobile_button i {
+  color: #ffffff;
+  font-size: 20px;
+}
+.dashboard_admin .all_messages .main_container .message_container .button_container .button.desktop_button {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .message_container .button_container .button.desktop_button {
+    display: block;
+    padding: 0.5em 1.5em;
+    border-radius: 25px;
+    margin-left: auto;
+  }
+  .dashboard_admin .all_messages .main_container .message_container .button_container .button.desktop_button a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+  }
 }
 
 .navbar {
@@ -1029,7 +1046,6 @@ footer .footer_container .text {
 }
 .admin__nav__list__element__logo {
   height: 6vh;
-  aspect-ratio: 4/3;
 }
 .admin__nav__list__element__link {
   font-size: 20px;

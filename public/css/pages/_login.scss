@@ -1,6 +1,6 @@
 .login-bg{
     background-image: url("../../images/backgrounds/login-bg.jpg");
-    background-size: auto 100%;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position-x:  25%;
     display: flex;
@@ -99,6 +99,5 @@
 @media screen and (min-width: 550px) {
     .login-bg .login {
         width: 500px;
-        height: 60vh;
     }
 }
