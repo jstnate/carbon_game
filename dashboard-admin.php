@@ -58,7 +58,7 @@ if($autorisation != 1){
                     </div>
                 </div>
                 <div class="message_container">
-                    <div class="message">
+                    <div class="message message-compact" id="message-action">
                         <div class="subject">
                             <h3><?php echo $message['subject'];?></h3>
                         </div>
@@ -67,8 +67,8 @@ if($autorisation != 1){
                         </div>
                     </div>
                     <div class="button_container">
-                        <div class="button desktop_button"> <a href="<?= 'mailto:' . $message['email'] ?>">Répondre</a></div>
-                        <div class="button mobile_button"> <a href="<?= 'mailto:' . $message['email'] ?>"><i class="fa-solid fa-share-from-square"></i></a></div>
+                        <div class="button desktop_button"><a href="<?= 'mailto:' . $message['email'] ?>">Répondre</a></div>
+                        <div class="button mobile_button"><a href="<?= 'mailto:' . $message['email'] ?>"><i class="fa-solid fa-share-from-square"></i></a></div>
                     </div>
                 </div>
             </div>

@@ -483,8 +483,6 @@ main {
   background-color: #FBFCF4;
   width: 100%;
   height: auto;
-  z-index: -1;
-  position: relative;
 }
 main .container_all {
   height: auto;
@@ -609,37 +607,15 @@ main .container_all .container_form form button {
   margin-bottom: 15px;
 }
 
-footer {
-  width: 100%;
-  height: 85px;
-  background: #6DB96C;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 20px 20px 0px 0px;
-}
-footer .footer_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 15px;
-}
-footer .footer_container .text {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  color: #FFFFFF;
-}
-
 .dashboard_admin {
   width: 100%;
   height: 100%;
   background-color: #FBFCF4;
+  overflow-x: hidden;
 }
 .dashboard_admin h1 {
   font-weight: 700;
-  font-size: 24px;
+  font-size: 28px;
   text-align: center;
   margin: 50px 5% 0;
 }
@@ -653,10 +629,11 @@ footer .footer_container .text {
 .dashboard_admin .all_messages {
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  margin: 25px 5%;
+  gap: 50px;
+  margin: 50px 5%;
 }
 .dashboard_admin .all_messages .main_container {
+  position: relative;
   width: 100%;
   height: auto;
   background-color: white;
@@ -674,10 +651,9 @@ footer .footer_container .text {
 .dashboard_admin .all_messages .main_container .infos_container {
   display: flex;
   flex-direction: column;
-  border-bottom: solid #6DB86C;
   justify-content: center;
-  gap: 15px;
-  padding: 20px;
+  gap: 5px;
+  padding: 15px;
 }
 @media screen and (min-width: 768px) {
   .dashboard_admin .all_messages .main_container .infos_container {
@@ -692,6 +668,7 @@ footer .footer_container .text {
   width: 100%;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   gap: 25px;
 }
 @media screen and (min-width: 768px) {
@@ -701,58 +678,159 @@ footer .footer_container .text {
   }
 }
 .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .demandeur {
-  width: 100%;
+  width: 50%;
 }
 .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .demandeur .title {
   font-size: 16px;
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .demandeur .title {
+    display: block;
+  }
 }
 .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .demandeur .info {
-  margin-left: 5%;
+  font-weight: bold;
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .demandeur .info {
+    font-weight: normal;
+    margin-left: 20px;
+    font-size: 16px;
+  }
 }
 .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .society {
-  width: 100%;
+  width: 50%;
 }
 .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .society .title {
+  display: none;
   font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .society .title {
+    display: block;
+  }
 }
 .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .society .info {
-  margin-left: 5%;
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .infos_container .demandeur_society .society .info {
+    font-weight: normal;
+    margin-left: 20px;
+    font-size: 16px;
+  }
+}
+.dashboard_admin .all_messages .main_container .infos_container .contact {
+  margin-top: 25px;
 }
 .dashboard_admin .all_messages .main_container .infos_container .contact .title {
+  display: none;
   font-size: 16px;
 }
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .infos_container .contact .title {
+    display: block;
+  }
+}
 .dashboard_admin .all_messages .main_container .infos_container .contact .info {
-  margin-left: 5%;
   font-size: 14px;
   color: #6DB86C;
 }
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .infos_container .contact .info {
+    margin-left: 20px;
+    font-size: 16px;
+  }
+}
 .dashboard_admin .all_messages .main_container .message_container {
-  margin-top: 5%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 20px;
-  padding: 15px;
+  padding: 0 15px 15px;
 }
 @media screen and (min-width: 768px) {
   .dashboard_admin .all_messages .main_container .message_container {
     margin-top: 0%;
     width: 70%;
+    min-height: 30vh;
   }
 }
-.dashboard_admin .all_messages .main_container .message_container .message {
+.dashboard_admin .all_messages .main_container .message_container .message-compact.message {
   display: flex;
   flex-direction: column;
   gap: 15px;
   text-align: left;
 }
 @media screen and (min-width: 768px) {
-  .dashboard_admin .all_messages .main_container .message_container .message {
+  .dashboard_admin .all_messages .main_container .message_container .message-compact.message {
     align-items: normal;
     padding: 20px;
   }
 }
-.dashboard_admin .all_messages .main_container .message_container .message .subject h3 {
+.dashboard_admin .all_messages .main_container .message_container .message-compact.message .subject {
+  display: none;
+}
+@media screen and (min-width: 760px) {
+  .dashboard_admin .all_messages .main_container .message_container .message-compact.message .subject {
+    display: block;
+  }
+}
+.dashboard_admin .all_messages .main_container .message_container .message-compact.message .subject h3 {
   font-size: 18px;
+}
+.dashboard_admin .all_messages .main_container .message_container .message-compact.message .description {
+  color: #767676;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+@media screen and (min-width: 760px) {
+  .dashboard_admin .all_messages .main_container .message_container .message-compact.message .description {
+    color: #000000;
+  }
+}
+.dashboard_admin .all_messages .main_container .message_container .message-compact.message .description p {
+  overflow: hidden;
+  white-space: nowrap;
+  line-height: 1.2em;
+  max-height: 2.4em;
+  text-overflow: ellipsis;
+}
+@media screen and (min-width: 760px) {
+  .dashboard_admin .all_messages .main_container .message_container .message-compact.message .description p {
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2em;
+    max-height: 2.4em;
+    text-overflow: unset;
+  }
+}
+.dashboard_admin .all_messages .main_container .message_container .message-full.message {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+@media screen and (min-width: 768px) {
+  .dashboard_admin .all_messages .main_container .message_container .message-full.message {
+    align-items: normal;
+    padding: 20px;
+  }
+}
+.dashboard_admin .all_messages .main_container .message_container .message-full.message .subject {
+  display: block;
+}
+.dashboard_admin .all_messages .main_container .message_container .message-full.message .subject h3 {
+  font-size: 18px;
+}
+.dashboard_admin .all_messages .main_container .message_container .message-full.message .description {
+  color: #000000;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
 }
 .dashboard_admin .all_messages .main_container .message_container .button_container {
   width: 100%;
@@ -770,6 +848,9 @@ footer .footer_container .text {
   border-radius: 25px;
   width: 30px;
   aspect-ratio: 1/1;
+  position: absolute;
+  right: 20px;
+  bottom: -20px;
 }
 @media screen and (min-width: 768px) {
   .dashboard_admin .all_messages .main_container .message_container .button_container .button.mobile_button {
@@ -1547,6 +1628,29 @@ footer .footer_container .text {
     width: 30%;
     margin: 3rem auto 1rem;
   }
+}
+
+footer {
+  width: 100%;
+  height: 85px;
+  background: #6DB96C;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0px 0px;
+}
+footer .footer_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+footer .footer_container .text {
+  font-family: "Koho";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=style.css.map */
