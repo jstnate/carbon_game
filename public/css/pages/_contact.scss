@@ -1,123 +1,135 @@
 @use "../utils/mixins";
 
-main{
-    background-color: #FBFCF4;
+.contact{
     width: 100%;
-    height: auto;
-    z-index: -1;
-    position: relative;
-    .container_all{
+    .navbar{
+        position: relative;
+        z-index: 1;
+    }
+    main{
+        background-color: #FBFCF4;
+        width: 100%;
         height: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-image: url("../../images/backgrounds/lianes.png");
-        background-position: center;
-        background-size: 80%;
-        background-repeat: no-repeat;
-        @include mixins.breakpoint(768px){
-            background-image: none;
-        }
-        .container_title{
-            background-color: white;
-            margin-top: 2%;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0px 2px 3px rgb(0 0 0 / 25%);
-            .title{
-                font-family: 'KoHo';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 20px;
-                color: #1F2020;
-            }
-        }
-        .container_form{
-            margin-top: 30px;
-            width: 60%;
+        .container_all{
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: url("../../images/backgrounds/lianes.png");
+            background-position: center;
+            background-size: 80%;
+            background-repeat: no-repeat;
+            padding: 5%;
             @include mixins.breakpoint(768px){
-                width: 80%;
+                background-image: none;
+                padding: 0%;
             }
-            form{
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 30px;
-                .container_input{
-                    width: 100%;
-                    background-color: white;
-                    padding: 5%;
-                    border: 2px solid #6DB86C;
-                    border-radius: 15px;
-                    .container_names{
-                        width: 100%;
-                        display: flex;
-                        flex-direction: row;
-                        @include mixins.breakpoint(768px){
-                            display: flex;
-                            flex-direction: column;
-                        }
-                        .container_label{
-                            width: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            input{
-                                background: rgba(109, 184, 108, 0.67);
-                                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-                                border-radius: 15px;
-                            }
-                        }
-                    }
-                    .container_label{
-                        display: flex;
-                        flex-direction: column;
-                        padding: 10px;
-                        label{
-                            font-family: 'KoHo';
-                            font-style: normal;
-                            font-weight: 700;
-                            font-size: 16px;
-                            color: black;
-                        }
-                        #subject{
-                            margin-bottom: 15px;
-                        }
-                        #description{
-                            height: 150px;
-                            resize: none;
-                        }
-                        input{
-                            width: 100%;
-                            height: 40px;
-                            background: #FFFFFF;
-                            border: 2px solid #6DB96C;
-                            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            border-radius: 15px;
-                            padding: 5px;
-                        }
-                        textarea{
-                            width: 100%;
-                            height: 40px;
-                            background: #FFFFFF;
-                            border: 2px solid #6DB96C;
-                            box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-                            border-radius: 15px;
-                            padding: 5px;
-                        }
-                    }
-                }
-                button{
-                    background: #6DB86C;
-                    border-radius: 25px;
-                    border: 2px solid #6DB86C;
-                    padding: 10px 20px;
+            .container_title{
+                background-color: white;
+                margin-top: 2%;
+                padding: 15px;
+                border-radius: 8px;
+                box-shadow: 0px 2px 3px rgb(0 0 0 / 25%);
+                .title{
                     font-family: 'KoHo';
                     font-style: normal;
                     font-weight: 700;
                     font-size: 20px;
-                    color: #FFFFFF;
-                    margin-bottom: 15px;
+                    color: #1F2020;
+                }
+            }
+            .container_form{
+                margin-top: 30px;
+                width: 60%;
+                @include mixins.breakpoint(768px){
+                    width: 80%;
+                }
+                form{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 30px;
+                    .container_input{
+                        width: 100%;
+                        background-color: white;
+                        padding: 5%;
+                        border: 2px solid #6DB86C;
+                        border-radius: 15px;
+                        @include mixins.breakpoint(768px){
+                            background-color: #FBFCF4;
+                            padding: 0;
+                            border: none;
+                        }
+                        .container_names{
+                            width: 100%;
+                            display: flex;
+                            flex-direction: row;
+                            @include mixins.breakpoint(768px){
+                                display: flex;
+                                flex-direction: column;
+                            }
+                            .container_label{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                input{
+                                    background: rgba(109, 184, 108, 0.67);
+                                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                                    border-radius: 15px;
+                                }
+                            }
+                        }
+                        .container_label{
+                            display: flex;
+                            flex-direction: column;
+                            padding: 10px;
+                            label{
+                                font-family: 'KoHo';
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 16px;
+                                color: black;
+                            }
+                            #subject{
+                                margin-bottom: 15px;
+                            }
+                            #description{
+                                height: 150px;
+                                resize: none;
+                            }
+                            input{
+                                width: 100%;
+                                height: 40px;
+                                background: #FFFFFF;
+                                border: 2px solid #6DB96C;
+                                box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                border-radius: 15px;
+                                padding: 5px;
+                            }
+                            textarea{
+                                width: 100%;
+                                height: 40px;
+                                background: #FFFFFF;
+                                border: 2px solid #6DB96C;
+                                box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                border-radius: 15px;
+                                padding: 5px;
+                            }
+                        }
+                    }
+                    button{
+                        background: #6DB86C;
+                        border-radius: 25px;
+                        border: 2px solid #6DB86C;
+                        padding: 10px 20px;
+                        font-family: 'KoHo';
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 20px;
+                        color: #FFFFFF;
+                        margin-bottom: 15px;
+                    }
                 }
             }
         }
@@ -126,7 +138,7 @@ main{
 
 footer{
     width: 100%;
-    height: 85px;
+    height: 100px;
     background: #6DB96C;
     box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
     border-radius: 20px 20px 0px 0px;

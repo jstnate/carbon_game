@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="public/css/style.css">
     <title>Page Contact</title>
 </head>
-<body>
+<body class="contact">
     <?php require "public/includes/navbar_contact.php"; ?>
     <main>
         <div class="container_all">
@@ -41,9 +41,7 @@
                             <textarea type="text" name="description" id="description" rows=1 COLS=40 placeholder="Dites-nous tout ?"></textarea>
                         </div>
                     </div>
-                    
                     <button type="submit">Contacter</button>
-
                 </form>
             </div>
 
@@ -76,7 +74,6 @@
 
 
     ?>
-        </div>
     </main>
 
     <footer>
