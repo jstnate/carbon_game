@@ -22,7 +22,7 @@
     </div>
     <form class="player-form" id="player-form" action="">
         <div class="name-input">
-            <label for="player">Créer un joueur</label>
+            <label for="player">Nom du joueur</label>
             <input type="text" name="player" id="player">
         </div>
         <button type="submit"><img src="images/icons/checked-white1.png" alt=""></button>
@@ -57,11 +57,16 @@
         <button class="phone-button" type="submit"><img src="images/icons/checked-white1.png" alt=""></button>
     </form>
 
-    <div id="playerAppears" class="player-appears">
-        <h2>Récapitulatif de la configuration</h2>
+    <div class="setup-show">
+        <div id="playerAppears" class="player-appears">
+            <h2>Récapitulatif de la configuration</h2>
+        </div>
+        <div class="setup-div" id="setup-div">
+
+        </div>
     </div>
-
-
-    <a href="in-game.php" id="start">Lancer la partie</a>
+    <div class="play">
+    <a href="in-game.php" id="start" class="start">Jouer</a>
+    </div>
 </body>
 </html>

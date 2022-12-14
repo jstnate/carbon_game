@@ -1,5 +1,5 @@
 <nav class="gm-navbar">
-    <img src="" alt="CARBON">
+    <h3 class="logo-phone-navbar">CARBON</h3>
     <div class="quit-button">
         <a href=""><img src="./images/icons/out.png" alt="Quit"></a>
     </div>
