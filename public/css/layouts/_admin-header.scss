@@ -10,8 +10,9 @@
     box-shadow: 0 5px 10px rgba($color: #000000, $alpha: .1);
 
     &__responsive-logo {
-        height: 6vh;
-        aspect-ratio: 1/1;
+        font-size: 24px;
+        color: #6DB96C;
+        ;font-weight: bold;
     }
 
     &__nav {
@@ -41,25 +42,23 @@
                     align-items: center;
 
                     button {
+                        border-radius: 30px;
+                        padding: .5em 2em;
                         font-size: 20px;
                         font-weight: bold;
                         text-decoration: none;
-                        color: #000000;
-                        background: none;
+                        color: #ffffff;
+                        background: #6DB96C;
                         border: none;
 
                         &:hover {
                             cursor: pointer;
-                            color: #6DB96C;
-                            
-                            i {
-                                color: #6DB96C;
-                            }
+                            background-color: #427241;
                         }
 
                         i {
                             font-size: 20px;
-                            color: #000000;
+                            color: #ffffff;
                             margin-left: 20px;
 
                             &.shown {
@@ -67,36 +66,22 @@
                             }
                         }
                     }
-
-                    .admin__nav__list__element__link {
-                        display: none;
-                        transform: translateX(30px);
-
-                        &:hover {
-                            cursor: pointer;
-                            color: #6DB96C;
-                        }
-
-                        &.shown {
-                            display: block;
-                        }
-                    }
                 }
 
                 &__logo {
                     height: 6vh;
-                    aspect-ratio: 1/1;
+                    aspect-ratio: 4/3;
                 } 
 
                 &__link {
                     font-size: 20px;
                     font-weight: bold;
                     text-decoration: none;
-                    color: #000000;
+                    color: #6DB96C;
 
                     &:hover {
                         cursor: pointer;
-                        color: #6DB96C;
+                        color: #000000;
                     }
                 }
             }
@@ -127,7 +112,7 @@
             width: 100%;
             height: 4px;
             border: none;
-            background-color: #000000;
+            background-color: #6DB96C;
             border-radius: 20px;
             transition: all .4s;
         }
@@ -188,6 +173,10 @@
                                 display: block;
                             }
                         }
+                    }
+
+                    &__logo {
+                        display: block;
                     }
                 }
             }

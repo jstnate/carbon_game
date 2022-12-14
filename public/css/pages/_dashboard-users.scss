@@ -33,6 +33,10 @@
             padding: .5em 1.5em;
             font-weight: bold;
             border-radius: 25px;
+
+            &:hover {
+                background-color: #427241;
+            }
         }
     }
     &__users {

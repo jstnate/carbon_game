@@ -1,6 +1,6 @@
 
 <header class="admin">
-    <img src="images/logos/logo.png" alt="" class="admin__responsive-logo">
+    <h3 class="admin__responsive-logo">CARBON</h3>
 
     <nav class="admin__nav" id="admin-menu">
         <ul class="admin__nav__list">

@@ -5,8 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
@@ -52,7 +51,7 @@ require_once 'object/card.php';
             );
             $img_name = $_FILES['image_url']['name'];
             $tmp_img_name = $_FILES['image_url']['tmp_name'];
-            $temporary = 'temporary/';
+            $temporary = 'images/cards/';
             move_uploaded_file($tmp_img_name,$temporary.$img_name);
 
             print_r($card);
