@@ -8,17 +8,18 @@
         font-weight: 700;
         font-size: 24px;
         text-align: center;
-        margin: 5%;
+        margin: 50px 5% 0;
         @include mixins.breakpointmin(768px){
             font-size: 35px;
             text-align: left;
+            margin: 5rem 5% 0;
         }
     }
     .all_messages{
         display: flex;
         flex-direction: column;
         gap: 30px;
-        margin: 5%;
+        margin: 25px 5%;
         .main_container{
             width: 100%;
             height: auto;
@@ -29,6 +30,7 @@
             @include mixins.breakpointmin(768px){
                 display: flex;
                 flex-direction: row;
+                align-items: center;
             }
             .infos_container{
                 display: flex;
@@ -36,12 +38,13 @@
                 border-bottom: solid #6DB86C;
                 justify-content: center;
                 gap: 15px;
-                padding: 15px;
+                padding: 20px;
                 @include mixins.breakpointmin(768px){
                     display: flex;
                     flex-direction: column;
                     border-right: solid #6DB86C;
                     border-bottom: none;
+                    width: 30%;
                 }
                 .demandeur_society{
                     width: 100%;
@@ -90,22 +93,18 @@
                 padding: 15px;
                 @include mixins.breakpointmin(768px){
                     margin-top: 0%;
+                    width: 70%;
                 }
                 .message{
                     display: flex;
                     flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
                     gap: 15px;
+                    text-align: left;
                     @include mixins.breakpointmin(768px){
                         align-items: normal;
                         padding: 20px;
                     }
                     .subject{
-                        text-align: center;
-                        @include mixins.breakpointmin(768px){
-                            text-align: left;
-                        }
                         h3{
                             font-size: 18px;
                         }
@@ -120,16 +119,40 @@
                     justify-content: flex-end;
                     .button{
                         background-color: #6DB96C;
-                        padding: 0.5em 1.5em;
-                        border-radius: 25px;
-                        width: 50%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
-                        a{
-                            color: white;
-                            text-decoration: none;
-                            font-weight: bold;
+                        
+                        &.mobile_button {
+                            padding: 0.5em 1.5em;
+                            border-radius: 25px;
+                            width: 30px;
+                            aspect-ratio: 1/1;
+
+                            @include mixins.breakpointmin(768px) {
+                                display: none;
+                            }
+
+                            i {
+                                color: #ffffff;
+                                font-size: 20px;
+                            }
+                        }
+
+                        &.desktop_button {
+                            display: none;
+
+                            @include mixins.breakpointmin(768px) {
+                                display: block;
+                                padding: 0.5em 1.5em;
+                                border-radius: 25px;
+                                margin-left: auto;
+                                a {
+                                    text-decoration: none;
+                                    color: #ffffff;
+                                    font-weight: bold;
+                                }
+                            }
                         }
                     }
                 }

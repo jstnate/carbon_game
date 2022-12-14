@@ -16,7 +16,7 @@ require_once 'object/partner.php';
 <body>
 
     <?php
-        if($_SESSION['function'] == 'admin' || $_SESSION['function'] == 'yes'){
+    if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé'){
             $verify = 1;
         } 
         if($verify != 1){

@@ -113,7 +113,6 @@ class Connection
         return true;
     }
 
-
     // Partenaires 
     public function insertPartner(Partner $partner): bool
     {
@@ -129,11 +128,11 @@ class Connection
     {
         $query = 'SELECT * FROM partner ORDER BY id';
     }
-    
+
     public function insertCard(Card $card): bool
     {
-        $query = 'INSERT INTO cards (card_name, carbon, description, image_url)
-                    VALUES (:card_name, :carbon, :description, :image_url)';
+        $query = 'INSERT INTO cards (card_name, carbon, description, image_url, type)
+                    VALUES (:card_name, :carbon, :description, :image_url, :type)';
 
         $statement = $this->pdo->prepare($query);
 
@@ -142,8 +141,10 @@ class Connection
             'carbon' => $card->carbon,
             'description' => $card->description,
             'image_url' => $card->image,
+            'type' => $card->type,
         ]);
     }
+
     public function GetCards()
     {
         $query = 'SELECT * FROM cards ORDER BY id';
@@ -190,6 +191,7 @@ class Connection
 
     }
 
+
     public function GetSingleCard($id): bool|array
     {
         $get = "SELECT * FROM cards WHERE id = $id";
@@ -199,7 +201,7 @@ class Connection
 
     public function ModifyCard(Card $card)
     {
-        $query = 'UPDATE cards SET card_name = :card_name, carbon = :carbon, description = :description, image_url = :image_url WHERE id = :id';
+        $query = 'UPDATE cards SET card_name = :card_name, carbon = :carbon, description = :description, image_url = :image_url, type = :type WHERE id = :id';
 
         $statement = $this->pdo->prepare($query);
 
@@ -209,6 +211,7 @@ class Connection
             'description' => $card->description,
             'image_url' => $card->image,
             'id' => $_POST['card_id'],
+            'type' => $card->type,
         ]);
     }
 
@@ -217,6 +220,15 @@ class Connection
         $supp = "DELETE FROM cards WHERE id = $id";
         $request2 = $this->pdo->query($supp);
         return $request2->fetchAll();
+    }
+
+    public function GetCategory()
+    {
+        $query = "SELECT type FROM cards GROUP BY type";
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
     }
 
 }

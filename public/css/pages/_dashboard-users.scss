@@ -1,6 +1,7 @@
 .dashboard {
     background-color: #FBFCF4;
-
+    overflow-x: hidden;
+    
     .unauthorized-message {
         font-size: 24px;
         width: 100vw;
@@ -32,6 +33,10 @@
             padding: .5em 1.5em;
             font-weight: bold;
             border-radius: 25px;
+
+            &:hover {
+                background-color: #427241;
+            }
         }
     }
     &__users {

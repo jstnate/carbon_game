@@ -7,9 +7,11 @@ class Card
         public float $carbon,
         public string $description,
         public string $image,
+        public string $type,
     )
     {
     }
+
     public function verifyInput(): bool
     {
         $isValid = true;
@@ -23,3 +25,4 @@ class Card
 }
 
 ?>
+

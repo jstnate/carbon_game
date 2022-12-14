@@ -29,12 +29,12 @@
             header('Location:login.php');
         }
 
-            require_once 'public/includes/_admin-nav.php';
-            ?>
+        require_once 'public/includes/_admin-nav.php';
+    ?>
 
             <div class="dashboard__header">
                 <h1 class="dashboard__header__title">Utilisateurs</h1>
-                <a href="#" class="dashboard__header__button">Ajouter un utilisateur</a>
+                <a href="add-admin.php" class="dashboard__header__button">Ajouter un utilisateur</a>
             </div>
 
             <div class="dashboard__users">

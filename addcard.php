@@ -5,8 +5,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
@@ -17,6 +16,7 @@
         <input type="number" name="carbon_number" placeholder="Indice Carbon">
         <input type="textarea" name="card_description" placeholder="Description">
         <input type="file" accept="image/png, image/jpeg" name="image_url">
+        <input type="text" name="type" placeholder="catégorie">
         <button type="Submit">Enregistrer la carte</button>
     </form>
 
@@ -27,7 +27,7 @@
 
 // Sécurité Provisoire //
 
-if($_SESSION['function'] == 'admin' || $_SESSION['function'] == 'yes'){
+if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
     $autorisation = 1;
 }
 
@@ -47,10 +47,11 @@ require_once 'object/card.php';
                     $_POST['carbon_number'],
                     $_POST['card_description'],
                     $_FILES['image_url']['name'],
+                    $_POST['type'],
             );
             $img_name = $_FILES['image_url']['name'];
             $tmp_img_name = $_FILES['image_url']['tmp_name'];
-            $temporary = 'temporary/';
+            $temporary = 'images/cards/';
             move_uploaded_file($tmp_img_name,$temporary.$img_name);
 
             print_r($card);

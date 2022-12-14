@@ -14,8 +14,15 @@ window.onload = () => {
         a.playerScore - b.playerScore
     )
 
+
+    let congrats = document.createElement('h2')
+    congrats.innerHTML = objects[0].playerName + " a gagné la partie ! "
+    document.getElementById('congrats').appendChild(congrats)
+    console.log(congrats)
+
     showWinners()
     // console.log(objects)
+
 }
 
 function showWinners() {
@@ -27,22 +34,22 @@ function showWinners() {
         objectScore.innerHTML = objects[i].playerScore
         let objectAvatar = document.createElement('img')
         objectAvatar.src = objects[i].playerAvatar
+        object.appendChild(objectAvatar)
         object.appendChild(objectName)
         object.appendChild(objectScore)
-        object.appendChild(objectAvatar)
         // console.log(objects[i])
     }
 
     for (let i = 3; i < objects.length; i++) {
         let objectName = document.createElement('h3')
-        objectName.innerHTML = objects[i].playerName
+        objectName.innerHTML = '#' + (i+1) + ' ' + objects[i].playerName
         let objectScore = document.createElement('p')
-        objectScore.innerHTML = objects[i].playerScore
-        let objectAvatar = document.createElement('img')
-        objectAvatar.src = objects[i].playerAvatar
-        others.appendChild(objectName)
-        others.appendChild(objectScore)
-        others.appendChild(objectAvatar)
+        objectScore.innerHTML = objects[i].playerScore + ' points'
+        let otherdiv = document.createElement('div')
+        otherdiv.classList.add('otherplayers')
+        otherdiv.appendChild(objectName)
+        otherdiv.appendChild(objectScore)
+        others.appendChild(otherdiv)
     }
 
 }

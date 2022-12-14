@@ -1,12 +1,12 @@
 <header class="admin">
-    <img src="../images/backgrounds/logo.png" alt="" class="admin__responsive-logo">
+    <h3 class="admin__responsive-logo">CARBON</h3>
 
     <nav class="admin__nav" id="admin-menu">
         <ul class="admin__nav__list">
             <li class="admin__nav__list__element"><a href="" class="admin__nav__list__element__link">Utilisateurs</a></li>
             <li class="admin__nav__list__element"><a href="" class="admin__nav__list__element__link">Ressources</a></li>
 
-            <li class="admin__nav__list__element admin__nav__logo"><img src="../images/backgrounds/logo.png" alt="Logo" class="admin__nav__list__element__logo"></li>
+            <li class="admin__nav__list__element admin__nav__logo"><img src="images/logos/logo.png" alt="Logo" class="admin__nav__list__element__logo"></li>
 
             <li class="admin__nav__list__element"><a href="" class="admin__nav__list__element__link">Partenaires</a></li>
             <li class="admin__nav__list__element">
