@@ -35,11 +35,11 @@ require_once 'object/partner.php';
                 <div class="info_container">
                     <div class="info">
                         <label for="partner_name">Nom d'un partenaire</label>
-                        <input type="text" name="partner_name" id="partner_name" placeholder="Nom d'un partenaire">
+                        <input type="text" name="partner_name" id="partner_name" placeholder="Ex : iim">
                     </div>
                     <div class="info">
-                        <label for="partner_name">Nom d'un partenaire</label>
-                        <input type="text" name="partner_name" id="partner_name" placeholder="Nom d'un partenaire">
+                        <label for="partner_mail">Adresse mail du partenaire</label>
+                        <input type="text" name="partner_mail" id="partner_mail" placeholder="Ex : iim@school.devinci.fr">
                     </div>
                 </div>
 
@@ -72,11 +72,12 @@ require_once 'object/partner.php';
         if ($_POST) {
             $partner = new Partner(
                 $_POST['partner_name'],
+                $_POST['partner_mail'],
                 $_FILES['logo']['name'],
             );
             $img_name=$_FILES['logo']['name'];
             $tmp_img_name=$_FILES['logo']['tmp_name'];
-            $folder = 'image/';
+            $folder = 'images/';
             move_uploaded_file($tmp_img_name,$folder.$img_name);
 
             if($partner->verifyInput()){
@@ -90,6 +91,6 @@ require_once 'object/partner.php';
             }
         }
     ?>
-    
+    <script src="public/js/custom-file-input.js"></script>
 </body>
 </html>

@@ -116,10 +116,11 @@ class Connection
     // Partenaires 
     public function insertPartner(Partner $partner): bool
     {
-        $query = 'INSERT INTO partner (partner_name, logo) VALUES (:partner_name, :logo)';
+        $query = 'INSERT INTO partner (partner_name, partner_mail, logo) VALUES (:partner_name, :partner_mail, :logo)';
         $statement = $this->pdo->prepare($query);
         return $statement->execute([
             'partner_name' => $partner->partner_name,
+            'partner_mail' => $partner->partner_mail,
             'logo' => $partner->logo,
         ]);
     }

@@ -35,8 +35,8 @@
                         <input type="text" name="card_name" placeholder="Ex : voiture thermique">
                     </div>
                     <div class="info">
-                        <label for="carbon_number">Indice Carbone</label>
-                        <input type="number" name="carbon_number" placeholder="Ex : 270g/1km">
+                        <label for="carbon">Indice Carbone</label>
+                        <input type="number" name="carbon" placeholder="Ex : 270g/1km">
                     </div>
                     <div class="info">
                         <label for="type">Catégorie</label>
@@ -54,8 +54,8 @@
                 </div>
                 
                 <div class="info">
-                    <label for="card_description">Description</label>
-                    <textarea type="text" name="card_description" id="card_description" rows=1 COLS=40 placeholder="Ajouter la description de la carte"></textarea>
+                    <label for="description">Description</label>
+                    <textarea type="text" name="description" id="description" rows=1 COLS=40 placeholder="Ajouter la description de la carte"></textarea>
                 </div>
                 <div class="button_container">
                     <button id="submit" type="Submit">Ajouter une carte</button>
@@ -87,14 +87,14 @@ require_once 'object/card.php';
         if($_POST){
             $card = new Card(
                     $_POST['card_name'],
-                    $_POST['carbon_number'],
+                    $_POST['carbon'],
                     $_POST['card_description'],
                     $_FILES['image_url']['name'],
                     $_POST['type'],
             );
             $img_name = $_FILES['image_url']['name'];
             $tmp_img_name = $_FILES['image_url']['tmp_name'];
-            $temporary = 'images/cards/';
+            $temporary = 'images/partners-icon/';
             move_uploaded_file($tmp_img_name,$temporary.$img_name);
 
             if($card->verifyInput()){
