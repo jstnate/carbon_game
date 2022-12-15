@@ -62,6 +62,10 @@
               justify-content: center;
               text-align: center;
               gap: 20px;
+
+              &:hover {
+                cursor: pointer;
+              }
               h3 {
                 color: #6DB96C;
                 filter: grayscale(100%);

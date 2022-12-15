@@ -51,6 +51,7 @@ startGame.addEventListener('click', (e) => {
         showEvent.classList.remove('event-shown')
         document.getElementById('gm-logo').style.display="block"
         let showResult = document.createElement('a')
+        showResult.className = 'game-ending'
         showResult.innerHTML = "Voir les résultat"
         showResult.href = "end-game.php"
         document.getElementById('game-border').appendChild(showResult)

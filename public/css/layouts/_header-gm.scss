@@ -18,6 +18,10 @@
   }
   .quit-computer{
     display: none;
+    &:hover {
+      background-color: #558f54;
+      cursor: pointer;
+    }
   }
 
   .quit-button {
@@ -31,7 +35,6 @@
     img{
       display: flex;
     }
-
   }
 }
 

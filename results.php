@@ -8,24 +8,26 @@
     <link rel="stylesheet" href="public/css/style.css">
     <title>Résultat de la partie</title>
 </head>
-<body id="winner-div">
+<body id="winner-div" class="results">
     <?php require_once 'public/includes/ingame-navbar.php' ?>
-    <div id="congrats">
+    <div class="results__div">
+        <div id="congrats" class="results__div__congrats">
 
+        </div>
+        <section id="winners" class="results__div__winners">
+            <div class="results__div__winners__players">
+                <div id="2" class="results__div__winners__players__player results__div__winners__players__second">
+                </div>
+                <div id="1" class="results__div__winners__players__player results__div__winners__players__first">
+                </div>
+                <div id="3" class="results__div__winners__players__player results__div__winners__players__third">
+
+                </div>
+            </div>
+            <div id="others" class="results__div__winners__others">
+
+            </div>
+        </section>
     </div>
-    <section id="winners">
-        <div id="1" class="first">
-
-        </div>
-        <div id="2" class="second">
-
-        </div>
-        <div id="3" class="third">
-
-        </div>
-        <div id="others">
-
-        </div>
-    </section>
 </body>
 </html>

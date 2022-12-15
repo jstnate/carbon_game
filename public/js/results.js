@@ -34,9 +34,13 @@ function showWinners() {
         objectScore.innerHTML = objects[i].playerScore
         let objectAvatar = document.createElement('img')
         objectAvatar.src = objects[i].playerAvatar
+        let podium = document.createElement('img')
+        podium.src = 'images/icons/podium' + (i + 1) + '.png'
+        podium.className = 'results__div__winners__players__player__podium' + (i + 1)
         object.appendChild(objectAvatar)
         object.appendChild(objectName)
         object.appendChild(objectScore)
+        object.appendChild(podium)
         // console.log(objects[i])
     }
 
