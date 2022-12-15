@@ -722,6 +722,11 @@ main .container_all .container_form form button {
     font-size: 16px;
   }
 }
+@media screen and (min-width: 760px) {
+  .dashboard_admin .all_messages .main_container .infos_container .contact {
+    margin-top: 25px;
+  }
+}
 .dashboard_admin .all_messages .main_container .infos_container .contact .title {
   display: none;
   font-size: 16px;
@@ -872,6 +877,10 @@ main .container_all .container_form form button {
     text-decoration: none;
     color: #ffffff;
     font-weight: bold;
+  }
+  .dashboard_admin .all_messages .main_container .message_container .button_container .button.desktop_button:hover {
+    cursor: pointer;
+    background-color: #549053;
   }
 }
 
@@ -1206,7 +1215,7 @@ main .container_all .container_form form button {
 .admin::before {
   content: "";
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   height: 90vh;
   left: 0;
   top: 10vh;
@@ -1218,6 +1227,7 @@ main .container_all .container_form form button {
 }
 .admin.show::before {
   opacity: 1;
+  z-index: 1;
 }
 .admin__nav {
   position: absolute;
@@ -1353,6 +1363,14 @@ main .container_all .container_form form button {
   text-align: center;
   font-size: 29px;
 }
+.game-init-container h2 {
+  margin: 20px 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
 .game-init-container .start {
   padding: 1em 2em;
   background: #6DB86C;
@@ -1368,33 +1386,41 @@ main .container_all .container_form form button {
   width: 100%;
 }
 .game-init-container .player-form {
-  position: relative;
+  width: 80%;
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: space-between;
   gap: 10px;
-  width: 100%;
   margin: 20px auto 0;
+}
+@media screen and (min-width: 768px) {
+  .game-init-container .player-form {
+    width: 50%;
+  }
 }
 .game-init-container .player-form .name-input {
   margin-bottom: 10px;
-  width: 70%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 3px;
 }
 .game-init-container .player-form .name-input input {
   border: 2px solid #6DB86C;
   border-radius: 15px;
   height: 2.5em;
-  width: 236px;
+  width: 100%;
+  padding-left: 15px;
 }
 .game-init-container .player-form .name-input label {
-  margin: 5px 10px;
+  margin-left: 10px;
   color: #8D8A8A;
   font-size: 12px;
 }
 .game-init-container .player-form button {
-  position: absolute;
-  right: 30px;
-  bottom: 8px;
+  margin: 10px 0;
   background: #6DB86C;
   border: 2px solid #FFFFFF;
   border-radius: 50%;
@@ -1409,17 +1435,31 @@ main .container_all .container_form form button {
   gap: 16px;
   display: flex;
   justify-content: space-between;
-  width: 70%;
-  margin: 20px auto;
-  align-items: center;
+  width: 80%;
+  margin: 0 auto 40px;
+  align-items: flex-end;
   position: relative;
 }
-.game-init-container .setup-form .setup-input {
+@media screen and (min-width: 768px) {
+  .game-init-container .setup-form {
+    width: 50%;
+  }
+}
+.game-init-container .setup-form .setup-input-div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.game-init-container .setup-form .setup-input-div .setup-input {
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 45%;
 }
-.game-init-container .setup-form select {
-  width: 110px;
+.game-init-container .setup-form .setup-input-div select {
+  width: 100%;
   background: #FFFFFF;
   border: 2px solid #6DB96C;
   box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -1427,31 +1467,26 @@ main .container_all .container_form form button {
   height: 2.5rem;
   padding: 0.5em 1em;
 }
-.game-init-container .setup-form label {
-  margin-left: auto;
-  margin-right: auto;
-  position: relative;
-  top: -5px;
+.game-init-container .setup-form .setup-input-div label {
+  margin: 0 0 3px 10px;
   font-size: 12px;
   white-space: nowrap;
   color: #8D8A8A;
 }
-.game-init-container .setup-form .responsive-button {
+.game-init-container .setup-form .setup-input-div .responsive-button {
   display: none;
 }
 .game-init-container .setup-form button {
   background: #6DB86C;
   border: 2px solid #FFFFFF;
   border-radius: 50%;
+  margin: 10px 0;
   width: 44px;
   height: 44px;
   padding: 1em;
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-  right: -30px;
-  bottom: 0;
 }
 .game-init-container .setup-show {
   min-height: 40vh;
@@ -1459,12 +1494,18 @@ main .container_all .container_form form button {
   overflow-y: auto;
   display: flex;
   flex-direction: column;
+  padding: 15px;
+  align-items: center;
   background: #FFFFFF;
   border: 1px solid #6DB96C;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
   border-radius: 10px;
   margin: 20px auto;
   width: 85%;
+}
+.game-init-container .setup-show h2 {
+  font-size: 20px;
+  text-align: center;
 }
 .game-init-container .setup-show .setup-div {
   width: 90%;
@@ -1475,20 +1516,40 @@ main .container_all .container_form form button {
   font-size: 18px;
   font-weight: bold;
 }
-.game-init-container .setup-show .player-div {
-  margin: 0px 30px;
+.game-init-container .setup-show .player-appears {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+@media screen and (min-width: 760px) {
+  .game-init-container .setup-show .player-appears {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(33.3333333333%, 1fr));
+    place-items: center;
+    row-gap: 25px;
+  }
+}
+.game-init-container .setup-show .player-appears .player-div {
+  width: 100%;
   display: flex;
   flex-direction: row;
   align-items: flex-end;
   text-align: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: -10px;
 }
-.game-init-container .setup-show img {
+@media screen and (min-width: 760px) {
+  .game-init-container .setup-show .player-appears .player-div {
+    width: 25%;
+  }
+}
+.game-init-container .setup-show .player-appears .player-div img {
   height: 36px;
   width: 36px;
   align-items: center;
 }
-.game-init-container .setup-show h2 {
-  padding: 6px;
+.game-init-container .setup-show .player-appears .player-div h3 {
   text-align: center;
   font-size: 22px;
 }

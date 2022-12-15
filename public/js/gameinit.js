@@ -33,14 +33,12 @@ playerForm.onsubmit = (e) => {
     playerdiv.classList.add('player-div')
     let playerImg = document.createElement('img')
     playerImg.src = playerAvatar
-    let name = document.createElement("h1")
+    let name = document.createElement("h3")
     name.innerHTML = PlayerName
     playerdiv.appendChild(playerImg)
     playerdiv.appendChild(name)
     playerAppears.appendChild(playerdiv)
     z++
-    // playerCount++
-    console.log(playerList)
     if(avatarNumber == 0){
         playerForm.style.display = "none"
         maximum.style.display = 'block'
@@ -66,12 +64,12 @@ setUpForm.onsubmit = (e) => {
 
 start.addEventListener('click', () => {
     localStorage.clear()
-   for (let i = 1; i <= playerList.length; i++) {
-       localStorage.setItem('Player-' + i, playerList[i-1])
-       localStorage.setItem('Avatar-' + i, selectedAvatar[i-1])
-   }
-   localStorage.setItem('TurnCount', turn)
-   localStorage.setItem('EventFrequency', event)
+    for (let i = 1; i <= playerList.length; i++) {
+        localStorage.setItem('Player-' + i, playerList[i-1])
+        localStorage.setItem('Avatar-' + i, selectedAvatar[i-1])
+    }
+    localStorage.setItem('TurnCount', turn)
+    localStorage.setItem('EventFrequency', event)
     localStorage.setItem('PlayerCount', playerList.length)
     localStorage.setItem('CurrentNumber', 1)
 })
