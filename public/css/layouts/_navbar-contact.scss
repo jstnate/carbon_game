@@ -12,10 +12,15 @@
         justify-content: space-between;
     }
     .container-logo{
-        img.logo{
+        .brandName{
             display: none;
             @include mixins.breakpoint(768px){
                 display: block;
+                font-family: 'KoHo';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 35px;
+                color: #6DB96C;
             }
         }
     }
@@ -50,6 +55,10 @@
         }
         .logo{
             list-style: none;
+            img.logoimg{
+                width: 65px;
+                margin: 5px;
+            }
             @include mixins.breakpoint(768px){
                 display: none;
             }

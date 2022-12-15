@@ -969,12 +969,17 @@
     justify-content: space-between;
   }
 }
-.navbar .container-logo img.logo {
+.navbar .container-logo .brandName {
   display: none;
 }
 @media screen and (max-width: 768px) {
-  .navbar .container-logo img.logo {
+  .navbar .container-logo .brandName {
     display: block;
+    font-family: "KoHo";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 35px;
+    color: #6DB96C;
   }
 }
 .navbar .nav-menu {
@@ -1009,6 +1014,10 @@
 }
 .navbar .nav-menu .logo {
   list-style: none;
+}
+.navbar .nav-menu .logo img.logoimg {
+  width: 65px;
+  margin: 5px;
 }
 @media screen and (max-width: 768px) {
   .navbar .nav-menu .logo {
@@ -2504,6 +2513,7 @@ footer .footer_container .text {
   font-size: 14px;
 }
 
+<<<<<<< HEAD
 .body-db-partners {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -2650,4 +2660,190 @@ footer .footer_container .text {
 }
 >>>>>>> adam-dev
 
+=======
+.modify_card {
+  width: 100%;
+  background-color: #FBFCF4;
+}
+.modify_card .main_container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+}
+.modify_card .main_container #title {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container #title {
+    display: initial;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+    margin: 4% 0% 3% 10%;
+  }
+}
+.modify_card .main_container .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.modify_card .main_container .info label {
+  font-weight: 700;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container .info label {
+    margin-left: 10px;
+  }
+}
+.modify_card .main_container .info input {
+  width: 100%;
+  background-color: white;
+  padding: 2% 5%;
+  border: 2px solid #6DB86C;
+  border-radius: 15px;
+}
+.modify_card .main_container .info #textarea_description {
+  width: 100%;
+  height: 150px;
+  background: #FFFFFF;
+  border: 2px solid #6DB96C;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 5px;
+  resize: none;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container .sub_container {
+    width: 90%;
+    background-color: #FBFCF4;
+    padding: 2% 5%;
+    border: 2px solid #6DB86C;
+    border-radius: 15px;
+  }
+}
+.modify_card .main_container .sub_container .container_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.modify_card .main_container .sub_container .container_text h2 {
+  font-weight: 700;
+  font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container .sub_container .container_text h2 {
+    display: none;
+  }
+}
+.modify_card .main_container .sub_container .container_text h3 {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container .sub_container .container_text h3 {
+    display: initial;
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+.modify_card .main_container .sub_container .container_text p {
+  text-align: center;
+}
+.modify_card .main_container .form_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 0px;
+}
+.modify_card .main_container .form_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.modify_card .main_container .form_container form .info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container .form_container form .info_container {
+    flex-direction: row;
+  }
+}
+.modify_card .main_container .form_container form .all_img {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container .form_container form .all_img .container_card {
+    width: 20%;
+    height: auto;
+    background-color: aqua;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modify_card .main_container .form_container form .all_img .container_card img {
+    width: 100%;
+  }
+}
+.modify_card .main_container .form_container form .all_img .add_img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  background-color: white;
+  padding: 2% 5%;
+  border: 2px dashed #6DB86C;
+}
+.modify_card .main_container .form_container form .all_img .add_img img {
+  width: 75px;
+}
+.modify_card .main_container .form_container form .all_img .add_img .button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modify_card .main_container .form_container form .all_img .add_img .button_container .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.modify_card .main_container .form_container form .all_img .add_img .button_container .inputfile + label {
+  background-color: #6DB96C;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.modify_card .main_container .form_container form .button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modify_card .main_container .form_container form .button_container #submit {
+  background-color: #6DB96C;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+>>>>>>> ambre-dev
 /*# sourceMappingURL=style.css.map */
