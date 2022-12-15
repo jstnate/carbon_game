@@ -26,12 +26,12 @@
 </head>
 <body class="solo-card">
     <?php require_once 'public/includes/navbar_contact.php'; ?>
-    <div class="card-img">
-    <img src="<?= $card[0]['image_url'] ?>" alt="">
-    </div>
     <div class="card-informations">
         <h2><?= $card[0]['card_name']?></h2>
-        <h3><?= $card[0]['carbon']?></h3>
+        <h3><?= $card[0]['carbon'] . 'g de Carbone' ?></h3>
+    </div>
+    <div class="card-img">
+    <img src="<?= $card[0]['image_url'] ?>" alt="">
     </div>
     <div class="card-description">
         <h2>Description de l'empreinte carbone :</h2>

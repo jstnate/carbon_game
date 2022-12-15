@@ -9,7 +9,11 @@
 @use "layouts/navbar-contact";
 @use "pages/dashboard-users";
 @use "layouts/admin-header";
+@use "pages/add-admin";
 @use "pages/game-init";
 @use "pages/card";
-@use "pages/add-admin";
 @use "layouts/footer";
+@use "pages/add-card";
+@use "pages/add-partner";
+@use "pages/dashboard-partners";
+

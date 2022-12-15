@@ -511,12 +511,20 @@
   justify-content: space-between;
 }
 
-main {
+.contact {
+  width: 100%;
+  height: auto;
+}
+.contact .container_all .navbar {
+  position: relative;
+  z-index: 1;
+}
+.contact .container_all main {
   background-color: #FBFCF4;
   width: 100%;
   height: auto;
 }
-main .container_all {
+.contact .container_all main .container_all {
   height: auto;
   display: flex;
   flex-direction: column;
@@ -525,90 +533,99 @@ main .container_all {
   background-position: center;
   background-size: 80%;
   background-repeat: no-repeat;
+  padding: 5%;
 }
 @media screen and (max-width: 768px) {
-  main .container_all {
+  .contact .container_all main .container_all {
     background-image: none;
+    padding: 0%;
   }
 }
-main .container_all .container_title {
+.contact .container_all main .container_all .container_title {
   background-color: white;
   margin-top: 2%;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
-main .container_all .container_title .title {
+.contact .container_all main .container_all .container_title .title {
   font-family: "KoHo";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   color: #1F2020;
 }
-main .container_all .container_form {
+.contact .container_all main .container_all .container_form {
   margin-top: 30px;
   width: 60%;
 }
 @media screen and (max-width: 768px) {
-  main .container_all .container_form {
+  .contact .container_all main .container_all .container_form {
     width: 80%;
   }
 }
-main .container_all .container_form form {
+.contact .container_all main .container_all .container_form form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
-main .container_all .container_form form .container_input {
+.contact .container_all main .container_all .container_form form .container_input {
   width: 100%;
   background-color: white;
   padding: 5%;
   border: 2px solid #6DB86C;
   border-radius: 15px;
 }
-main .container_all .container_form form .container_input .container_names {
+@media screen and (max-width: 768px) {
+  .contact .container_all main .container_all .container_form form .container_input {
+    background-color: #FBFCF4;
+    padding: 0;
+    border: none;
+  }
+}
+.contact .container_all main .container_all .container_form form .container_input .container_names {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 @media screen and (max-width: 768px) {
-  main .container_all .container_form form .container_input .container_names {
+  .contact .container_all main .container_all .container_form form .container_input .container_names {
     display: flex;
     flex-direction: column;
   }
 }
-main .container_all .container_form form .container_input .container_names .container_label {
+.contact .container_all main .container_all .container_form form .container_input .container_names .container_label {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-main .container_all .container_form form .container_input .container_names .container_label input {
+.contact .container_all main .container_all .container_form form .container_input .container_names .container_label input {
   background: rgba(109, 184, 108, 0.67);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
-main .container_all .container_form form .container_input .container_label {
+.contact .container_all main .container_all .container_form form .container_input .container_label {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
-main .container_all .container_form form .container_input .container_label label {
+.contact .container_all main .container_all .container_form form .container_input .container_label label {
   font-family: "KoHo";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   color: black;
 }
-main .container_all .container_form form .container_input .container_label #subject {
+.contact .container_all main .container_all .container_form form .container_input .container_label #subject {
   margin-bottom: 15px;
 }
-main .container_all .container_form form .container_input .container_label #description {
+.contact .container_all main .container_all .container_form form .container_input .container_label #description {
   height: 150px;
   resize: none;
 }
-main .container_all .container_form form .container_input .container_label input {
+.contact .container_all main .container_all .container_form form .container_input .container_label input {
   width: 100%;
   height: 40px;
   background: #FFFFFF;
@@ -617,7 +634,7 @@ main .container_all .container_form form .container_input .container_label input
   border-radius: 15px;
   padding: 5px;
 }
-main .container_all .container_form form .container_input .container_label textarea {
+.contact .container_all main .container_all .container_form form .container_input .container_label textarea {
   width: 100%;
   height: 40px;
   background: #FFFFFF;
@@ -626,7 +643,7 @@ main .container_all .container_form form .container_input .container_label texta
   border-radius: 15px;
   padding: 5px;
 }
-main .container_all .container_form form button {
+.contact .container_all main .container_all .container_form form button {
   background: #6DB86C;
   border-radius: 25px;
   border: 2px solid #6DB86C;
@@ -637,6 +654,28 @@ main .container_all .container_form form button {
   font-size: 20px;
   color: #FFFFFF;
   margin-bottom: 15px;
+}
+.contact footer {
+  width: 100%;
+  height: 100px;
+  background: #6DB96C;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+  border-radius: 20px 20px 0px 0px;
+}
+.contact footer .footer_container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 15px;
+}
+.contact footer .footer_container .text {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  color: #FFFFFF;
 }
 
 .dashboard_admin {
@@ -1387,6 +1426,313 @@ main .container_all .container_form form button {
     display: block;
   }
 }
+.add_admin {
+  width: 100%;
+  height: 100%;
+  background-color: #FBFCF4;
+}
+.add_admin label {
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 15px;
+}
+.add_admin input input, .add_admin select input {
+  width: 100%;
+  background-color: white;
+  padding: 2% 5%;
+  border: 2px solid #6DB86C;
+  border-radius: 15px;
+  background-position: 100px;
+  appearance: none;
+}
+.add_admin input input:focus, .add_admin select input:focus {
+  border: 2px solid #000000;
+  outline: none;
+}
+.add_admin input select, .add_admin select select {
+  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+}
+.add_admin input select:focus, .add_admin select select:focus {
+  background-image: linear-gradient(45deg, #6DB86C 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #6DB86C 50%), linear-gradient(to right, #ccc, #ccc);
+  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
+  background-size: 5px 5px, 5px 5px, 1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+.add_admin input__header, .add_admin select__header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  margin: 2em auto;
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__header, .add_admin select__header {
+    margin: 5rem auto 2em;
+  }
+}
+.add_admin input__header h2, .add_admin select__header h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__header h2, .add_admin select__header h2 {
+    font-size: 28px;
+  }
+}
+.add_admin input__header a, .add_admin select__header a {
+  border: 2px solid #6DB86C;
+  border-radius: 30px;
+  padding: 0.5em 1em;
+  font-size: 18px;
+  text-decoration: none;
+  color: #6DB86C;
+  font-weight: bold;
+}
+.add_admin input__header a:hover, .add_admin select__header a:hover {
+  background-color: #6DB86C;
+  color: #ffffff;
+}
+.add_admin input__container, .add_admin select__container {
+  background-color: #ffffff;
+  width: 90%;
+  margin: 0 auto;
+  border: 1px solid #6BD86C;
+  padding: 2em;
+  border-radius: 20px;
+}
+.add_admin input__container__title, .add_admin select__container__title {
+  margin: 0 0 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__title, .add_admin select__container__title {
+    align-items: center;
+    margin-bottom: 5rem;
+  }
+}
+.add_admin input__container__title h3, .add_admin select__container__title h3 {
+  font-size: 26px;
+}
+.add_admin input__container__form, .add_admin select__container__form {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form, .add_admin select__container__form {
+    gap: 30px;
+  }
+}
+.add_admin input__container__form__first, .add_admin select__container__form__first {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form__first, .add_admin select__container__form__first {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0% 15%;
+  }
+}
+.add_admin input__container__form__first__input, .add_admin select__container__form__first__input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form__first__input, .add_admin select__container__form__first__input {
+    width: 45%;
+  }
+}
+.add_admin input__container__form .main_container, .add_admin select__container__form .main_container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.add_admin input__container__form .main_container h2, .add_admin select__container__form .main_container h2 {
+  font-weight: 700;
+  font-size: 25px;
+  padding: 10% 5% 2%;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container h2, .add_admin select__container__form .main_container h2 {
+    font-size: 30px;
+    padding: 5% 0% 0%;
+    text-align: left;
+    width: 85%;
+  }
+}
+.add_admin input__container__form .main_container .sub_container, .add_admin select__container__form .main_container .sub_container {
+  width: 85%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  border: #6DB96C solid;
+  padding: 20px;
+  border-radius: 16px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container, .add_admin select__container__form .main_container .sub_container {
+    background-color: #FBFCF4;
+  }
+}
+.add_admin input__container__form .main_container .sub_container .container_text, .add_admin select__container__form .main_container .sub_container .container_text {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container .container_text, .add_admin select__container__form .main_container .sub_container .container_text {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 0% 15%;
+  }
+}
+.add_admin input__container__form .main_container .sub_container .container_text__input, .add_admin select__container__form .main_container .sub_container .container_text__input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container .container_text__input, .add_admin select__container__form .main_container .sub_container .container_text__input {
+    width: 45%;
+  }
+}
+.add_admin input__container__form .main_container .sub_container__submit, .add_admin select__container__form .main_container .sub_container__submit {
+  background-color: #6DB96C;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 25px;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: #ffffff;
+  padding: 15px 55px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container__submit, .add_admin select__container__form .main_container .sub_container__submit {
+    width: 30%;
+    margin: 3rem auto 1rem;
+    gap: 10px;
+    align-items: center;
+  }
+}
+.add_admin input__container__form .main_container .sub_container__submit h3, .add_admin select__container__form .main_container .sub_container__submit h3 {
+  font-size: 30px;
+}
+.add_admin input__container__form .main_container .sub_container .add_form, .add_admin select__container__form .main_container .sub_container .add_form {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container .add_form, .add_admin select__container__form .main_container .sub_container .add_form {
+    gap: 30px;
+  }
+}
+.add_admin input__container__form .main_container .sub_container .add_form .first, .add_admin select__container__form .main_container .sub_container .add_form .first {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container .add_form .first, .add_admin select__container__form .main_container .sub_container .add_form .first {
+    flex-direction: row;
+    gap: 100px;
+    padding: 0% 15%;
+  }
+}
+.add_admin input__container__form .main_container .sub_container .add_form .first .info_container, .add_admin select__container__form .main_container .sub_container .add_form .first .info_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add_admin input__container__form .main_container .sub_container .add_form .first .info_container .select .function_select, .add_admin select__container__form .main_container .sub_container .add_form .first .info_container .select .function_select {
+  width: 100%;
+  background-color: white;
+  padding: 2%;
+  border: 2px solid #6DB86C;
+  border-radius: 15px;
+}
+.add_admin input__container__form .main_container .sub_container .add_form .second, .add_admin select__container__form .main_container .sub_container .add_form .second {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container .add_form .second, .add_admin select__container__form .main_container .sub_container .add_form .second {
+    flex-direction: row;
+    gap: 100px;
+    padding: 0% 15%;
+  }
+}
+.add_admin input__container__form .main_container .sub_container .add_form .second .info_container, .add_admin select__container__form .main_container .sub_container .add_form .second .info_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.add_admin input__container__form .main_container .sub_container .add_form .button_container, .add_admin select__container__form .main_container .sub_container .add_form .button_container {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 50px;
+  margin-top: 10%;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container .add_form .button_container, .add_admin select__container__form .main_container .sub_container .add_form .button_container {
+    flex-direction: row;
+    display: flex;
+    margin: 5% 3% 0%;
+    justify-content: flex-end;
+    gap: 30%;
+  }
+}
+.add_admin input__container__form .main_container .sub_container .add_form .button_container #submit, .add_admin select__container__form .main_container .sub_container .add_form .button_container #submit {
+  background-color: #6DB96C;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+@media screen and (min-width: 768px) {
+  .add_admin input__container__form .main_container .sub_container .add_form .button_container #submit, .add_admin select__container__form .main_container .sub_container .add_form .button_container #submit {
+    padding: 15px 55px;
+  }
+}
+.add_admin input__container__form .main_container .sub_container .add_form .button_container a #back, .add_admin select__container__form .main_container .sub_container .add_form .button_container a #back {
+  background-color: white;
+  border: #6DB96C solid;
+  padding: 0.5em 1.5em;
+  border-radius: 25px;
+  color: #6DB96C;
+}
+
 .game-init-container {
   background: #FBFCF4;
 }
@@ -1602,7 +1948,7 @@ main .container_all .container_form form button {
   overflow: hidden;
 }
 .solo-card .card-img {
-  width: 50%;
+  width: 80%;
   padding: 1em;
   margin: 20px auto;
   display: flex;
@@ -1613,6 +1959,9 @@ main .container_all .container_form form button {
 }
 .solo-card .card-img img {
   max-width: 100%;
+}
+.solo-card .card-informations {
+  margin-top: 20px;
 }
 .solo-card .card-informations h2 {
   color: black;
@@ -1626,6 +1975,7 @@ main .container_all .container_form form button {
   color: #6DB86C;
 }
 .solo-card .card-description {
+  padding-top: 20px;
   margin: auto;
   width: 90%;
 }
@@ -1633,6 +1983,7 @@ main .container_all .container_form form button {
   color: black;
   font-weight: bold;
 }
+<<<<<<< HEAD
 
 .add-admin {
   width: 100%;
@@ -1791,19 +2142,10 @@ main .container_all .container_form form button {
 }
 .add-admin__container__form__submit {
   background-color: #6DB96C;
+=======
+.solo-card .card-description p {
+>>>>>>> adam-dev
   font-size: 20px;
-  font-weight: bold;
-  margin-top: 25px;
-  border: #6DB96C;
-  border-radius: 25px;
-  color: #ffffff;
-  padding: 15px 55px;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__container__form__submit {
-    width: 30%;
-    margin: 3rem auto 1rem;
-  }
 }
 
 footer {
@@ -1828,5 +2170,484 @@ footer .footer_container .text {
   font-size: 15px;
   color: #FFFFFF;
 }
+<<<<<<< HEAD
+=======
+
+.add_card {
+  width: 100%;
+  background-color: #FBFCF4;
+}
+.add_card .main_container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .add_card .main_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+}
+.add_card .main_container #title {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .add_card .main_container #title {
+    display: initial;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+    margin: 4% 0% 3% 10%;
+  }
+}
+.add_card .main_container .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.add_card .main_container .info label {
+  font-weight: 700;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .add_card .main_container .info label {
+    margin-left: 10px;
+  }
+}
+.add_card .main_container .info input {
+  width: 100%;
+  background-color: white;
+  padding: 2% 5%;
+  border: 2px solid #6DB86C;
+  border-radius: 15px;
+}
+.add_card .main_container .info textarea {
+  width: 100%;
+  height: 40px;
+  background: #FFFFFF;
+  border: 2px solid #6DB96C;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 5px;
+}
+@media screen and (min-width: 768px) {
+  .add_card .main_container .sub_container {
+    width: 90%;
+    background-color: #FBFCF4;
+    padding: 2% 5%;
+    border: 2px solid #6DB86C;
+    border-radius: 15px;
+  }
+}
+.add_card .main_container .sub_container .container_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.add_card .main_container .sub_container .container_text h2 {
+  font-weight: 700;
+  font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .add_card .main_container .sub_container .container_text h2 {
+    display: none;
+  }
+}
+.add_card .main_container .sub_container .container_text h3 {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .add_card .main_container .sub_container .container_text h3 {
+    display: initial;
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+.add_card .main_container .sub_container .container_text p {
+  text-align: center;
+}
+.add_card .main_container .form_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 0px;
+}
+.add_card .main_container .form_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.add_card .main_container .form_container form .info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .add_card .main_container .form_container form .info_container {
+    flex-direction: row;
+  }
+}
+.add_card .main_container .form_container form .add-img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  background-color: white;
+  padding: 2% 5%;
+  border: 2px dashed #6DB86C;
+}
+.add_card .main_container .form_container form .add-img img {
+  width: 75px;
+}
+.add_card .main_container .form_container form .add-img .button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add_card .main_container .form_container form .add-img .button_container .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.add_card .main_container .form_container form .add-img .button_container .inputfile + label {
+  background-color: #6DB96C;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.add_card .main_container .form_container form .button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add_card .main_container .form_container form .button_container #submit {
+  background-color: #6DB96C;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+.add_partner {
+  width: 100%;
+  background-color: #FBFCF4;
+}
+.add_partner .main_container {
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .add_partner .main_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5%;
+  }
+}
+.add_partner .main_container #title {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .add_partner .main_container #title {
+    display: initial;
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+    margin: 4% 0% 3% 10%;
+  }
+}
+.add_partner .main_container .info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.add_partner .main_container .info label {
+  font-weight: 700;
+  font-size: 16px;
+}
+@media screen and (min-width: 768px) {
+  .add_partner .main_container .info label {
+    margin-left: 10px;
+  }
+}
+.add_partner .main_container .info input {
+  width: 100%;
+  background-color: white;
+  padding: 2% 5%;
+  border: 2px solid #6DB86C;
+  border-radius: 15px;
+}
+.add_partner .main_container .info textarea {
+  width: 100%;
+  height: 40px;
+  background: #FFFFFF;
+  border: 2px solid #6DB96C;
+  box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 15px;
+  padding: 5px;
+}
+@media screen and (min-width: 768px) {
+  .add_partner .main_container .sub_container {
+    width: 90%;
+    background-color: #FBFCF4;
+    padding: 2% 5%;
+    border: 2px solid #6DB86C;
+    border-radius: 15px;
+  }
+}
+.add_partner .main_container .sub_container .container_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+.add_partner .main_container .sub_container .container_text h2 {
+  font-weight: 700;
+  font-size: 25px;
+}
+@media screen and (min-width: 768px) {
+  .add_partner .main_container .sub_container .container_text h2 {
+    display: none;
+  }
+}
+.add_partner .main_container .sub_container .container_text h3 {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .add_partner .main_container .sub_container .container_text h3 {
+    display: initial;
+    font-weight: 700;
+    font-size: 25px;
+  }
+}
+.add_partner .main_container .sub_container .container_text p {
+  text-align: center;
+}
+.add_partner .main_container .form_container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px 0px;
+}
+.add_partner .main_container .form_container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.add_partner .main_container .form_container form .info_container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+@media screen and (min-width: 768px) {
+  .add_partner .main_container .form_container form .info_container {
+    flex-direction: row;
+  }
+}
+.add_partner .main_container .form_container form .add-img {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  background-color: white;
+  padding: 2% 5%;
+  border: 2px dashed #6DB86C;
+}
+.add_partner .main_container .form_container form .add-img img {
+  width: 75px;
+}
+.add_partner .main_container .form_container form .add-img .button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add_partner .main_container .form_container form .add-img .button_container .inputfile {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+.add_partner .main_container .form_container form .add-img .button_container .inputfile + label {
+  background-color: #6DB96C;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.add_partner .main_container .form_container form .button_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.add_partner .main_container .form_container form .button_container #submit {
+  background-color: #6DB96C;
+  border: #6DB96C;
+  border-radius: 25px;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.body-db-partners {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: #FBFCF4;
+}
+.body-db-partners .partners-actions {
+  display: flex;
+  filter: drop-shadow(0px 1px 4px rgba(0, 0, 0, 0.25));
+  padding: 2em 1em;
+  justify-content: space-around;
+  align-items: center;
+  background: white;
+  color: black;
+  width: 85%;
+  margin: auto 24px;
+  border-radius: 25px;
+}
+.body-db-partners .partners-actions .desktop-only {
+  display: none;
+}
+.body-db-partners .partners-actions h2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.body-db-partners .partenaires {
+  margin: 50px auto 25px;
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.body-db-partners .partenaires h1 {
+  font-size: 25px;
+}
+.body-db-partners .partenaires .add-a-partner {
+  padding: 0.5em 1.5em;
+  background: #6DB86C;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 25px;
+}
+.body-db-partners .solo-partner {
+  display: flex;
+  justify-content: center;
+  margin: 14px 24px 14px 24px;
+  flex-direction: column;
+  background: #E3F1DD;
+  border-bottom: 1px solid #F0F2E1;
+  border-radius: 15px;
+}
+.body-db-partners .solo-partner .solo-partner-infos {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20px;
+}
+.body-db-partners .solo-partner img {
+  width: 50px;
+  height: 50px;
+}
+.body-db-partners .solo-partner p {
+  font-size: 10px;
+  font-weight: bold;
+}
+.body-db-partners .solo-partner h2 {
+  font-size: 15px;
+  font-weight: bold;
+}
+.body-db-partners .solo-partner .delete-partners {
+  align-items: center;
+  padding: 0.5em 1.5em;
+  background: #DB1A1A;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+}
+.body-db-partners .solo-partner .group-partner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 760px) {
+  .body-db-partners .partenaires {
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 90px 60px;
+  }
+  .body-db-partners .partners-actions {
+    width: 95%;
+    margin: 0 auto;
+  }
+  .body-db-partners .partners-actions .desktop-only {
+    display: block;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+  }
+  .body-db-partners .solo-partner {
+    margin: 0 auto;
+    border-radius: 0;
+    width: 95%;
+    border-bottom: 1px solid #A7A7A7;
+  }
+  .body-db-partners .solo-partner .group-partner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+  .body-db-partners .solo-partner .group-partner .solo-partner-infos {
+    display: flex;
+    width: 70%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    flex-direction: row;
+    margin: 20px 0;
+  }
+  .body-db-partners .solo-partner .group-partner .solo-partner-infos h2, .body-db-partners .solo-partner .group-partner .solo-partner-infos p {
+    width: 33.3333333333%;
+    display: flex;
+    align-items: center;
+  }
+  .body-db-partners .solo-partner .group-partner .solo-partner-infos h2 {
+    justify-content: flex-start;
+  }
+  .body-db-partners .solo-partner .group-partner .solo-partner-infos img {
+    margin-left: 40px;
+  }
+  .body-db-partners .solo-partner .group-partner .solo-partner-infos p {
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+>>>>>>> adam-dev
 
 /*# sourceMappingURL=style.css.map */
