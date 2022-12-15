@@ -11,11 +11,9 @@
 @use "layouts/admin-header";
 @use "pages/add-admin";
 @use "pages/game-init";
-<<<<<<< HEAD
 @use "pages/card";
-@use "pages/add-admin";
 @use "layouts/footer";
-=======
 @use "pages/add-card";
 @use "pages/add-partner";
->>>>>>> ambre-dev
+@use "pages/dashboard-partners";
+

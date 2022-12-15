@@ -1,10 +1,7 @@
 @use "../utils/mixins";
-<<<<<<< HEAD
-.add-admin{
-=======
+
 
 .add_admin{
->>>>>>> origin/ambre-dev
     width: 100%;
     height: 100%;
     background-color: #FBFCF4;
@@ -13,17 +10,13 @@
         font-size: 16px;
         margin-left: 15px;
     }
-<<<<<<< HEAD
     input, select{
-=======
     input{
->>>>>>> origin/ambre-dev
         width: 100%;
         background-color: white;
         padding: 2% 5%;
         border: 2px solid #6DB86C;
         border-radius: 15px;
-<<<<<<< HEAD
         background-position: 100px;
         appearance: none;
     }
@@ -161,7 +154,6 @@
             }
 
             &__second{
-=======
     }
     .main_container{
         width: 100%;
@@ -195,12 +187,10 @@
             }
             .container_text{
                 width: 100%;
->>>>>>> origin/ambre-dev
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
                 @include mixins.breakpointmin(768px){
-<<<<<<< HEAD
                     flex-direction: row;
                     justify-content: space-around;
                     padding: 0% 15%;
@@ -230,7 +220,6 @@
                 @include mixins.breakpointmin(768px){
                     width: 30%;
                     margin: 3rem auto 1rem;
-=======
                     gap: 10px;
                     align-items: center;
                 }
@@ -323,13 +312,8 @@
                             color: #6DB96C;
                         }
                     }
->>>>>>> origin/ambre-dev
                 }
             }
         }
     }
-}
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/ambre-dev
+}}}}

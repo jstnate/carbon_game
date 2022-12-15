@@ -128,6 +128,10 @@ class Connection
     public function GetPartners()
     {
         $query = 'SELECT * FROM partner ORDER BY id';
+        $statement = $this->pdo->prepare($query);
+        $statement->execute();
+        $data = $statement->fetchAll();
+        return $data;
     }
 
     public function insertCard(Card $card): bool
