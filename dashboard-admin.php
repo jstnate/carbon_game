@@ -24,7 +24,7 @@ if($autorisation != 1){
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b050931f68.js" crossorigin="anonymous"></script>
     <script src="public/js/main.js" defer></script>
-    <title>Tableau de bord - Admin</title>
+    <title>Tableau de bord - Accueil</title>
 </head>
 <body class="dashboard_admin">
     <?php require_once 'public/includes/_admin-nav.php'; ?>

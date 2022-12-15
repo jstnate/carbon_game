@@ -11,7 +11,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="public/js/gameinit.js" defer></script>
     <link rel="stylesheet" href="public/css/style.css">
-    <title>Document</title>
+    <title>Configuration du jeu</title>
 </head>
 <body class="game-init-container">
     <?php require_once 'public/includes/ingame-navbar.php'; ?>

@@ -11,7 +11,7 @@ require_once 'object/connection.php';
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <script src="public/js/endgame.js" defer></script>
         <link rel="stylesheet" href="public/css/style.css">
-        <title>Document</title>
+        <title>Fin du jeu</title>
     </head>
     <body class="endgame">
 
