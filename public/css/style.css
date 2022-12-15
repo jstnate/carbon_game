@@ -722,9 +722,6 @@ main .container_all .container_form form button {
     font-size: 16px;
   }
 }
-.dashboard_admin .all_messages .main_container .infos_container .contact {
-  margin-top: 25px;
-}
 .dashboard_admin .all_messages .main_container .infos_container .contact .title {
   display: none;
   font-size: 16px;
@@ -1204,9 +1201,27 @@ main .container_all .container_form form button {
   font-size: 24px;
   color: #6DB96C;
   font-weight: bold;
+  text-decoration: none;
+}
+.admin::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  height: 90vh;
+  left: 0;
+  top: 10vh;
+  height: 90vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: all 0.4s;
+  opacity: 0;
+}
+.admin.show::before {
+  opacity: 1;
 }
 .admin__nav {
   position: absolute;
+  z-index: 2;
   right: -300px;
   top: 10vh;
   height: 90vh;

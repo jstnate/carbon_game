@@ -1,5 +1,5 @@
-<header class="admin">
-    <h3 class="admin__responsive-logo">CARBON</h3>
+<header class="admin" id="admin-nav" >
+    <a href="dashboard-admin.php" class="admin__responsive-logo">CARBON</a>
 
     <nav class="admin__nav" id="admin-menu">
         <ul class="admin__nav__list">

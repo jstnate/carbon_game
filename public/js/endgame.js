@@ -44,23 +44,10 @@ form.onsubmit = () => {
 
     localStorage.setItem('Player-' + currentNumber, JSON.stringify(player))
 
-    if (currentNumber === playerCount) {
-        text.innerHTML = ''
-        currentPlayer.innerHTML = ''
-        currentAvatar.style.display = 'none'
-        actionDisplay.innerHTML = ''
-        let a = document.createElement('a')
-        a.href = 'results.php'
-        a.innerHTML = 'Voir le classement'
-        actionDisplay.appendChild(a)
-    } else {
-        currentNumber = parseInt(currentNumber) + 1
-        localStorage.setItem('CurrentNumber', currentNumber)
-    }
+    currentNumber = parseInt(currentNumber) + 1
+    localStorage.setItem('CurrentNumber', currentNumber)
 }
 
-// let test = JSON.parse(localStorage.getItem('Player-' + currentNumber))
-// console.log(test['playerName'])
-
-
-
+if (currentNumber > playerCount) {
+    window.location.replace("results.php")
+}
