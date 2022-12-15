@@ -1,7 +1,7 @@
 .solo-card{
   overflow: hidden;
   .card-img{
-    width: 50%;
+    width: 80%;
     padding: 1em;
     margin: 20px auto;
     display: flex;
@@ -27,12 +27,12 @@
     }
   }
   .card-description{
+    padding-top: 20px;
     margin: auto;
     width: 90%;
     h2{
       color: black;
       font-weight: bold;
-
     }
   }
 
