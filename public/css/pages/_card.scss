@@ -1,5 +1,6 @@
 .solo-card{
   overflow: hidden;
+
   .card-img{
     width: 80%;
     padding: 1em;
@@ -14,6 +15,7 @@
     }
   }
   .card-informations{
+    margin-top: 20px;
     h2{
       color: black;
       font-weight: bold;
@@ -33,6 +35,9 @@
     h2{
       color: black;
       font-weight: bold;
+    }
+    p{
+      font-size: 20px;
     }
   }
 

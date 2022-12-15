@@ -39,7 +39,7 @@ if($verify != 1){
         <h1>Partenaires</h1>
         <a class="add-a-partner" href="add-partner.php">Ajouter un partenaire</a>
     </div>
-
+<div class="all-partners">
     <div class="partners-actions">
         <h2>Partenaires</h2>
         <h2 class="desktop-only">Logo</h2>
@@ -72,6 +72,7 @@ if($verify != 1){
             header('Location:dashboard-partners.php'); 
         }
     ?>
+</div>
 
 </body>
 </html>

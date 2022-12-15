@@ -1820,6 +1820,9 @@
 .solo-card .card-img img {
   max-width: 100%;
 }
+.solo-card .card-informations {
+  margin-top: 20px;
+}
 .solo-card .card-informations h2 {
   color: black;
   font-weight: bold;
@@ -1839,6 +1842,9 @@
 .solo-card .card-description h2 {
   color: black;
   font-weight: bold;
+}
+.solo-card .card-description p {
+  font-size: 20px;
 }
 
 footer {
@@ -2335,6 +2341,8 @@ footer .footer_container .text {
   }
   .body-db-partners .solo-partner .group-partner .solo-partner-infos p {
     justify-content: flex-end;
+    font-weight: bold;
+    font-size: 15px;
   }
 }
 
