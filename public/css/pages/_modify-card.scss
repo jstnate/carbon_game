@@ -1,0 +1,173 @@
+@use "../utils/mixins";
+
+.modify_card{
+    width: 100%;
+    background-color: #FBFCF4;
+    .main_container{
+        width: 100%;
+        @include mixins.breakpointmin(768px){
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 5%;
+        }
+        #title{
+            display: none;
+            @include mixins.breakpointmin(768px){
+                display: initial;
+                font-size: 30px;
+                text-align: left;
+                width: 100%;
+                margin: 4% 0% 3% 10%;
+            }
+        }
+        .info{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+            label{
+                font-weight: 700;
+                font-size: 16px;
+                @include mixins.breakpointmin(768px){
+                    margin-left: 10px;
+                }
+            }
+            input{
+                width: 100%;
+                background-color: white;
+                padding: 2% 5%;
+                border: 2px solid #6DB86C;
+                border-radius: 15px;
+            }
+            #textarea_description{
+                width: 100%;
+                height: 150px;
+                background: #FFFFFF;
+                border: 2px solid #6DB96C;
+                box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 15px;
+                padding: 5px;
+                resize: none;
+            }
+        }
+        .sub_container{
+            @include mixins.breakpointmin(768px){
+                width: 90%;
+                background-color: #FBFCF4;
+                padding: 2% 5%;
+                border: 2px solid #6DB86C;
+                border-radius: 15px;
+            }
+            .container_text{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 30px;
+                h2{
+                    font-weight: 700;
+                    font-size: 25px;
+                    @include mixins.breakpointmin(768px){
+                        display: none;
+                    }
+                }
+                h3{
+                    display: none;
+                    @include mixins.breakpointmin(768px){
+                        display: initial;
+                        font-weight: 700;
+                        font-size: 25px;
+                    }
+                }
+                p{
+                    text-align: center;
+                }
+            }
+        }
+        .form_container{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            padding: 30px 20px 0px;
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .info_container{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    @include mixins.breakpointmin(768px){
+                        flex-direction: row;
+                    }
+                }
+                .all_img{
+                    display: flex;
+                    flex-direction: row;
+                    gap: 30px;
+                    .container_card{
+                        @include mixins.breakpointmin(768px){
+                            width: 20%;
+                            height: auto;
+                            background-color: aqua;
+                        }
+                        img{
+                            @include mixins.breakpointmin(768px){
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .add_img{
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 7px;
+                        background-color: white;
+                        padding: 2% 5%;
+                        border: 2px dashed #6DB86C;
+                        img{
+                            width: 75px;
+                        }
+                        .button_container{
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            .inputfile{
+                                width: 0.1px;
+                                height: 0.1px;
+                                opacity: 0;
+                                overflow: hidden;
+                                position: absolute;
+                                z-index: -1;
+                            }
+                            .inputfile + label {
+                                background-color: #6DB96C;
+                                border: #6DB96C;
+                                border-radius: 25px;
+                                color: white;
+                                padding: 10px 20px;
+                                font-size: 14px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .button_container{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    #submit{
+                        background-color: #6DB96C;
+                        border: #6DB96C;
+                        border-radius: 25px;
+                        color: white;
+                        padding: 10px 20px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
