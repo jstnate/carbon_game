@@ -33,7 +33,7 @@
                 justify-content: center;
                 text-align: center;
                 gap: 20px;
-                padding: 1em;
+                padding: 1em 2em;
 
                 @include mixins.breakpointmin(768px) {
                     text-align: right;
