@@ -88,13 +88,13 @@ require_once 'object/card.php';
             $card = new Card(
                     $_POST['card_name'],
                     $_POST['carbon'],
-                    $_POST['card_description'],
+                    $_POST['description'],
                     $_FILES['image_url']['name'],
                     $_POST['type'],
             );
             $img_name = $_FILES['image_url']['name'];
             $tmp_img_name = $_FILES['image_url']['tmp_name'];
-            $temporary = 'images/partners-icon/';
+            $temporary = 'images/cards/';
             move_uploaded_file($tmp_img_name,$temporary.$img_name);
 
             if($card->verifyInput()){

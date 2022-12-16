@@ -77,7 +77,7 @@ require_once 'object/partner.php';
             );
             $img_name=$_FILES['logo']['name'];
             $tmp_img_name=$_FILES['logo']['tmp_name'];
-            $folder = 'images/';
+            $folder = 'images/partners-icon';
             move_uploaded_file($tmp_img_name,$folder.$img_name);
 
             if($partner->verifyInput()){
