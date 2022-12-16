@@ -24,7 +24,7 @@ if($autorisation != 1){
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b050931f68.js" crossorigin="anonymous"></script>
     <script src="public/js/main.js" defer></script>
-    <title>Tableau de bord - Admin</title>
+    <title>Tableau de bord - Accueil</title>
 </head>
 <body class="dashboard_admin">
     <?php require_once 'public/includes/_admin-nav.php'; ?>
@@ -58,7 +58,7 @@ if($autorisation != 1){
                     </div>
                 </div>
                 <div class="message_container">
-                    <div class="message">
+                    <div class="message message-compact" id="message-action">
                         <div class="subject">
                             <h3><?php echo $message['subject'];?></h3>
                         </div>
@@ -67,8 +67,8 @@ if($autorisation != 1){
                         </div>
                     </div>
                     <div class="button_container">
-                        <div class="button desktop_button"> <a href="<?= 'mailto:' . $message['email'] ?>">Répondre</a></div>
-                        <div class="button mobile_button"> <a href="<?= 'mailto:' . $message['email'] ?>"><i class="fa-solid fa-share-from-square"></i></a></div>
+                        <div class="button desktop_button"><a href="<?= 'mailto:' . $message['email'] ?>">Répondre</a></div>
+                        <div class="button mobile_button"><a href="<?= 'mailto:' . $message['email'] ?>"><i class="fa-solid fa-share-from-square"></i></a></div>
                     </div>
                 </div>
             </div>

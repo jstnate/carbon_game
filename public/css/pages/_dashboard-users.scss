@@ -104,22 +104,47 @@
     
                     &.dashboard__users__user_actions__add-admin {
                         background-color: #6DB96C;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #5b9b5a;
+                        }
                     }
     
                     &.dashboard__users__user_actions__remove-admin {
                         background-color: #f4ac30;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #c48a25;
+                        }
                     }
     
                     &.dashboard__users__user_actions__remove-authorized {
                         background-color: #7f7f7f;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #4f4e4e;
+                        }
                     }
     
                     &.dashboard__users__user_actions__add-authorized {
                         background-color: #548df7;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #3e69ba;
+                        }
                     }
     
                     &.dashboard__users__user_actions__remove {
                         background-color: #ca4040;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: #932d2d;
+                        }
                     }
                 }
             }

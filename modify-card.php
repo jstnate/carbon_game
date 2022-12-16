@@ -39,7 +39,7 @@
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b050931f68.js" crossorigin="anonymous"></script>
     <script src="public/js/main.js" defer></script>
-    <title>Modifier carte</title>
+    <title>Tableau de bord - Modifier la carte</title>
 </head>
 <body class="modify_card">
     <?php require_once 'public/includes/_admin-nav.php'; ?>

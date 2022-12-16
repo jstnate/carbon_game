@@ -17,7 +17,7 @@ require_once 'object/partner.php';
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b050931f68.js" crossorigin="anonymous"></script>
     <script src="public/js/main.js" defer></script>
-    <title>Ajout partenaire</title>
+    <title>Tableau de bord - Ajout d'un Partenaire</title>
 </head>
 
 <body class="add_partner">

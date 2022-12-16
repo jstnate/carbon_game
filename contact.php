@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/css/style.css">
-    <title>Page Contact</title>
+    <title>Contact</title>
 </head>
 <body class="contact">
     <?php require "public/includes/navbar_contact.php"; ?>
@@ -20,20 +20,20 @@
                         <div class="container_names">
                             <div class="container_label">
                                 <label for="family_name">Nom</label>
-                                <input type="text" name="family_name" placeholder="Nom de Famille">
+                                <input type="text" name="family_name" id="family_name" placeholder="Nom de Famille">
                             </div>
                             <div class="container_label">
                                 <label for="name">Prénom</label>
-                                <input type="text" name="name" placeholder="Prénom">
+                                <input type="text" name="name" id="name" placeholder="Prénom">
                             </div>
                         </div>
                         <div class="container_label">
                             <label for="email">Adresse e-mail</label>
-                            <input type="email" name="email" placeholder="Adresse e-mail">
+                            <input type="email" name="email" id="email" placeholder="Adresse e-mail">
                         </div>
                         <div class="container_label">
                             <label for="society">Entreprise/Ecole</label>
-                            <input type="text" name="society" placeholder="Entreprise/Ecole">
+                            <input type="text" name="society" id="society" placeholder="Entreprise/Ecole">
                         </div>
                         <div class="container_label">
                             <label for="subject_description">Sujet</label>
@@ -71,16 +71,10 @@
                 }
             }
         }
-
-
     ?>
     </main>
 
-    <footer>
-        <div class="footer_container">
-            <p class="text">Copyright © 2023 Carbon. All Rights reserved</p>
-        </div>
-    </footer>
+    <?php require_once 'public/includes/_footer-template.php'; ?>
 
 </body>
 </html>

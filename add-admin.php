@@ -22,58 +22,52 @@ if($autorisation != 1){
     <link href="https://fonts.googleapis.com/css2?family=KoHo:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/b050931f68.js" crossorigin="anonymous"></script>
     <script src="public/js/main.js" defer></script>
-    <title>Ajout utilisateur</title>
+    <title>Tableau de bord - Ajout d'un utilisateur</title>
 </head>
 
-<body class="add_admin">
+<body class="add-admin">
     <?php require_once 'public/includes/_admin-nav.php'; ?>
-    <div class="main_container">
+    <div class="add-admin__header">
         <h2>Ajouter un utilisateur</h2>
-        <div class="sub_container">
-            <div class="container_text">
-                <h3> Infos utilisateur</h3>
-                <p>Veuillez renseigner les infos nécessaire à la création de l’utilisateur</p>
-            </div>
-            <form class="add_form" method="POST">
-                <div class="first">
-                    <div class="info_container">
-                        <label for="name">Prénom Nom</label>
-                        <input type="text" name="name" id="name" placeholder="Jogh DOE">
-                    </div>
-
-                    <div class="info_container">
-                        <label for="function">Rôle</label>
-                        <div class="select">
-                            <select class="function_select" name="function" id="function">
-                                <option value="interdit">Sélectionnez son rôle...</option>
-                                <option value="autorisé">Autorisé</option>
-                                <option value="administrateur">Administrateur</option>
-                            </select>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="second">
-                    <div class="info_container">
-                        <label for="email">Adresse email</label>
-                        <input type="email" name="email" id="email" placeholder="mail@gmail.com">
-                    </div>
-
-                    <div class="info_container">
-                        <label for="pass">Mot de passe</label>
-                        <input type="password" name="password" id="pass" placeholder="Nouveau mot de passe">
-                    </div>
-                </div>
-
-                <div class="button_container">
-                    <button id="submit" type="submit">Ajouter un utilisateur</button>
-                    <a href="dashboard-users.php"><button id="back">Retour</button></a>
-                </div>
-            </form>
-        </div>
+        <a href="dashboard-users.php">Retour</a>
     </div>
+    <div class="add-admin__container">
+        <div class="add-admin__container__title">
+            <h3> Infos utilisateur</h3>
+            <p>Veuillez renseigner les infos nécessaire à la création de l’utilisateur</p>
+        </div>
+        <form class="add-admin__container__form" method="POST">
+            <div class="add-admin__container__form__first">
+                <div class="add-admin__container__form__first__input">
+                    <label for="name">Prénom Nom</label>
+                    <input type="text" name="name" id="name" placeholder="Jogh DOE">
+                </div>
 
+                <div class="add-admin__container__form__first__input">
+                    <label for="function">Rôle</label>
+                    <select class="function_select" name="function" id="function">
+                        <option value="interdit">Sélectionnez son rôle...</option>
+                        <option value="autorisé">Autorisé</option>
+                        <option value="administrateur">Administrateur</option>
+                    </select>
+                </div>
+            </div>
+            <div class="add-admin__container__form__second">
+                <div class="add-admin__container__form__second__input">
+                    <label for="email">Adresse email</label>
+                    <input type="email" name="email" id="email" placeholder="mail@gmail.com">
+                </div>
 
+                <div class="add-admin__container__form__second__input">
+                    <label for="pass">Mot de passe</label>
+                    <input type="password" name="password" id="pass" placeholder="Nouveau mot de passe">
+                </div>
+            </div>
+
+            <button class="add-admin__container__form__submit" id="submit" type="submit">Ajouter un utilisateur</button>
+        </form>
+    </div>
+    
     <?php
         if ($_POST) {
             $user = new User(

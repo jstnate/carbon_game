@@ -1,5 +1,6 @@
 <nav class="navbar">
     <div class="container-logo">
+        <img class="logo" src="../images/logos/logo.png" alt="">
         <h2 class="brandName">CARBON</h2>
     </div>
     <ul class="nav-menu">
