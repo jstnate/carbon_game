@@ -2601,6 +2601,7 @@ footer .footer_container .text {
 @media screen and (min-width: 768px) {
   .rules .first-section .asideR {
     padding: 20px;
+    width: 100%;
   }
 }
 .rules .first-section .asideR .all-texts {
@@ -2670,6 +2671,7 @@ footer .footer_container .text {
   .rules .first-section .asideL {
     display: flex;
     flex-direction: column;
+    width: 100%;
   }
 }
 .rules .first-section .asideL .img-container {
@@ -2820,6 +2822,8 @@ footer .footer_container .text {
 }
 .rules .second-section .desktop .all-cards .card-container img {
   width: 150px;
+  position: relative;
+  z-index: 1;
 }
 .rules .second-section .desktop .all-cards .card-container .bottom {
   display: flex;
@@ -2828,7 +2832,6 @@ footer .footer_container .text {
   background-color: rgba(109, 185, 108, 0.35);
   position: relative;
   top: -15px;
-  z-index: -1;
   padding: 20px 0px 10px;
   border-radius: 0px 0px 25px 25px;
 }
@@ -2839,6 +2842,7 @@ footer .footer_container .text {
   color: white;
   padding: 10px 20px;
   font-size: 14px;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */
