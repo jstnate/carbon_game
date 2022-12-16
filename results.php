@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -9,7 +9,7 @@
     <title>Résultat de la partie</title>
 </head>
 <body id="winner-div" class="results">
-    <?php require_once 'public/includes/ingame-navbar.php' ?>
+    <?php require_once 'public/includes/_ingame-navbar.php' ?>
     <div class="results__div">
         <div id="congrats" class="results__div__congrats">
 

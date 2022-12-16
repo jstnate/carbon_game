@@ -12,7 +12,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -25,7 +25,7 @@
     <?php } ?>
 </head>
 <body class="solo-card">
-    <?php require_once 'public/includes/navbar_contact.php'; ?>
+    <?php require_once 'public/_client-navbar.php'; ?>
     <div class="card-informations">
         <h2><?= $card[0]['card_name']?></h2>
         <h3><?= $card[0]['carbon'] . 'g de Carbone' ?></h3>

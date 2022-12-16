@@ -83,15 +83,7 @@ if($autorisation != 1){
 
                 if ($verify === false) {
                     $insert = $connection->InsertUser($user);
-
-                    if ($insert) { ?>
-                        <h2>Création réussie</h2>
-                    <?php } else { ?>
-                        <h2>Un problème est survenu</h2>
-                    <?php }
-                } else { ?>
-                    <h2>Adresse email déjà utilisée</h2>
-                <?php }
+                }
             }
         }
     ?>
