@@ -76,7 +76,7 @@
                 Apprenez a jouer au jeu Carbon !
             </h2>
 
-            <video class="home__main__learning__video" poster controls>
+            <video class="home__main__learning__video" poster="images/video-poster.png" controls>
                 <source src="images/carbon-video.mp4" type="video/mp4">
                 Votre navigateur ne prend pas en charge l'élément video.
             </video>
