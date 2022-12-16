@@ -1375,6 +1375,9 @@
   .dashboard__users__user__fields__name {
     width: 200px;
   }
+  .dashboard__users__user__fields__name h3, .dashboard__users__user__fields__name h4 {
+    width: 100% !important;
+  }
   .dashboard__users__user__fields h3 {
     width: 100px;
   }
