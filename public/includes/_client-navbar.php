@@ -3,11 +3,11 @@
         <h2 class="brandName">CARBON</h2>
     </div>
     <ul class="nav-menu">
-        <li class="nav-item"><a href="#" class="nav-link">Accueil</a></li>
-        <li class="nav-item"><a href="#" class="nav-link">Jouer</a></li>
+        <li class="nav-item"><a href="index.php" class="nav-link">Accueil</a></li>
+        <li class="nav-item"><a href="game-init.php" class="nav-link">Jouer</a></li>
         <li class="logo"><img class="logoimg" src="images/logos/logo.png" alt="logo"></li>
-        <li class="nav-item"><a href="#" class="nav-link">Règles</a></li>
-        <li class="nav-item"><a href="./contact.php" class="nav-link">Contact</a></li>
+        <li class="nav-item"><a href="rules.php" class="nav-link">Règles</a></li>
+        <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
     </ul>
     <div class="hamburger">
         <span class="bar"></span>

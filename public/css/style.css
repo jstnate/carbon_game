@@ -84,6 +84,10 @@
   font-weight: bold;
   border-radius: 20px;
 }
+.home__main__header__content__cta:hover {
+  background-color: #6DB86C;
+  color: #ffffff;
+}
 .home__main__goal {
   display: flex;
   align-items: center;
@@ -1144,6 +1148,10 @@
   font-size: 24px;
   color: #6DB86C;
   text-decoration: none;
+}
+.navbar .nav-menu .nav-item .nav-link:hover {
+  color: #000000;
+  cursor: pointer;
 }
 .navbar .nav-menu .logo {
   list-style: none;
@@ -2373,7 +2381,7 @@ footer .footer_container .text {
   font-weight: bold;
 }
 .body-db-partners .partenaires {
-  margin: 50px auto 25px;
+  margin: 50px auto 0;
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -2429,6 +2437,9 @@ footer .footer_container .text {
   display: flex;
   justify-content: center;
 }
+.body-db-partners .solo-partner .delete-partners:hover {
+  background-color: #9e1111;
+}
 .body-db-partners .solo-partner .group-partner {
   display: flex;
   flex-direction: row;
@@ -2440,7 +2451,7 @@ footer .footer_container .text {
   .body-db-partners .partenaires {
     flex-direction: row;
     justify-content: space-between;
-    margin: 90px 60px;
+    margin: 90px 60px 25px;
   }
   .body-db-partners .partners-actions {
     width: 95%;

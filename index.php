@@ -13,6 +13,7 @@
 <title>Accueil</title>
 </head>
 <body class="home">
+    <!-- Les devs sur ce  projet : Nathan LEFETEY, Adam SIMONS, Ambre KOUITINI -->
     <?php
         require_once 'public/includes/_client-navbar.php';
     ?>

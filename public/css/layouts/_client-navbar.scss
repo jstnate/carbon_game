@@ -54,6 +54,11 @@
                 font-size: 24px;
                 color: #6DB86C;
                 text-decoration: none;
+
+                &:hover {
+                    color: #000000;
+                    cursor: pointer;
+                }
             }
         }
         .logo{
