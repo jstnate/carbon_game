@@ -4,7 +4,7 @@ require_once 'object/connection.php';
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -15,7 +15,7 @@ require_once 'object/connection.php';
     </head>
     <body class="endgame">
 
-    <?php require 'public/includes/ingame-navbar.php'; ?>
+    <?php require 'public/includes/_ingame-navbar.php'; ?>
         <h1 id="result-title" class="endgame__title">Sélectionnez les cartes que vous avez en main</h1>
         <div class="endgame__player">
         <img src="" alt="" id="current-avatar">
