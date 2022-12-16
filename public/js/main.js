@@ -32,3 +32,12 @@ if (window.innerWidth <= 760) {
     })
     
 }
+
+
+if(window.innerWidth >= 760){
+    if(document.querySelectorAll('.phone-link-to-add') != null){
+        document.querySelectorAll('.phone-link-to-add').forEach((item) => {
+            item.innerHTML = "Ajouter une carte"
+        })
+    }
+}
