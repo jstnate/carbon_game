@@ -1992,168 +1992,7 @@
   color: black;
   font-weight: bold;
 }
-<<<<<<< HEAD
-
-.add-admin {
-  width: 100%;
-  height: 100%;
-  background-color: #FBFCF4;
-}
-.add-admin label {
-  font-weight: 700;
-  font-size: 16px;
-  margin-left: 15px;
-}
-.add-admin input, .add-admin select {
-  width: 100%;
-  background-color: white;
-  padding: 2% 5%;
-  border: 2px solid #6DB86C;
-  border-radius: 15px;
-  background-position: 100px;
-  appearance: none;
-}
-.add-admin input:focus {
-  border: 2px solid #000000;
-  outline: none;
-}
-.add-admin select {
-  background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
-  background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
-}
-.add-admin select:focus {
-  background-image: linear-gradient(45deg, #6DB86C 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #6DB86C 50%), linear-gradient(to right, #ccc, #ccc);
-  background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
-  background-size: 5px 5px, 5px 5px, 1px 1.5em;
-  background-repeat: no-repeat;
-  border-color: green;
-  outline: 0;
-}
-.add-admin__header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1em;
-  margin: 2em auto;
-  width: 90%;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__header {
-    margin: 5rem auto 2em;
-  }
-}
-.add-admin__header h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__header h2 {
-    font-size: 28px;
-  }
-}
-.add-admin__header a {
-  border: 2px solid #6DB86C;
-  border-radius: 30px;
-  padding: 0.5em 1em;
-  font-size: 18px;
-  text-decoration: none;
-  color: #6DB86C;
-  font-weight: bold;
-}
-.add-admin__header a:hover {
-  background-color: #6DB86C;
-  color: #ffffff;
-}
-.add-admin__container {
-  background-color: #ffffff;
-  width: 90%;
-  margin: 0 auto;
-  border: 1px solid #6BD86C;
-  padding: 2em;
-  border-radius: 20px;
-}
-.add-admin__container__title {
-  margin: 0 0 30px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__container__title {
-    align-items: center;
-    margin-bottom: 5rem;
-  }
-}
-.add-admin__container__title h3 {
-  font-size: 26px;
-}
-.add-admin__container__form {
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__container__form {
-    gap: 30px;
-  }
-}
-.add-admin__container__form__first {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  gap: 20px;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__container__form__first {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0% 15%;
-  }
-}
-.add-admin__container__form__first__input {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__container__form__first__input {
-    width: 45%;
-  }
-}
-.add-admin__container__form__second {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__container__form__second {
-    flex-direction: row;
-    justify-content: space-around;
-    padding: 0% 15%;
-  }
-}
-.add-admin__container__form__second__input {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-@media screen and (min-width: 768px) {
-  .add-admin__container__form__second__input {
-    width: 45%;
-  }
-}
-.add-admin__container__form__submit {
-  background-color: #6DB96C;
-=======
 .solo-card .card-description p {
->>>>>>> adam-dev
   font-size: 20px;
 }
 
@@ -2179,8 +2018,6 @@ footer .footer_container .text {
   font-size: 15px;
   color: #FFFFFF;
 }
-<<<<<<< HEAD
-=======
 
 .add_card {
   width: 100%;
@@ -2513,7 +2350,6 @@ footer .footer_container .text {
   font-size: 14px;
 }
 
-<<<<<<< HEAD
 .body-db-partners {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -2658,9 +2494,6 @@ footer .footer_container .text {
     font-size: 15px;
   }
 }
->>>>>>> adam-dev
-
-=======
 .modify_card {
   width: 100%;
   background-color: #FBFCF4;
@@ -2845,5 +2678,4 @@ footer .footer_container .text {
   font-size: 14px;
 }
 
->>>>>>> ambre-dev
 /*# sourceMappingURL=style.css.map */
