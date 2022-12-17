@@ -12,12 +12,12 @@ console.log(eventName[17], eventEffect[16])
 let startGame = document.getElementById('game-start')
 let showEvent = document.getElementById('event-appear')
 let showPlayers = document.getElementById('game-player')
-
 let quit = document.getElementById('quit-game')
 
 quit.addEventListener("click", () =>{
     localStorage.clear()
 })
+
 console.log(playerCount)
 window.onload = showPlayer()
 function showPlayer() {

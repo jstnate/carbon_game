@@ -4,6 +4,12 @@ let playerCount = localStorage.getItem('PlayerCount')
 const objects = []
 let others = document.getElementById('others')
 
+let quit = document.getElementById('quit-game')
+
+quit.addEventListener("click", () =>{
+    localStorage.clear()
+})
+
 window.onload = () => {
     for (let i = 1; i <= playerCount; i++) {
         let player = JSON.parse(localStorage.getItem('Player-' + i))
@@ -22,7 +28,6 @@ window.onload = () => {
 
     showWinners()
     // console.log(objects)
-
 }
 
 function showWinners() {

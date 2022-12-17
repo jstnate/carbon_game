@@ -12,6 +12,11 @@ let text = document.getElementById('result-title')
 
 let actionDisplay = document.getElementById('action-display')
 
+let quit = document.getElementById('quit-game')
+
+quit.addEventListener("click", () =>{
+    localStorage.clear()
+})
 class Player
 {
     constructor(name, score, avatar) {

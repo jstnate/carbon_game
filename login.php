@@ -2,6 +2,31 @@
     session_start();
     require_once 'object/user.php';
     require_once 'object/connection.php';
+    
+?>
+<?php
+    if ($_POST) {
+        $user = new User(
+            '',
+            $_POST['email'],
+            $_POST['password'],
+            ''
+        );
+
+        $connection = new Connection;
+        $verify = $connection->LoginVerify($user);
+
+        if ($verify === true) {
+            if ($_SESSION['function'] === 'administrateur' || $_SESSION['function'] === 'autorisé') {
+                header('Location: dashboard-admin.php');
+            } else {
+                header('Location: login.php?error=1');
+            }
+        } else {
+            header('Location: login.php?error=1');
+        };
+
+    }
 ?>
 
 <!doctype html>
@@ -38,32 +63,6 @@
             <button type="submit">Se connecter</button>
         </form>
     </div>
-
-    <?php
-    if ($_POST) {
-        $user = new User(
-            '',
-            $_POST['email'],
-            $_POST['password'],
-            ''
-        );
-
-        $connection = new Connection;
-        $verify = $connection->LoginVerify($user);
-
-        if ($verify === true) {
-            if ($_SESSION['function'] === 'administrateur' || $_SESSION['function'] === 'autorisé') {
-                header('Location: dashboard-admin.php');
-            } else {
-                header('Location: login.php?error=1');
-            }
-        } else {
-            header('Location: login.php?error=1');
-        };
-
-    }
-    ?>
-
     <script type="text/javascript" src="public/js/error.js"></script>
 </body>
 </html>

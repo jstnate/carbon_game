@@ -45,6 +45,11 @@ playerForm.onsubmit = (e) => {
     }
 }
 
+let quit = document.getElementById('quit-game')
+
+quit.addEventListener("click", () =>{
+    localStorage.clear()
+})
 
 let setupdiv = document.getElementById('setup-div')
 
