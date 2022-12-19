@@ -1,0 +1,171 @@
+@use '../utils/mixins';
+
+.home {
+    overflow-x: hidden;
+    &__main {
+
+        &__header {
+            background-image: url('../../images/backgrounds/index-banner-responsive.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-height: 70vh;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 1em 0;
+
+            @include mixins.breakpointmin(768px) {
+                background-image: url('../../images/backgrounds/index-banner.png');
+                background-size: cover;
+                background-repeat: no-repeat;
+                align-items: center;
+                justify-content: flex-end;
+            }
+
+            @include mixins.breakpointmin(1024px) {
+                align-items: flex-start;
+            }
+
+            &__content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 20px;
+                padding: 1em 2em;
+
+                @include mixins.breakpointmin(768px) {
+                    text-align: right;
+                    align-items: flex-end;
+                    width: 60vw;
+                    gap: 40px;
+                }
+
+                @include mixins.breakpointmin(1024px) {
+                    width: 50vw;
+                    margin-top: 5vh;
+                }
+
+                &__title {
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    @include mixins.breakpointmin(768px) {
+                        font-size: 28px;
+                    }
+
+                    @include mixins.breakpointmin(1024px) {
+                        font-size: 36px;
+                    }
+                }
+
+                &__description {
+                    font-size: 18px;
+                }
+
+                &__cta {
+                    padding: 1em 4em;
+                    background-color: #ffffff;
+                    text-decoration: none;
+                    color: #000000;
+                    font-size: 20px;
+                    font-weight: bold;
+                    border-radius: 20px;
+
+                    &:hover {
+                        background-color: #6DB86C;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+
+        &__goal {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 100vw;
+
+            &__title {
+                font-size: 26px;
+                font-weight: bold;
+                width: 100%;
+                text-align: center;
+                padding: 3em 1em 2em;
+            }
+
+            &__carrousel {
+                display: flex;
+                flex-wrap: nowrap;
+                overflow-x: auto;
+                align-items: center;
+                justify-content: flex-start;
+                width: 100vw;
+
+                @include mixins.breakpointmin(768px) {
+                    overflow-x: hidden;
+                    justify-content: center;
+                }
+
+                &__content {
+                    display: flex;
+                    gap: 50px;
+                    align-items: center;
+                    justify-content: center;
+                    padding: 1em 3em 2em;
+    
+                    &__div {
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: space-evenly;
+                        width: 200px;
+                        height: 350px;
+                        padding: 2em;
+                        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+                        border-radius: 20px;
+
+                        &__pic {
+                            width: 100px;
+                            aspect-ratio: 1/1;
+                        }
+
+                        &__title {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__learning {
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 4em;
+            
+            &__title {
+                padding: 3em 1em;
+                font-size: 26px;
+                font-weight: bold;
+                width: 100%;
+                text-align: center;
+            }
+
+            &__video {
+                width: 90vw;
+                aspect-ratio: 16/9;
+                border-radius: 15px;
+
+                @include mixins.breakpointmin(768px) {
+                    width: 60vw;
+                }
+            }
+        }
+    }
+}

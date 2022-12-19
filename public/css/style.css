@@ -7,6 +7,167 @@
   font-family: "Koho", sans-serif;
 }
 
+.home {
+  overflow-x: hidden;
+}
+.home__main__header {
+  background-image: url("../../images/backgrounds/index-banner-responsive.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: 70vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 1em 0;
+}
+@media screen and (min-width: 768px) {
+  .home__main__header {
+    background-image: url("../../images/backgrounds/index-banner.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home__main__header {
+    align-items: flex-start;
+  }
+}
+.home__main__header__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  padding: 1em 2em;
+}
+@media screen and (min-width: 768px) {
+  .home__main__header__content {
+    text-align: right;
+    align-items: flex-end;
+    width: 60vw;
+    gap: 40px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home__main__header__content {
+    width: 50vw;
+    margin-top: 5vh;
+  }
+}
+.home__main__header__content__title {
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  .home__main__header__content__title {
+    font-size: 28px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .home__main__header__content__title {
+    font-size: 36px;
+  }
+}
+.home__main__header__content__description {
+  font-size: 18px;
+}
+.home__main__header__content__cta {
+  padding: 1em 4em;
+  background-color: #ffffff;
+  text-decoration: none;
+  color: #000000;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 20px;
+}
+.home__main__header__content__cta:hover {
+  background-color: #6DB86C;
+  color: #ffffff;
+}
+.home__main__goal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+}
+.home__main__goal__title {
+  font-size: 26px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+  padding: 3em 1em 2em;
+}
+.home__main__goal__carrousel {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100vw;
+}
+@media screen and (min-width: 768px) {
+  .home__main__goal__carrousel {
+    overflow-x: hidden;
+    justify-content: center;
+  }
+}
+.home__main__goal__carrousel__content {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 1em 3em 2em;
+}
+.home__main__goal__carrousel__content__div {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 200px;
+  height: 350px;
+  padding: 2em;
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+}
+.home__main__goal__carrousel__content__div__pic {
+  width: 100px;
+  aspect-ratio: 1/1;
+}
+.home__main__goal__carrousel__content__div__title {
+  font-size: 20px;
+}
+.home__main__learning {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 4em;
+}
+.home__main__learning__title {
+  padding: 3em 1em;
+  font-size: 26px;
+  font-weight: bold;
+  width: 100%;
+  text-align: center;
+}
+.home__main__learning__video {
+  width: 90vw;
+  aspect-ratio: 16/9;
+  border-radius: 15px;
+}
+@media screen and (min-width: 768px) {
+  .home__main__learning__video {
+    width: 60vw;
+  }
+}
+
 .login-bg {
   background-image: url("../../images/backgrounds/login-bg.jpg");
   background-size: cover;
@@ -515,16 +676,12 @@
   width: 100%;
   height: auto;
 }
-.contact .container_all .navbar {
-  position: relative;
-  z-index: 1;
-}
-.contact .container_all main {
+.contact main {
   background-color: #FBFCF4;
   width: 100%;
   height: auto;
 }
-.contact .container_all main .container_all {
+.contact main .container_all {
   height: auto;
   display: flex;
   flex-direction: column;
@@ -536,42 +693,42 @@
   padding: 5%;
 }
 @media screen and (max-width: 768px) {
-  .contact .container_all main .container_all {
+  .contact main .container_all {
     background-image: none;
     padding: 0%;
   }
 }
-.contact .container_all main .container_all .container_title {
+.contact main .container_all .container_title {
   background-color: white;
   margin-top: 2%;
   padding: 15px;
   border-radius: 8px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
-.contact .container_all main .container_all .container_title .title {
+.contact main .container_all .container_title .title {
   font-family: "KoHo";
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   color: #1F2020;
 }
-.contact .container_all main .container_all .container_form {
+.contact main .container_all .container_form {
   margin-top: 30px;
   width: 60%;
 }
 @media screen and (max-width: 768px) {
-  .contact .container_all main .container_all .container_form {
+  .contact main .container_all .container_form {
     width: 80%;
   }
 }
-.contact .container_all main .container_all .container_form form {
+.contact main .container_all .container_form form {
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 30px;
 }
-.contact .container_all main .container_all .container_form form .container_input {
+.contact main .container_all .container_form form .container_input {
   width: 100%;
   background-color: white;
   padding: 5%;
@@ -579,53 +736,53 @@
   border-radius: 15px;
 }
 @media screen and (max-width: 768px) {
-  .contact .container_all main .container_all .container_form form .container_input {
+  .contact main .container_all .container_form form .container_input {
     background-color: #FBFCF4;
     padding: 0;
     border: none;
   }
 }
-.contact .container_all main .container_all .container_form form .container_input .container_names {
+.contact main .container_all .container_form form .container_input .container_names {
   width: 100%;
   display: flex;
   flex-direction: row;
 }
 @media screen and (max-width: 768px) {
-  .contact .container_all main .container_all .container_form form .container_input .container_names {
+  .contact main .container_all .container_form form .container_input .container_names {
     display: flex;
     flex-direction: column;
   }
 }
-.contact .container_all main .container_all .container_form form .container_input .container_names .container_label {
+.contact main .container_all .container_form form .container_input .container_names .container_label {
   width: 100%;
   display: flex;
   flex-direction: column;
 }
-.contact .container_all main .container_all .container_form form .container_input .container_names .container_label input {
+.contact main .container_all .container_form form .container_input .container_names .container_label input {
   background: rgba(109, 184, 108, 0.67);
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   border-radius: 15px;
 }
-.contact .container_all main .container_all .container_form form .container_input .container_label {
+.contact main .container_all .container_form form .container_input .container_label {
   display: flex;
   flex-direction: column;
   padding: 10px;
 }
-.contact .container_all main .container_all .container_form form .container_input .container_label label {
+.contact main .container_all .container_form form .container_input .container_label label {
   font-family: "KoHo";
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
   color: black;
 }
-.contact .container_all main .container_all .container_form form .container_input .container_label #subject {
+.contact main .container_all .container_form form .container_input .container_label #subject {
   margin-bottom: 15px;
 }
-.contact .container_all main .container_all .container_form form .container_input .container_label #description {
+.contact main .container_all .container_form form .container_input .container_label #description {
   height: 150px;
   resize: none;
 }
-.contact .container_all main .container_all .container_form form .container_input .container_label input {
+.contact main .container_all .container_form form .container_input .container_label input {
   width: 100%;
   height: 40px;
   background: #FFFFFF;
@@ -634,7 +791,7 @@
   border-radius: 15px;
   padding: 5px;
 }
-.contact .container_all main .container_all .container_form form .container_input .container_label textarea {
+.contact main .container_all .container_form form .container_input .container_label textarea {
   width: 100%;
   height: 40px;
   background: #FFFFFF;
@@ -643,7 +800,7 @@
   border-radius: 15px;
   padding: 5px;
 }
-.contact .container_all main .container_all .container_form form button {
+.contact main .container_all .container_form form button {
   background: #6DB86C;
   border-radius: 25px;
   border: 2px solid #6DB86C;
@@ -654,28 +811,6 @@
   font-size: 20px;
   color: #FFFFFF;
   margin-bottom: 15px;
-}
-.contact footer {
-  width: 100%;
-  height: 100px;
-  background: #6DB96C;
-  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
-  border-radius: 20px 20px 0px 0px;
-}
-.contact footer .footer_container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  padding-bottom: 15px;
-}
-.contact footer .footer_container .text {
-  font-family: "Inter";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  color: #FFFFFF;
 }
 
 .dashboard_admin {
@@ -961,6 +1096,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
   padding: 0 24px;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
 }
@@ -1011,6 +1148,10 @@
   font-size: 24px;
   color: #6DB86C;
   text-decoration: none;
+}
+.navbar .nav-menu .nav-item .nav-link:hover {
+  color: #000000;
+  cursor: pointer;
 }
 .navbar .nav-menu .logo {
   list-style: none;
@@ -1435,17 +1576,17 @@
     display: block;
   }
 }
-.add_admin {
+.add-admin {
   width: 100%;
   height: 100%;
   background-color: #FBFCF4;
 }
-.add_admin label {
+.add-admin label {
   font-weight: 700;
   font-size: 16px;
   margin-left: 15px;
 }
-.add_admin input input, .add_admin select input {
+.add-admin input, .add-admin select {
   width: 100%;
   background-color: white;
   padding: 2% 5%;
@@ -1454,17 +1595,17 @@
   background-position: 100px;
   appearance: none;
 }
-.add_admin input input:focus, .add_admin select input:focus {
+.add-admin input:focus {
   border: 2px solid #000000;
   outline: none;
 }
-.add_admin input select, .add_admin select select {
+.add-admin select {
   background-image: linear-gradient(45deg, transparent 50%, gray 50%), linear-gradient(135deg, gray 50%, transparent 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 20px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px), calc(100% - 2.5em) 0.5em;
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
   background-repeat: no-repeat;
 }
-.add_admin input select:focus, .add_admin select select:focus {
+.add-admin select:focus {
   background-image: linear-gradient(45deg, #6DB86C 50%, transparent 50%), linear-gradient(135deg, transparent 50%, #6DB86C 50%), linear-gradient(to right, #ccc, #ccc);
   background-position: calc(100% - 15px) 1em, calc(100% - 20px) 1em, calc(100% - 2.5em) 0.5em;
   background-size: 5px 5px, 5px 5px, 1px 1.5em;
@@ -1472,7 +1613,7 @@
   border-color: green;
   outline: 0;
 }
-.add_admin input__header, .add_admin select__header {
+.add-admin__header {
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -1482,20 +1623,20 @@
   width: 90%;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__header, .add_admin select__header {
+  .add-admin__header {
     margin: 5rem auto 2em;
   }
 }
-.add_admin input__header h2, .add_admin select__header h2 {
+.add-admin__header h2 {
   font-size: 24px;
   font-weight: bold;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__header h2, .add_admin select__header h2 {
+  .add-admin__header h2 {
     font-size: 28px;
   }
 }
-.add_admin input__header a, .add_admin select__header a {
+.add-admin__header a {
   border: 2px solid #6DB86C;
   border-radius: 30px;
   padding: 0.5em 1em;
@@ -1504,11 +1645,11 @@
   color: #6DB86C;
   font-weight: bold;
 }
-.add_admin input__header a:hover, .add_admin select__header a:hover {
+.add-admin__header a:hover {
   background-color: #6DB86C;
   color: #ffffff;
 }
-.add_admin input__container, .add_admin select__container {
+.add-admin__container {
   background-color: #ffffff;
   width: 90%;
   margin: 0 auto;
@@ -1516,22 +1657,22 @@
   padding: 2em;
   border-radius: 20px;
 }
-.add_admin input__container__title, .add_admin select__container__title {
+.add-admin__container__title {
   margin: 0 0 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__container__title, .add_admin select__container__title {
+  .add-admin__container__title {
     align-items: center;
     margin-bottom: 5rem;
   }
 }
-.add_admin input__container__title h3, .add_admin select__container__title h3 {
+.add-admin__container__title h3 {
   font-size: 26px;
 }
-.add_admin input__container__form, .add_admin select__container__form {
+.add-admin__container__form {
   height: auto;
   width: 100%;
   display: flex;
@@ -1539,95 +1680,58 @@
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__container__form, .add_admin select__container__form {
+  .add-admin__container__form {
     gap: 30px;
   }
 }
-.add_admin input__container__form__first, .add_admin select__container__form__first {
+.add-admin__container__form__first {
   display: flex;
   flex-direction: column;
   gap: 20px;
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__container__form__first, .add_admin select__container__form__first {
+  .add-admin__container__form__first {
     flex-direction: row;
     justify-content: space-around;
     padding: 0% 15%;
   }
 }
-.add_admin input__container__form__first__input, .add_admin select__container__form__first__input {
+.add-admin__container__form__first__input {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__container__form__first__input, .add_admin select__container__form__first__input {
+  .add-admin__container__form__first__input {
     width: 45%;
   }
 }
-.add_admin input__container__form .main_container, .add_admin select__container__form .main_container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-}
-.add_admin input__container__form .main_container h2, .add_admin select__container__form .main_container h2 {
-  font-weight: 700;
-  font-size: 25px;
-  padding: 10% 5% 2%;
-}
-@media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container h2, .add_admin select__container__form .main_container h2 {
-    font-size: 30px;
-    padding: 5% 0% 0%;
-    text-align: left;
-    width: 85%;
-  }
-}
-.add_admin input__container__form .main_container .sub_container, .add_admin select__container__form .main_container .sub_container {
-  width: 85%;
-  background-color: white;
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  border: #6DB96C solid;
-  padding: 20px;
-  border-radius: 16px;
-}
-@media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container, .add_admin select__container__form .main_container .sub_container {
-    background-color: #FBFCF4;
-  }
-}
-.add_admin input__container__form .main_container .sub_container .container_text, .add_admin select__container__form .main_container .sub_container .container_text {
-  width: 100%;
+.add-admin__container__form__second {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container .container_text, .add_admin select__container__form .main_container .sub_container .container_text {
+  .add-admin__container__form__second {
     flex-direction: row;
     justify-content: space-around;
     padding: 0% 15%;
   }
 }
-.add_admin input__container__form .main_container .sub_container .container_text__input, .add_admin select__container__form .main_container .sub_container .container_text__input {
+.add-admin__container__form__second__input {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container .container_text__input, .add_admin select__container__form .main_container .sub_container .container_text__input {
+  .add-admin__container__form__second__input {
     width: 45%;
   }
 }
-.add_admin input__container__form .main_container .sub_container__submit, .add_admin select__container__form .main_container .sub_container__submit {
+.add-admin__container__form__submit {
   background-color: #6DB96C;
   font-size: 20px;
   font-weight: bold;
@@ -1638,108 +1742,10 @@
   padding: 15px 55px;
 }
 @media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container__submit, .add_admin select__container__form .main_container .sub_container__submit {
+  .add-admin__container__form__submit {
     width: 30%;
     margin: 3rem auto 1rem;
-    gap: 10px;
-    align-items: center;
   }
-}
-.add_admin input__container__form .main_container .sub_container__submit h3, .add_admin select__container__form .main_container .sub_container__submit h3 {
-  font-size: 30px;
-}
-.add_admin input__container__form .main_container .sub_container .add_form, .add_admin select__container__form .main_container .sub_container .add_form {
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-@media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container .add_form, .add_admin select__container__form .main_container .sub_container .add_form {
-    gap: 30px;
-  }
-}
-.add_admin input__container__form .main_container .sub_container .add_form .first, .add_admin select__container__form .main_container .sub_container .add_form .first {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  gap: 20px;
-}
-@media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container .add_form .first, .add_admin select__container__form .main_container .sub_container .add_form .first {
-    flex-direction: row;
-    gap: 100px;
-    padding: 0% 15%;
-  }
-}
-.add_admin input__container__form .main_container .sub_container .add_form .first .info_container, .add_admin select__container__form .main_container .sub_container .add_form .first .info_container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.add_admin input__container__form .main_container .sub_container .add_form .first .info_container .select .function_select, .add_admin select__container__form .main_container .sub_container .add_form .first .info_container .select .function_select {
-  width: 100%;
-  background-color: white;
-  padding: 2%;
-  border: 2px solid #6DB86C;
-  border-radius: 15px;
-}
-.add_admin input__container__form .main_container .sub_container .add_form .second, .add_admin select__container__form .main_container .sub_container .add_form .second {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-@media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container .add_form .second, .add_admin select__container__form .main_container .sub_container .add_form .second {
-    flex-direction: row;
-    gap: 100px;
-    padding: 0% 15%;
-  }
-}
-.add_admin input__container__form .main_container .sub_container .add_form .second .info_container, .add_admin select__container__form .main_container .sub_container .add_form .second .info_container {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-.add_admin input__container__form .main_container .sub_container .add_form .button_container, .add_admin select__container__form .main_container .sub_container .add_form .button_container {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: flex-start;
-  gap: 50px;
-  margin-top: 10%;
-}
-@media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container .add_form .button_container, .add_admin select__container__form .main_container .sub_container .add_form .button_container {
-    flex-direction: row;
-    display: flex;
-    margin: 5% 3% 0%;
-    justify-content: flex-end;
-    gap: 30%;
-  }
-}
-.add_admin input__container__form .main_container .sub_container .add_form .button_container #submit, .add_admin select__container__form .main_container .sub_container .add_form .button_container #submit {
-  background-color: #6DB96C;
-  border: #6DB96C;
-  border-radius: 25px;
-  color: white;
-  padding: 10px 20px;
-  font-size: 14px;
-}
-@media screen and (min-width: 768px) {
-  .add_admin input__container__form .main_container .sub_container .add_form .button_container #submit, .add_admin select__container__form .main_container .sub_container .add_form .button_container #submit {
-    padding: 15px 55px;
-  }
-}
-.add_admin input__container__form .main_container .sub_container .add_form .button_container a #back, .add_admin select__container__form .main_container .sub_container .add_form .button_container a #back {
-  background-color: white;
-  border: #6DB96C solid;
-  padding: 0.5em 1.5em;
-  border-radius: 25px;
-  color: #6DB96C;
 }
 
 .game-init-container {
@@ -2464,7 +2470,7 @@ footer .footer_container .text {
   font-weight: bold;
 }
 .body-db-partners .partenaires {
-  margin: 50px auto 25px;
+  margin: 50px auto 0;
   display: flex;
   gap: 10px;
   justify-content: center;
@@ -2520,6 +2526,9 @@ footer .footer_container .text {
   display: flex;
   justify-content: center;
 }
+.body-db-partners .solo-partner .delete-partners:hover {
+  background-color: #9e1111;
+}
 .body-db-partners .solo-partner .group-partner {
   display: flex;
   flex-direction: row;
@@ -2531,7 +2540,7 @@ footer .footer_container .text {
   .body-db-partners .partenaires {
     flex-direction: row;
     justify-content: space-between;
-    margin: 90px 60px;
+    margin: 90px 60px 25px;
   }
   .body-db-partners .partners-actions {
     width: 95%;

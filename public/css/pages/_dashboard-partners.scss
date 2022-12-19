@@ -23,7 +23,7 @@
     }
   }
   .partenaires{
-    margin: 50px auto 25px;
+    margin: 50px auto 0;
     display: flex;
     gap: 10px;
     justify-content: center;
@@ -79,6 +79,10 @@
       border-radius: 25px;
       display: flex;
       justify-content: center;
+
+      &:hover {
+        background-color: #9e1111;
+      }
     }
     .group-partner{
       display: flex;
@@ -94,7 +98,7 @@
     .partenaires{
       flex-direction: row;
       justify-content: space-between;
-      margin: 90px 60px;
+      margin: 90px 60px 25px;
     }
     .partners-actions{
       width: 95%;

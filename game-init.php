@@ -4,7 +4,7 @@
 ?>
 
 <!doctype html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -14,7 +14,7 @@
     <title>Configuration du jeu</title>
 </head>
 <body class="game-init-container">
-    <?php require_once 'public/includes/ingame-navbar.php'; ?>
+    <?php require_once 'public/includes/_ingame-navbar.php'; ?>
     <h1>Configuration de la partie</h1>
     <div id="maximum" style="display: none">
         <h2>Nombre maximum de joueur atteint</h2>
