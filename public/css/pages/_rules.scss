@@ -1,0 +1,252 @@
+@use "../utils/mixins";
+
+
+.rules{
+    overflow-x: hidden;
+    background-color: #FBFCF4;
+    .first-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        padding: 20px;
+        @include mixins.breakpointmin(768px){
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+        }
+        .asideR{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            @include mixins.breakpointmin(768px){
+                padding: 20px;
+                width: 100%;
+            }
+            .all-texts{
+                display: flex;
+                flex-direction: row;
+                .containerR{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    .title-container{
+                        display: flex;
+                        align-items: center;
+                        @include mixins.breakpointmin(768px){
+                            gap: 7px;
+                        }
+                        img{
+                            display: none;
+                            @include mixins.breakpointmin(768px){
+                                display: initial;
+                            }
+                        }
+                        .title{
+                            margin-left: 15px;
+                            font-weight: 700;
+                            font-size: 30px;
+                            color: #6DB96C;
+                            @include mixins.breakpointmin(768px){
+                                margin-left: 0px;
+                            }
+                        }
+                    }
+                    
+                    .text{
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: #000000;
+                        @include mixins.breakpointmin(768px){
+                            padding-left: 8%;
+                        }
+                    }
+                    .line{
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        margin-top: 25px;
+                        @include mixins.breakpointmin(768px){
+                            display: none;
+                        }
+                        span{
+                            width: 75%;
+                            border-bottom: solid lightgray;
+                        }
+                    }
+                }
+            }
+        }
+        .asideL{
+            @include mixins.breakpointmin(768px){
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+            .img-container{
+                display: none;
+                @include mixins.breakpointmin(768px){
+                    display: flex;
+                    justify-content: center;
+                    width: 100%;
+                }
+                img{
+                    width: 75%;
+                }
+            }
+            .all-texts{
+                display: flex;
+                flex-direction: column;
+                .containerL{
+                    display: none;
+                    img{
+                    }
+                }
+                .containerR{
+                    .title-container{
+                        display: flex;
+                        align-items: center;
+                        @include mixins.breakpointmin(768px){
+                            gap: 7px;
+                        }
+                        img{
+                            display: none;
+                            @include mixins.breakpointmin(768px){
+                                display: initial;
+                            }
+                        }
+                        .title{
+                            margin-left: 15px;
+                            font-weight: 700;
+                            font-size: 30px;
+                            color: #6DB96C;
+                            @include mixins.breakpointmin(768px){
+                                margin-left: 0px;
+                            }
+                        }
+                    }
+                    .text{
+                        font-weight: 400;
+                        font-size: 15px;
+                        color: #000000;
+                        @include mixins.breakpointmin(768px){
+                            padding-left: 8%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .line{
+        display: none;
+        @include mixins.breakpointmin(768px){
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 25px;
+        }
+        span{
+            width: 75%;
+            border-bottom: solid lightgray;
+        }
+    }
+    .second-section{
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 30px;
+        .title{
+            font-size: 25px;
+            font-weight: 700;
+            color: #6DB96C;
+            margin-left: 4%;
+            display: none;
+            @include mixins.breakpointmin(768px){
+                display: initial;
+            }
+        }
+        .mobile{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            @include mixins.breakpointmin(768px){
+                display: none;
+            }
+            .category-container{
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                .category-name{
+                    font-size: 20px;
+                    color: #6DB96C;
+                    padding-left: 20px;
+                }
+                .all-cards{
+                    display: flex;
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                    gap: 30px;
+                    align-items: center;
+                    justify-content: flex-start;
+                    background-color: #E3F1DD;
+                    padding: 10px;
+                    .card-container{
+                        img{
+                            width: 150px;
+                        }
+                        h3{
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .desktop{
+            display: none;
+            @include mixins.breakpointmin(768px){
+                display: initial;
+            }
+            .all-cards{
+                width: 100%;
+                height: auto;
+                display: grid;
+                grid-template-columns: repeat(5, 1fr);
+                gap: 5px;
+                justify-items: center;
+                .card-container{
+                    img{
+                        width: 150px;
+                        position: relative;
+                        z-index: 1;
+                    }
+                    .bottom{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: rgba(109, 185, 108, 0.35);
+                        position: relative;
+                        top: -15px;
+                        padding: 20px 0px 10px;
+                        border-radius: 0px 0px 25px 25px;
+                        a{
+                            button{
+                                background-color: #6DB96C;
+                                border: #6DB96C;
+                                border-radius: 25px;
+                                color: white;
+                                padding: 10px 20px;
+                                font-size: 14px;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

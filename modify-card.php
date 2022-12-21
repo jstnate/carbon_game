@@ -3,8 +3,29 @@
     require_once 'object/user.php';
     require_once 'object/connection.php';
     require_once 'object/card.php';
-?>
 
+    if($_POST){
+        $card = new Card(
+            $_POST['card_name'],
+            $_POST['carbon'],
+            $_POST['description'],
+            $_FILES['image_url']['name'],
+            $_POST['type'],
+        );
+        $img_name = $_FILES['image_url']['name'];
+        $tmp_img_name = $_FILES['image_url']['tmp_name'];
+        $temporary = 'images/cards/';
+        move_uploaded_file($tmp_img_name,$temporary.$img_name);
+        print_r($card);
+        $connection = new Connection();
+        $modify = $connection->ModifyCard($card);
+        if($modify){
+            header('Location: dashboard-cards.php');
+        }else{
+            echo "C'est pas good man";
+        }
+    }
+?>
 
 <!doctype html>
 <html lang="fr">
@@ -97,30 +118,6 @@
             <?php endforeach; ?>
         </div>
     </div>
-
-    <?php
-        if($_POST){
-            $card = new Card(
-                $_POST['card_name'],
-                $_POST['carbon'],
-                $_POST['description'],
-                $_FILES['image_url']['name'],
-                $_POST['type'],
-            );
-            $img_name = $_FILES['image_url']['name'];
-            $tmp_img_name = $_FILES['image_url']['tmp_name'];
-            $temporary = 'temporary/';
-            move_uploaded_file($tmp_img_name,$temporary.$img_name);
-            print_r($card);
-            $connection = new Connection();
-            $modify = $connection->ModifyCard($card);
-            if($modify){
-                header('Location: dashboard-cards.php');
-            }else{
-                echo "C'est pas good man";
-            }
-        }
-    ?>
 
     <script src="public/js/custom-file-input.js"></script>
 </body>

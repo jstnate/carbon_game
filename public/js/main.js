@@ -19,6 +19,23 @@ if (burgerBtn != null) {
 }
 
 
+let burgerBtnClient = document.getElementById('burger-btn')
+let clientBg = document.getElementById('client-nav')
+let menuClient = document.getElementById('client-menu')
+
+burgerBtnClient.addEventListener('click', () => {
+    if (menuClient.classList.contains('client__nav-shown')) {
+        burgerBtnClient.classList.remove('client__burger-shown')
+        menuClient.classList.remove('client__nav-shown')
+        clientBg.classList.remove('show')
+    } else {
+        burgerBtnClient.classList.add('client__burger-shown')
+        menuClient.classList.add('client__nav-shown')
+        clientBg.classList.add('show')
+    }
+})
+
+
 
 if (window.innerWidth <= 760) {
     document.querySelectorAll('#message-action').forEach((item) => {
@@ -34,7 +51,6 @@ if (window.innerWidth <= 760) {
     })
     
 }
-
 
 if(window.innerWidth >= 760){
     if(document.querySelectorAll('.phone-link-to-add') != null){

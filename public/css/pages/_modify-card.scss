@@ -2,6 +2,7 @@
 
 .modify_card{
     width: 100%;
+    overflow-x: hidden;
     background-color: #FBFCF4;
     .main_container{
         width: 100%;
@@ -107,10 +108,10 @@
                     flex-direction: row;
                     gap: 30px;
                     .container_card{
+                        display: none;
                         @include mixins.breakpointmin(768px){
                             width: 20%;
                             height: auto;
-                            background-color: aqua;
                         }
                         img{
                             @include mixins.breakpointmin(768px){
