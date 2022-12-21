@@ -32,7 +32,7 @@
     </div>
     <section class="card-section">
         <div class="card-img">
-            <img src="<?= $card[0]['image_url'] ?>" alt="">
+            <img src="./images/cards/<?= $card[0]['image_url'] ?>" alt="">
             <div class="desktop-card-infos">
                 <div class="card-infos-v2">
                 <h2><?= $card[0]['card_name']?></h2>

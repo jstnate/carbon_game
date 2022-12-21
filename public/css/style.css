@@ -2688,6 +2688,9 @@ footer .footer_container .text {
     text-align: left;
     margin-left: 30px;
   }
+  .dashboard-body .second-section2 .category-container2 {
+    margin-bottom: 60px;
+  }
   .dashboard-body .second-section2 .category-container2 .all-cards2 .card-container img {
     width: 250px;
   }
