@@ -6,7 +6,7 @@
             <li class="client__nav__list__element"><a href="index.php" class="client__nav__list__element__link">Accueil</a></li>
             <li class="client__nav__list__element"><a href="game-init.php" class="client__nav__list__element__link">Jouer</a></li>
 
-            <li class="client__nav__list__element client__nav__logo"><a href="index.php.php"><img src="images/logos/logo.png" alt="Logo" class="client__nav__list__element__logo"></a></li>
+            <li class="client__nav__list__element client__nav__logo"><a href="index.php"><img src="images/logos/logo.png" alt="Logo" class="client__nav__list__element__logo"></a></li>
 
             <li class="client__nav__list__element"><a href="contact.php" class="client__nav__list__element__link">Contact</a></li>
             <li class="client__nav__list__element"><a href="rules.php" class="client__nav__list__element__link">Règles</a></li>
