@@ -53,7 +53,7 @@ if($verify != 1){
         <div class="group-partner">
         <div class="solo-partner-infos">
             <h2> <?= $partner['partner_name']?></h2>
-            <img src="images/<?php echo $partner['logo'] ?>" alt="">
+            <img src="images/partners-logos/<?php echo $partner['logo'] ?>" alt="">
             <p> <?= date("d-m-y", strtotime($partner['created_at']))?></p>
         </div>
         <div>

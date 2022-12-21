@@ -3,8 +3,8 @@
 class Message
 {
     public function __construct(
-        public string $family_name,
-        public string $name,
+        public string $last_name,
+        public string $first_name,
         public string $email,
         public string $society,
         public string $subject,
@@ -17,7 +17,7 @@ class Message
     {
         $isValid = true;
 
-        if ($this->family_name === '' || $this->name == '' || $this->email === '' || $this->society === '' || $this->subject === '' || $this->description === '') {
+        if ($this->last_name === '' || $this->first_name == '' || $this->email === '' || $this->society === '' || $this->subject === '' || $this->description === '') {
             $isValid = false;
         }
 

@@ -65,7 +65,6 @@
                     $subject = $_POST['subject'],
                     $description = $_POST['description'],
             );
-            print_r($message);
             if($message->verifyMessage()){
                 $connection = new Connection();
                 $result = $connection->insertMessage($message);

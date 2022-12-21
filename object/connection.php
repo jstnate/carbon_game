@@ -116,12 +116,12 @@ class Connection
     // Partenaires 
     public function insertPartner(Partner $partner): bool
     {
-        $query = 'INSERT INTO partner (partner_name, partner_mail, logo) VALUES (:partner_name, partner_mail, :logo)';
+        $query = 'INSERT INTO partner (partner_name, partner_mail, logo) VALUES (:partner_name, :partner_mail, :logo)';
         $statement = $this->pdo->prepare($query);
         return $statement->execute([
             'partner_name' => $partner->partner_name,
             'partner_mail' => $partner->partner_mail,
-            'logo' => $partner->logo,
+            'logo' => $partner->logo
         ]);
     }
 
@@ -170,14 +170,14 @@ class Connection
 
     public function insertMessage(Message $message): bool
     {
-        $query = 'INSERT INTO messages (family_name, name, email, society, subject, description)
-                    VALUES (:family_name, :name, :email, :society, :subject, :description)';
+        $query = 'INSERT INTO messages (last_name, first_name, email, society, subject, description)
+                    VALUES (:last_name, :first_name, :email, :society, :subject, :description)';
 
         $statement = $this->pdo->prepare($query);
 
         return $statement->execute([
-            'family_name' => $message->family_name,
-            'name' => $message->name,
+            'last_name' => $message->last_name,
+            'first_name' => $message->first_name,
             'email' => $message->email,
             'society' => $message->society,
             'subject' => $message->subject,
