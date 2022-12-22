@@ -98,7 +98,7 @@ require_once 'object/connection.php';
                         <?php foreach ($cards as $card): ?>
                             <?php if($card['type'] == $category['type']){?>
                                 <div class="card-container">
-                                    <img src="./images/cards/test-card.png" alt="" >
+                                    <img src="./images/cards/<?php echo $card['image_url']?>" alt="" >
                                     <h3><?= $card['card_name']?></h3>
                                 </div>
                             <?php }?>
