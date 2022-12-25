@@ -1,14 +1,14 @@
 <?php
     session_start();
-
-
+    require_once 'object/card.php';
+    require_once 'object/connection.php';
 // Sécurité Provisoire //
 
 if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
-    $autorisation = 1;
-}
-
-if ($autorisation != 1) {
+    $connection = new Connection();
+    $cards = $connection->GetCards();
+    $categories = $connection->GetCategory();
+} else {
     header('Location: login.php');
 }
 ?>
@@ -16,8 +16,7 @@ if ($autorisation != 1) {
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="public/css/style.css">
     <script src="public/js/main.js" defer></script>
@@ -28,18 +27,8 @@ if ($autorisation != 1) {
 <?php require 'public/includes/_admin-nav.php'; ?>
     <h1>Gestion des cartes</h1>
 
-<?php
-    require_once 'object/card.php';
-    require_once 'object/connection.php';
-?>
-
-
     <div class="second-section2">
         <?php
-        $connection = new Connection();
-        $cards = $connection->GetCards();
-        $categories = $connection->GetCategory();
-
         foreach ($categories as $category): ?>
             <div class="category-container2">
                 <div class="category-class2">

@@ -3,6 +3,11 @@ session_start();
 require_once 'object/user.php';
 require_once 'object/connection.php';
 require_once 'object/partner.php';
+if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé'){
+    $autorisation = 1;
+} else {
+    header('Location:login.php');
+}
 ?>
 
 <!doctype html>
@@ -62,13 +67,6 @@ require_once 'object/partner.php';
 
 
     <?php
-    if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé'){
-            $verify = 1;
-        } 
-        if($verify != 1){
-            header('Location:login.php');
-        }
-
         if ($_POST) {
             $partner = new Partner(
                 $_POST['partner_name'],

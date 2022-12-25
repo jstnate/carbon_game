@@ -3,6 +3,12 @@
     require_once 'object/user.php';
     require_once 'object/connection.php';
     require_once 'object/partner.php';
+    if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
+        $connection = new Connection();
+        $partners=$connection->GetPartners();
+    } else {
+        header('Location:login.php');
+    }
 ?>
 
 <!doctype html>
@@ -20,18 +26,6 @@
     <script src="public/js/main.js" defer></script>
     <title>Tableau de bord - Partenaires</title>
 </head>
-
-<?php
-if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
-    $verify = 1;
-    $connection = new Connection();
-    $partners=$connection->GetPartners();
-}
-if($verify != 1){
-    header('Location:login.php');
-}
-?>
-
 <body class="body-db-partners">
 <?php require_once 'public/includes/_admin-nav.php';?>
 

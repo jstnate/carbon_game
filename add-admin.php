@@ -4,10 +4,10 @@ require_once 'object/user.php';
 require_once 'object/connection.php';
 if(isset($_SESSION['function']) && $_SESSION['function'] == 'administrateur'){
     $autorisation = 1;
-}
-if($autorisation != 1){
+} else {
     header('Location: login.php');
 }
+
 ?>
 
 <!doctype html>
@@ -40,12 +40,12 @@ if($autorisation != 1){
             <div class="add-admin__container__form__first">
                 <div class="add-admin__container__form__first__input">
                     <label for="name">Prénom Nom</label>
-                    <input type="text" name="name" id="name" placeholder="Jogh DOE">
+                    <input type="text" name="name" id="name" placeholder="Jogh DOE" required>
                 </div>
 
                 <div class="add-admin__container__form__first__input">
                     <label for="function">Rôle</label>
-                    <select class="function_select" name="function" id="function">
+                    <select class="function_select" name="function" id="function" required>
                         <option value="interdit">Sélectionnez son rôle...</option>
                         <option value="autorisé">Autorisé</option>
                         <option value="administrateur">Administrateur</option>
@@ -55,12 +55,12 @@ if($autorisation != 1){
             <div class="add-admin__container__form__second">
                 <div class="add-admin__container__form__second__input">
                     <label for="email">Adresse email</label>
-                    <input type="email" name="email" id="email" placeholder="mail@gmail.com">
+                    <input type="email" name="email" id="email" placeholder="mail@gmail.com" required>
                 </div>
 
                 <div class="add-admin__container__form__second__input">
                     <label for="pass">Mot de passe</label>
-                    <input type="password" name="password" id="pass" placeholder="Nouveau mot de passe">
+                    <input type="password" name="password" id="pass" placeholder="Nouveau mot de passe" required>
                 </div>
             </div>
 

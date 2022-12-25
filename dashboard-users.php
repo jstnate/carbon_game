@@ -2,6 +2,12 @@
     session_start();
     require_once 'object/user.php';
     require_once 'object/connection.php';
+    if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
+            $connection = new Connection();
+            $users = $connection->GetUsers();
+    } else {
+        header('Location:login.php');
+    }
 ?>
 
 <!doctype html>
@@ -20,15 +26,6 @@
 </head>
 <body class="dashboard">
     <?php
-        if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
-            $verify = 1;
-            $connection = new Connection();
-            $users = $connection->GetUsers();
-        }
-        if($verify != 1){
-            header('Location:login.php');
-        }
-
         require_once 'public/includes/_admin-nav.php';
     ?>
 

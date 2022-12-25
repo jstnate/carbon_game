@@ -1,11 +1,12 @@
 <?php
 
 session_start();
+require_once 'object/message.php';
+    require_once 'object/connection.php';
 if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
-    $autorisation = 1;
-}
-
-if($autorisation != 1){
+    $connection = new Connection();
+    $messages = $connection->GetMessages();
+} else {
     header('Location: login.php');
 }
 ?>
@@ -27,14 +28,6 @@ if($autorisation != 1){
 <body class="dashboard_admin">
     <?php require_once 'public/includes/_admin-nav.php'; ?>
     <h1>Demandes de contacts</h1>
-
-    <?php
-    require_once 'object/message.php';
-    require_once 'object/connection.php';
-
-    $connection = new Connection();
-    $messages = $connection->GetMessages();
-    ?>
 
     <div class="all_messages">
         <?php foreach($messages as $message): ?>

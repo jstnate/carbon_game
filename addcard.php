@@ -1,5 +1,15 @@
 <?php
     session_start();
+    require_once 'object/connection.php';
+    require_once 'object/user.php';
+    require_once 'object/card.php';
+    // Sécurité Provisoire //
+
+if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
+    $autorisation = 1;
+} else {
+    header('Location: login.php');
+}
 ?>
 <!doctype html>
 <html lang="fr">
@@ -69,43 +79,28 @@
 </body>
 
 <?php
+    if($_POST){
+        $card = new Card(
+                $_POST['card_name'],
+                $_POST['carbon'],
+                $_POST['description'],
+                $_FILES['image_url']['name'],
+                $_POST['type'],
+        );
+        $img_name = $_FILES['image_url']['name'];
+        $tmp_img_name = $_FILES['image_url']['tmp_name'];
+        $temporary = 'images/cards/';
+        move_uploaded_file($tmp_img_name,$temporary.$img_name);
 
-// Sécurité Provisoire //
-
-if (isset($_SESSION['function']) && $_SESSION['function'] === 'administrateur' || isset($_SESSION['function']) && $_SESSION['function'] === 'autorisé') {
-    $autorisation = 1;
-}
-
-if($autorisation != 1){
-    header('Location: login.php');
-}
-
-require_once 'object/connection.php';
-require_once 'object/user.php';
-require_once 'object/card.php';
-
-        if($_POST){
-            $card = new Card(
-                    $_POST['card_name'],
-                    $_POST['carbon'],
-                    $_POST['description'],
-                    $_FILES['image_url']['name'],
-                    $_POST['type'],
-            );
-            $img_name = $_FILES['image_url']['name'];
-            $tmp_img_name = $_FILES['image_url']['tmp_name'];
-            $temporary = 'images/cards/';
-            move_uploaded_file($tmp_img_name,$temporary.$img_name);
-
-            if($card->verifyInput()){
-                $connection = new Connection();
-                $result = $connection->insertCard($card);
-                if($result){
-                    echo 'Votre carte a été ajoutée';
-                }else{
-                    echo 'Erreur !';
-                }
+        if($card->verifyInput()){
+            $connection = new Connection();
+            $result = $connection->insertCard($card);
+            if($result){
+                echo 'Votre carte a été ajoutée';
+            }else{
+                echo 'Erreur !';
             }
         }
+    }   
 ?>
 </html>
