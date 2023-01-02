@@ -111,7 +111,7 @@ require_once 'object/connection.php';
                     <div class="all-cards">
                         <?php foreach ($cards as $card): ?>
                             <div class="card-container">
-                                <img src="./images/cards/test-card.png" alt="" >
+                                <img src="./images/cards/<?php echo $card['image_url']?>" alt="" >
                                 <div class="bottom">
                                     <a href="card.php?id=<?php echo $card['id'] ?>"><button>En savoir plus</button></a>
                                 </div>
