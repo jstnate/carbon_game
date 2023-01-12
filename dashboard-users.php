@@ -2,6 +2,29 @@
     session_start();
     require_once 'object/user.php';
     require_once 'object/connection.php';
+
+    if (isset($_POST['create-admin'])) {
+        $connection = new Connection();
+        $id = $_POST['id'];
+        $connection->CreateAdmin($id);
+        header('Refresh:0');
+    } else if (isset($_POST['remove-admin']) || isset($_POST['authorize'])) {
+        $connection = new Connection();
+        $id = $_POST['id'];
+        $connection->Authorize($id);
+        header('Refresh:0');
+    } else if (isset($_POST['unauthorize'])) {
+        $connection = new Connection();
+        $id = $_POST['id'];
+        $connection->Unauthorize($id);
+        header('Refresh:0');
+    } else if (isset($_POST['delete'])) {
+        $connection = new Connection();
+        $id = $_POST['id'];
+        $connection->DeleteUser($id);
+        header('Refresh:0');
+    }
+
 ?>
 
 <!doctype html>
@@ -83,25 +106,5 @@
 
                 <?php endforeach; ?>
             </div>
-        
-        <?php if (isset($_POST['create-admin'])) {
-            $connection = new Connection();
-            $id = $_POST['id'];
-            $connection->CreateAdmin($id);
-        } else if (isset($_POST['remove-admin']) || isset($_POST['authorize'])) {
-            $connection = new Connection();
-            $id = $_POST['id'];
-            $connection->Authorize($id);
-        } else if (isset($_POST['unauthorize'])) {
-            $connection = new Connection();
-            $id = $_POST['id'];
-            $connection->Unauthorize($id);
-        } else if (isset($_POST['delete'])) {
-            $connection = new Connection();
-            $id = $_POST['id'];
-            $connection->DeleteUser($id);
-        }
-    ?>
-
 </body>
 </html>
