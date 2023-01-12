@@ -37,7 +37,7 @@ require_once 'object/connection.php';
                                         <input type="checkbox" id="<?= $card['id'] ?>" value="<?= $card['carbon'] ?>" >
                                         <label for="<?= $card['id'] ?>">
                                             <img
-                                                    src="./images/cards/test-card.png"
+                                                    src="./images/cards/<?= $card['image_url']?>"
                                                     alt=""
                                             >
                                             <h3><?= $card['card_name']?></h3>
