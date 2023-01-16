@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.5-10.10.2-MariaDB)
 # Database: carbon_db
-# Generation Time: 2023-01-16 21:35:47 +0000
+# Generation Time: 2023-01-16 22:09:25 +0000
 # ************************************************************
 
 
@@ -33,7 +33,7 @@ CREATE TABLE `cards` (
   `image_url` varchar(255) DEFAULT NULL,
   `type` varchar(255) NOT NULL,
   UNIQUE KEY `id` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=60 DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
 LOCK TABLES `cards` WRITE;
 /*!40000 ALTER TABLE `cards` DISABLE KEYS */;
@@ -93,7 +93,8 @@ VALUES
 	(55,'Mail',4,'Envoi d\'un mail','mail.png','Numérique'),
 	(56,'Transaction d\'une NFT',48000,' ','transaction-nft.png','Numérique'),
 	(57,'Data Center',500,'Consommation d\'une journée, environ 100 gigabits de données','data-center.png','Numérique'),
-	(58,'Visioconférence d\'une heure',4,'Qualité HD (720p), 2 personnes','visioconference.png','Numérique');
+	(58,'Visioconférence d\'une heure',4,'Qualité HD (720p), 2 personnes','visioconference.png','Numérique'),
+	(59,'Matelas mousse neuf',275000,'Cycle de vie complet','matelas-neuf.png','Biens de consommation');
 
 /*!40000 ALTER TABLE `cards` ENABLE KEYS */;
 UNLOCK TABLES;
