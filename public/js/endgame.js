@@ -53,6 +53,8 @@ form.onsubmit = () => {
     localStorage.setItem('CurrentNumber', currentNumber)
 }
 
-if (currentNumber > playerCount) {
+if (currentNumber > playerCount || currentNumber > 9) {
     window.location.replace("results.php")
 }
+
+
