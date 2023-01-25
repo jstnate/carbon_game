@@ -12,3 +12,8 @@ The goal of this project is to create a website for this game.
 
 This site must contain an admin interface allowing the masters of the game to manage the resources of the game.
 It also contains a game section with a game master that allows to play without worrying about counting points or managing events by letting the game master
+
+## Project setup
+```
+git@github.com:jstnate/carbon_game.git
+```
